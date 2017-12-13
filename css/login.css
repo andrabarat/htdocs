@@ -1,0 +1,36 @@
+#regContainer{
+    margin-top: 10%;
+    border-radius: 15px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.headerForm{
+    font-size: 30px;
+    text-decoration: none; 
+}
+.col-md-6 > a {
+    font-weight: bold;
+    color: #2dc997;
+}
+.col-md-6 > a:hover {
+    font-weight: bold;
+    text-decoration: none; 
+    cursor: pointer;
+    color: #2dc997;
+}
+.active{
+    transition: font-size 0.5s;
+    font-size: 40px;
+    color: #285e4d !important;
+}
+.glyphicon{
+    top: 0px;
+}
+.error{
+    border: 1px solid red;
+}
+.passed{
+    border: 1px solid green;
+}
