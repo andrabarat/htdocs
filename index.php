@@ -20,9 +20,6 @@
 </head>
 
 <body>
-    <!--==========================
-         Header
-         ============================-->
     <header id="header">
         <div class="container">
             <div id="logo" class="pull-left">
@@ -34,7 +31,7 @@
             <nav id="nav-menu-container">
                 <ul class="nav-menu">
                     <!--li class="!menu-active"><a href="#hero">Acasa</a></li-->
-                    <li><a href="/Medici/doctor.php">Medici</a></li>
+                    <li><a href="/Medici/doctors.php">Medici</a></li>
                     <li class="menu-has-children"><a href="">Informatii</a>
                          <ul>
                              <li><a href="#about">Despre noi</a></li>
@@ -53,9 +50,6 @@
             </nav>
         </div>
     </header>
-    <!--==========================
-         Hero Section
-         ============================-->
     <section id="hero">
         <div class="hero-container">
             <h1>REGNA iti ureaza bun venit!</h1>
@@ -74,103 +68,95 @@
                         <h2 class="title">Cateva cuvinte despre noi</h2>
                         <div class="icon-box wow fadeInUp">
                             <div class="icon"><i class="fa fa-user-md"></i></div>
-                            <h4 class="title"><a href="">Medici</a></h4>
+                            <h4 class="title"><a href="">Oamenii REGNA</a></h4>
                             <p class="description">Echipa noastră de medici este sufletul Reţelei private de sănătate REGNA. Pregătirea şi implicarea lor neobosită, atenţia acordată fiecărui pacient şi performanţele medicale pe care le-au atins sunt garanţii ale excelenţei pe care o promovăm.</p>
                         </div>
                         <div class="icon-box wow fadeInUp" data-wow-delay="0.2s">
                             <div class="icon"><i class="fa fa-medkit"></i></div>
-                            <h4 class="title"><a href="">Laborator</a></h4>
+                            <h4 class="title"><a href="">Stiinta REGNA</a></h4>
                             <p class="description"> Priceperea specialistilor nostri se imbina cu precizia celei mai performante aparaturi din Romania. Laboratorul Central REGNA are eticheta Roche Diagnostic pentru linia de biochimie si imunologie si e un reper tehnologic pentru sistemul medical romanesc. </p>
                         </div>
                         <div class="icon-box wow fadeInUp" data-wow-delay="0.4s">
                             <div class="icon"><i class="fa fa-shopping-bag"></i></div>
-                            <h4 class="title"><a href="">Abonamente si pachete</a></h4>
-                            <p class="description">Asigură-te că ai mereu acces la cele mai bune servicii medicale, contra unei sume avantajoase. Alege-ţi abonamentul care acoperă cel mai bine nevoile tale de sănătate şi bucură-te de privilegiile dedicate abonaţilor Rețelei de sănătate REGNA</p>
+                            <h4 class="title"><a href="">Experienta REGNA</a></h4>
+                            <p class="description">Asigură-te că ai mereu acces la cele mai bune servicii medicale, contra unei sume avantajoase. </p>
                         </div>
                     </div>
                     <div class="col-lg-6 background order-lg-2 order-1 wow fadeInRight"></div>
                 </div>
             </div>
         </section>
-        <!--==========================
-            Services Section
-            ============================-->
-        <section id="services">
-            <div class="container wow fadeIn">
-                <div class="section-header">
-                    <h3 class="section-title">Services</h3>
-                    <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="box">
-                            <div class="icon"><a href=""><i class="fa fa-desktop"></i></a></div>
-                            <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-                            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="box">
-                            <div class="icon"><a href=""><i class="fa fa-bar-chart"></i></a></div>
-                            <h4 class="title"><a href="">Dolor Sitema</a></h4>
-                            <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="box">
-                            <div class="icon"><a href=""><i class="fa fa-paper-plane"></i></a></div>
-                            <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-                            <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="box">
-                            <div class="icon"><a href=""><i class="fa fa-photo"></i></a></div>
-                            <h4 class="title"><a href="">Magni Dolores</a></h4>
-                            <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="box">
-                            <div class="icon"><a href=""><i class="fa fa-road"></i></a></div>
-                            <h4 class="title"><a href="">Nemo Enim</a></h4>
-                            <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="box">
-                            <div class="icon"><a href=""><i class="fa fa-shopping-bag"></i></a></div>
-                            <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
-                            <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--==========================
-            Call To Action Section
-            ============================-->
         <section id="call-to-action">
             <div class="container wow fadeIn">
                 <div class="row">
                     <div class="col-lg-9 text-center text-lg-left">
-                        <h3 class="cta-title">Call To Action</h3>
-                        <p class="cta-text"> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <h3 class="cta-title">Ai grija de sanatatea ta!</h3>
+                        <p class="cta-text"> Fii sigur ca duci o viata sanatoasa. Noi te ajutam sa afli la ce ai putea sa fii predispus. Completeaza formularul apasand butonul din dreapta.</p>
                     </div>
                     <div class="col-lg-3 cta-btn-container text-center">
-                        <a class="cta-btn align-middle" href="#">Call To Action</a>
+                        <a class="cta-btn align-middle" href="#">Click aici</a>
+                    </div>
+                </div>
+            </div>
+        </section>s
+        <section id="services">
+            <div class="container wow fadeIn">
+                <div class="section-header">
+                    <h3 class="section-title">Servicii</h3>
+                    <p class="section-description">Suntem siguri ca ai ales locul potrivit pentru a te face bine!</p>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="box">
+                            <div class="icon"><a href=""><i class="fa fa-user-md"></i></a></div>
+                            <h4 class="title"><a href="">Medici</a></h4>
+                            <p class="description">Echipa noastră de medici este sufletul Reţelei private de sănătate REGNA.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="box">
+                            <div class="icon"><a href=""><i class="fa fa-h-square"></i></a></div>
+                            <h4 class="title"><a href="">Spitale si policlinici</a></h4>
+                            <p class="description">Suntem mereu aproape de pacientii nostri, prin intermediul celor 36 de policlinici, 4 spitale, 8 Campusuri si 180 de clinici partenere in toată tara.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="box">
+                            <div class="icon"><a href=""><i class="fa fa-hospital-o"></i></a></div>
+                            <h4 class="title"><a href="">Laboratoare</a></h4>
+                            <p class="description">Laboratorul Central REGNA are eticheta Roche Diagnostic pentru linia de biochimie si imunologie si e un reper tehnologic pentru sistemul medical romanesc.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="box">
+                            <div class="icon"><a href=""><i class="fa fa-heartbeat"></i></a></div>
+                            <h4 class="title"><a href="">Imagistica</a></h4>
+                            <p class="description">Acuratetea unui diagnostic este de o importanta cruciala in tratarea cu succes a cazurilor medicale cu care medicii se confrunta zilnic.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="box">
+                            <div class="icon"><a href=""><i class="fa fa-medkit"></i></a></div>
+                            <h4 class="title"><a href="">Abonamente si pachete</a></h4>
+                            <p class="description">Asigură-te că ai mereu acces la cele mai bune servicii medicale, contra unei sume avantajoase. </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="box">
+                            <div class="icon"><a href=""><i class="fa fa-ambulance"></i></a></div>
+                            <h4 class="title"><a href="">Maternitati</a></h4>
+                            <p class="description">Nasterea unui copil este cel mai emotionant si memorabil moment din viata unei mamici.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!--==========================
-            Aritcles Section
-            ============================-->
+        
         <section id="portfolio">
             <div class="container wow fadeInUp">
                 <div class="section-header">
                     <h3 class="section-title">Educatie medicala</h3>
-                    <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+                    <p class="section-description">Citeste cateva articole care te vor ajuta</p>
                 </div>
                 <div class="row">
                     <div class="col-lg-12">
@@ -295,21 +281,18 @@
                 </div>
             </div>
         </section>
-        <!--==========================
-            Team Section
-            ============================-->
         <section id="team">
             <div class="container wow fadeInUp">
                 <div class="section-header">
-                    <h3 class="section-title">Team</h3>
-                    <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+                    <h3 class="section-title">Echipa noastra</h3>
+                    <p class="section-description">Echipa noastră de medici este sufletul Reţelei private de sănătate REGNA</p>
                 </div>
                 <div class="row">
                     <div class="col-lg-3 col-md-6">
                         <div class="member">
-                            <div class="pic"><img src="img/team-1.jpg" alt=""></div>
-                            <h4>Walter White</h4>
-                            <span>Chief Executive Officer</span>
+                            <div class="pic"><img src="image/doc1.png" alt=""></div>
+                            <h4>Ioan Popescu</h4>
+                            <span>Doctor general</span>
                             <div class="social">
                                 <a href=""><i class="fa fa-twitter"></i></a>
                                 <a href=""><i class="fa fa-facebook"></i></a>
@@ -320,9 +303,9 @@
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="member">
-                            <div class="pic"><img src="img/team-2.jpg" alt=""></div>
-                            <h4>Sarah Jhinson</h4>
-                            <span>Product Manager</span>
+                            <div class="pic"><img src="image/doc2.png" alt=""></div>
+                            <h4>Marian Dumitrescu</h4>
+                            <span>Medic de famielie</span>
                             <div class="social">
                                 <a href=""><i class="fa fa-twitter"></i></a>
                                 <a href=""><i class="fa fa-facebook"></i></a>
@@ -333,9 +316,9 @@
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="member">
-                            <div class="pic"><img src="img/team-3.jpg" alt=""></div>
-                            <h4>William Anderson</h4>
-                            <span>CTO</span>
+                            <div class="pic"><img src="image/doc3.jpg" alt=""></div>
+                            <h4>Sebastian Ciobanu</h4>
+                            <span>Medic cardiolog</span>
                             <div class="social">
                                 <a href=""><i class="fa fa-twitter"></i></a>
                                 <a href=""><i class="fa fa-facebook"></i></a>
@@ -346,9 +329,9 @@
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="member">
-                            <div class="pic"><img src="img/team-4.jpg" alt=""></div>
-                            <h4>Amanda Jepson</h4>
-                            <span>Accountant</span>
+                            <div class="pic"><img src="image/doc4.jpg" alt=""></div>
+                            <h4>Alina Manolache</h4>
+                            <span>Medic general</span>
                             <div class="social">
                                 <a href=""><i class="fa fa-twitter"></i></a>
                                 <a href=""><i class="fa fa-facebook"></i></a>
@@ -360,9 +343,6 @@
                 </div>
             </div>
         </section>
-        <!--==========================
-            Contact Section
-            ============================-->
         <section id="contact">
             <div class="container wow fadeInUp">
                 <div class="section-header">
@@ -426,22 +406,7 @@
             </div>
         </section>
     </main>
-    <!--==========================
-         Footer
-         ============================-->
     <footer id="footer">
-        <div class="footer-top">
-            <div class="container">
-            </div>
-        </div>
-        <div class="container">
-            <div class="copyright">
-                &copy; Copyright <strong>Regna</strong>. All Rights Reserved
-            </div>
-            <div class="credits">
-                Bootstrap Templates by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-            </div>
-        </div>
     </footer>
     <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
     <script src="lib/jquery/jquery.min.js"></script>
