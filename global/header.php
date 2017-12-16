@@ -2,6 +2,7 @@
     include "../global/session.php";
 ?>
 <head>
+    <link href="/img/favicon.png" rel="icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
@@ -10,17 +11,19 @@
         <div class="container">
 
             <div id="logo" class="pull-left">
-                <a href="/"><img src="/img/logo.png" alt="" title="" /></img></a>
+                <a href="/"><img src="/img/logo.png"></img></a>
                 <!-- Uncomment below if you prefer to use a text logo -->
                 <!--<h1><a href="#hero">Regna</a></h1>-->
             </div>
 
             <nav id="nav-menu-container">
                 <ul class="nav-menu">
-                    <li class="!menu-active"><a href="/">Home</a></li>
+                    <li><a href="/Medici/doctors.php">Medici</a></li>
                     <?php if($login_session!='') {?>
-                    <li class="!menu-active"><a href="/Account/MyProfile.php"><?php echo $_SESSION["usernameLogin"];}?></a></li>
-                    <li><a href="#contact">Contact Us</a></li>
+                    <li class="!menu-active"><a href="/Account/MyProfile.php"><?php echo $_SESSION["usernameLogin"];?></a></li>
+                    <?php } else {?>
+                    <li class="!menu-active"><a href="/Account/Login.php">Login</a></li>
+                    <?php } ?>
                     <!--
                     <li><a href="#about">About Us</a></li>
                     <li><a href="#services">Services</a></li>

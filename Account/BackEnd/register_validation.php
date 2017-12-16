@@ -38,23 +38,25 @@
         $result = $conn->query($sql);        
         if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
-                $id = $row["Max_number"];
+                $id_user = $row["Max_number"];
             }
         }
-        if($id==''){
-            $id=1;
+        if($id_user==''){
+            $id_user=1;
         } else {
-            $id=$id+1;
+            $id_user=$id_user+1;
         }
         $sql = "INSERT INTO users (id_user, first_name, last_name, cnp, user_name, phone_number, email, password)
                 VALUES (".$id_user.",'".$first_name."', '".$last_name."', '".$cnp."','".$user_name."','".$phone_number."','".$email."','".$password."')";
         if ($conn->query($sql) === TRUE) {
             $_SESSION['usernameLogin']=$user_name;
-            header("Location: /");
         } else {
             header("Location: /Account/Login.php");
         }
     }
-
-    header("Location: /Account/Login.php?registerError=".$error);
+    if($error==""){
+        header("Location: /");
+    } else {
+        header("Location: /Account/Login.php?registerError=".$error);
+    }
 ?>
