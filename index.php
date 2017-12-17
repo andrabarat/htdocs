@@ -31,7 +31,7 @@
             <nav id="nav-menu-container">
                 <ul class="nav-menu">
                     <!--li class="!menu-active"><a href="#hero">Acasa</a></li-->
-                    <li><a href="/Medici/doctors.php">Medici</a></li>
+                    <li><a href="/Medici/Doctors.php">Medici</a></li>
                     <li class="menu-has-children"><a href="">Informatii</a>
                          <ul>
                              <li><a href="#about">Despre noi</a></li>

@@ -18,7 +18,7 @@
 
             <nav id="nav-menu-container">
                 <ul class="nav-menu">
-                    <li><a href="/Medici/doctors.php">Medici</a></li>
+                    <li><a href="/Medici/Doctors.php">Medici</a></li>
                     <?php if($login_session!='') {?>
                     <li class="!menu-active"><a href="/Account/MyProfile.php"><?php echo $_SESSION["usernameLogin"];?></a></li>
                     <?php } else {?>

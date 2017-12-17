@@ -2,6 +2,15 @@
     include "../global/session.php";
     include "../global/header.php";
     include "../global/dbConnect.php";
+
+    $id_session=0;
+    $sql = "SELECT id_user FROM users WHERE user_name='".$login_session."'";
+    $result = $conn->query($sql);        
+    if ($result->num_rows > 0){
+        while($row = $result->fetch_assoc()) {
+            $id_session=$row["id_user"];
+        }
+    }
 ?>
 <html lang="en">
 
@@ -10,6 +19,7 @@
     <meta charset="utf-8">
     <link href="/css/doctors.css" rel="stylesheet">
     <script src="/js/doctors.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -43,12 +53,19 @@
                     <div class="modal-body" id="modalBody">
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <h4 class="text-center" id="modalFooter">
+                            <button type="button" class="btn btn-default btn-lg" data-dismiss="modal">Close</button>
+                        </h4>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <form action="/Medici/BackEnd/appointments.php" method="post" style="display: none">
+        <input type="text" name="user_name" id="id_user" value="<?php echo $id_session?>">
+        <input type="text" name="id_doctor" id="id_doctor" value="">
+        <input type="text" name="dateAppoiment" id="dateAppoiment" value="">
+    </form>
 </body>
 
 </html>
@@ -66,5 +83,17 @@
         echo "0 results";
     }
 ?>
-
+$("#myBtn").click(function(){
+    $("#myModal").modal();
+});
 </script>
+<style>
+.hours{
+    background-color: #2dc996;
+    color: white;
+    cursor: pointer;
+}
+    .btn-success{
+        background-color: #2dc996 !important;
+    }
+</style>
