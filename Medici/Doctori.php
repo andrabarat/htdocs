@@ -54,17 +54,17 @@
                     </div>
                     <div class="modal-footer">
                         <h4 class="text-center" id="modalFooter">
-                            <button type="button" class="btn btn-default btn-lg" data-dismiss="modal">Close</button>
                         </h4>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <form action="/Medici/BackEnd/appointments.php" method="post" style="display: none">
+    <form action="/Medici/BackEnd/appointments.php" method="post" style="display: none" id="reservation">
         <input type="text" name="user_name" id="id_user" value="<?php echo $id_session?>">
         <input type="text" name="id_doctor" id="id_doctor" value="">
         <input type="text" name="dateAppoiment" id="dateAppoiment" value="">
+        <input type="text" name="timeInterval" id="timeInterval" value="">
     </form>
 </body>
 
@@ -83,17 +83,9 @@
         echo "0 results";
     }
 ?>
-$("#myBtn").click(function(){
-    $("#myModal").modal();
-});
 </script>
 <style>
-.hours{
-    background-color: #2dc996;
-    color: white;
-    cursor: pointer;
+.btn-success{
+    background-color: #2dc996 !important;
 }
-    .btn-success{
-        background-color: #2dc996 !important;
-    }
 </style>

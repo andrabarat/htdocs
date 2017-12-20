@@ -63,7 +63,7 @@ function create(father, id, grade, firstname, lastname, description, jobTitle){
     var titleJob=document.createElement("h5");
     titleJob.className="col-sm-3";
     titleJob.innerHTML="<strong>"+jobTitle+"</strong>";
-    titleJob.style.color="#2dc996";
+    titleJob.style.color="#ff531a";
     
     var buttonContent=document.createElement("div");
     buttonContent.className="col-sm-2";
@@ -96,23 +96,33 @@ function openModal(id, grade, firstname, lastname){
     document.getElementById("id_doctor").value=id;
     document.getElementById("modalHeader").innerHTML=grade+" "+firstname+" "+lastname;
     createCalendar(0);
+    
+    var father=document.getElementById("modalFooter");
+    father.innerHTML="";
+    var button=document.createElement("button");
+    button.setAttribute("type","button");
+    button.className="btn btn-default btn-lg";
+    button.setAttribute("data-dismiss","modal");
+    button.innerHTML="Inchide";
+    
+    father.appendChild(button);
 }
 
 
 function getCurrentMonthText(position) {
     var month = new Array();
-    month[0] = "January";
-    month[1] = "February";
-    month[2] = "March";
-    month[3] = "April";
-    month[4] = "May";
-    month[5] = "June";
-    month[6] = "July";
+    month[0] = "Ianuarie";
+    month[1] = "Februarie";
+    month[2] = "Martie";
+    month[3] = "Aprilie";
+    month[4] = "Mai";
+    month[5] = "Iunie";
+    month[6] = "Iulie";
     month[7] = "August";
-    month[8] = "September";
-    month[9] = "October";
-    month[10] = "November";
-    month[11] = "December";
+    month[8] = "Septembrie";
+    month[9] = "Octombrie";
+    month[10] = "Noiembrie";
+    month[11] = "Decembrie";
 
     var date = new Date();
     var monthText = month[(date.getMonth()+position)%12];
@@ -257,10 +267,18 @@ function createCalendar(position){
             text=i+2-getFirstDayOfMonth(yearPosition, monthPosition);
         }
         day.innerHTML=text;
+        day.setAttribute("onclick","setDateAppoiment('"+text+"', '"+monthPosition+"', '"+yearPosition+"')");
         if(text==getCurrentDay() && monthPosition==getCurrentMonth() && yearPosition==getCurrentYear()){
             day.className="currentDay";
         }
-        day.setAttribute("onclick","setDateAppoiment('"+text+"', '"+monthPosition+"', '"+yearPosition+"')");
+        if(monthPosition<getCurrentMonth() && yearPosition<=getCurrentYear()){
+            day.className="inactiveDays";
+            day.setAttribute("onclick", "alert('Ne pare rau, dar nu puteti face o planificare in trecut.')");
+        }
+        if(text<getCurrentDay() && monthPosition==getCurrentMonth() && yearPosition==getCurrentYear()){
+            day.className="inactiveDays";
+            day.setAttribute("onclick", "alert('Ne pare rau, dar nu puteti face o planificare in trecut.')");
+        }
         daysNumber.appendChild(day);
     }
     
@@ -277,7 +295,7 @@ function getCurrentDay(){
 
 
 function setDateAppoiment(day, month, year){
-    document.getElementById("dateAppoiment").value=day+"-"+month+"-"+year;
+    document.getElementById("dateAppoiment").value=year+"-"+month+"-"+day;
     document.getElementById("modalHeader").innerHTML=day+"-"+month+"-"+year;
     
     var father=document.getElementById("modalBody");
@@ -292,14 +310,26 @@ function setDateAppoiment(day, month, year){
         hours.className="col-sm-2 text-center hours";
         hours.innerHTML=hourFormat(i)+" - "+hourFormat((i+1));
         var line=document.createElement("td");
-        line.className="col-sm-10";
+        line.id=hourFormat(i)+"-"+hourFormat((i+1));
+        line.className="col-sm-10 infoHours";
+        line.setAttribute("onclick","reserveIntervalHours(this.id)");
         row.appendChild(hours);
         row.appendChild(line);
         tbody.appendChild(row);
     }
     table.appendChild(tbody);
     father.appendChild(table);
-
+    
+    var fatherFooter=document.getElementById("modalFooter");
+    var button=document.createElement("button");
+    button.setAttribute("type","button");
+    button.className="btn btn-success btn-lg";
+    button.setAttribute("onclick","submitForm()");
+    button.innerHTML="Trimite programare";
+    
+    fatherFooter.appendChild(button); 
+    
+    getReservedIntervalHours();
 }
 
 function hourFormat(text){
@@ -308,4 +338,58 @@ function hourFormat(text){
         return "0"+text;
     }
     return text;
+}
+
+function reserveIntervalHours(elem){
+    var type=document.getElementById(elem).className;
+    if(type.indexOf("hoursSelected")>0){
+        document.getElementById(elem).className="col-sm-10 infoHours";
+    } else {
+        var allClasses=document.querySelectorAll(".hoursSelected");
+        if(allClasses.length>0){
+            alert('Nu va este permis mai mult de o singura rezervare intr-o zi la acest doctor.');
+        } else {
+            document.getElementById(elem).className+=" hoursSelected text-center";
+            document.getElementById(elem).innerHTML+="Text";
+            document.getElementById(elem).style.color="white";
+        }
+    }
+}
+
+function getReservedIntervalHours(){
+    var id_doctor=document.getElementById("id_doctor").value;
+    var dateAppoiment=document.getElementById("dateAppoiment").value;
+    //alert(id_doctor+" "+dateAppoiment);
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange=function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var response=this.responseText;
+            setTimeout(function(){ reservedIntervalHours(response); }, 100);
+            
+        }
+    };
+    xhttp.open("GET", "BackEnd/getReservations.php?id_doctor="+id_doctor+"&dateAppoiment="+dateAppoiment, true);
+    xhttp.send();   
+    
+}
+
+function reservedIntervalHours(intervalHours){
+    intervalHours = intervalHours.split(", ");
+    for(var i=0; i<intervalHours.length; i++){
+        document.getElementById(intervalHours[i]).className+=" reserved text-center";
+        document.getElementById(intervalHours[i]).innerHTML+="Ocupat";
+        document.getElementById(intervalHours[i]).style.color+="white";
+        document.getElementById(intervalHours[i]).setAttribute("onclick","");
+    }
+}
+
+function submitForm(){
+    var allClasses=document.querySelectorAll(".hoursSelected");
+    
+    if(allClasses.length==1){
+        document.getElementById("timeInterval").value=allClasses[0].id;
+        document.getElementById("reservation").submit();
+    }else{
+        alert("Pentru a face o rezervare, te rugam selecteaza un interval orar.");
+    }
 }

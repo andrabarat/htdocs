@@ -90,10 +90,51 @@ body {
     color: white !important
 }
 
+.inactiveDays{
+    color:grey !important;
+    cursor: not-allowed !important;
+}
+
 .doctors{
     margin-top: 10%
 }
 
 .currentDay{
     border: 2px solid black;
+}
+
+.hours{
+    background-color: #2dc996;
+    color: white;
+    cursor: default;
+}
+
+.infoHours{
+    background-color: #eff5f5;
+    cursor: pointer;
+}
+
+.infoHours:hover{
+    background-color: #ffb399;
+    cursor: pointer;
+}
+
+.hoursSelected{
+    background-color: #ff531a;
+    cursor: pointer;
+}
+
+.hoursSelected:hover{
+    background-color: #ff531a;
+    cursor: pointer;
+}
+
+.reserved {
+    background-color: #ff4d4d;
+    cursor: not-allowed;
+}
+
+.reserved:hover {
+    background-color: #ff4d4d;
+    cursor: not-allowed;
 }

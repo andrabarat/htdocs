@@ -31,7 +31,7 @@
             <nav id="nav-menu-container">
                 <ul class="nav-menu">
                     <!--li class="!menu-active"><a href="#hero">Acasa</a></li-->
-                    <li><a href="/Medici/Doctors.php">Medici</a></li>
+                    <li><a href="/Medici/Doctori.php">Medici</a></li>
                     <li class="menu-has-children"><a href="">Informatii</a>
                          <ul>
                              <li><a href="#about">Despre noi</a></li>
@@ -94,7 +94,7 @@
                         <p class="cta-text"> Fii sigur ca duci o viata sanatoasa. Noi te ajutam sa afli la ce ai putea sa fii predispus. Completeaza formularul apasand butonul din dreapta.</p>
                     </div>
                     <div class="col-lg-3 cta-btn-container text-center">
-                        <a class="cta-btn align-middle" href="#">Click aici</a>
+                        <a class="cta-btn align-middle" href="/Exercitiu/Test.php">Click aici</a>
                     </div>
                 </div>
             </div>

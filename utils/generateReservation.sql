@@ -1,0 +1,6 @@
+INSERT INTO `reservations` (`id_reservation`, `id_user`, `id_doctor`, `start_reservation`, `time_interval`, `creation_date`) VALUES ('1', '1', '1', '2017-12-20 10:00:00', '10-11', '2017-12-19 12:00:00');
+INSERT INTO `reservations` (`id_reservation`, `id_user`, `id_doctor`, `start_reservation`, `time_interval`, `creation_date`) VALUES ('2', '2', '1', '2017-12-20 11:00:00', '11-12', '2017-12-19 12:00:00');
+INSERT INTO `reservations` (`id_reservation`, `id_user`, `id_doctor`, `start_reservation`, `time_interval`, `creation_date`) VALUES ('3', '3', '1', '2017-12-20 14:00:00', '14-15', '2017-12-19 12:00:00');
+INSERT INTO `reservations` (`id_reservation`, `id_user`, `id_doctor`, `start_reservation`, `time_interval`, `creation_date`) VALUES ('4', '4', '1', '2017-12-20 19:00:00', '19-20', '2017-12-19 12:00:00');
+INSERT INTO `reservations` (`id_reservation`, `id_user`, `id_doctor`, `start_reservation`, `time_interval`, `creation_date`) VALUES ('5', '4', '2', '2017-12-20 19:00:00', '19-20', '2017-12-19 12:00:00');
+INSERT INTO `reservations` (`id_reservation`, `id_user`, `id_doctor`, `start_reservation`, `time_interval`, `creation_date`) VALUES ('6', '3', '2', '2017-12-20 14:00:00', '14-15', '2017-12-19 12:00:00');
