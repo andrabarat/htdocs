@@ -42,7 +42,13 @@
                          </ul>
                     </li>
                     <?php if($login_session!='') { ?>
-                    <li class="menu-has-children"><a href="/Account/MyProfile.php"><?php echo $login_session; ?></a>
+                    <li class="menu-has-children"><a href="#"><?php echo $login_session; ?></a>
+                        <ul>
+                            <li><a href="#">Editeaza profil</a></li>
+                            <li><a href="#">Programarile mele</a></li>
+                            <li><a href="/Account/MyProfile.php">Iesire din cont</a></li>
+                        </ul>
+                    </li>
                     <?php } else { ?>
                     <li class="menu-has-children"><a href="/Account/Login.php">Login</a>
                     <?php } ?>
@@ -94,7 +100,12 @@
                         <p class="cta-text"> Fii sigur ca duci o viata sanatoasa. Noi te ajutam sa afli la ce ai putea sa fii predispus. Completeaza formularul apasand butonul din dreapta.</p>
                     </div>
                     <div class="col-lg-3 cta-btn-container text-center">
-                        <a class="cta-btn align-middle" href="/Exercitiu/Test.php">Click aici</a>
+                        <div class="row">
+                            <a class="cta-btn align-middle col-sm-5" href="/Predictii/TestAritmie.php">Test Aritmie</a>
+                            <a class="cta-btn align-middle col-sm-5" href="/Predictii/Test2.php">Test 2</a>
+                            <a class="cta-btn align-middle col-sm-5" href="/Predictii/Test3.php">Test 3</a>
+                            <a class="cta-btn align-middle col-sm-5" href="/Predictii/Test4.php">Test 4</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -108,15 +119,15 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
                         <div class="box">
-                            <div class="icon"><a href=""><i class="fa fa-user-md"></i></a></div>
+                            <div class="icon"><a href="Medici/Doctori.php"><i class="fa fa-user-md"></i></a></div>
                             <h4 class="title"><a href="">Medici</a></h4>
                             <p class="description">Echipa noastră de medici este sufletul Reţelei private de sănătate REGNA.</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
                         <div class="box">
-                            <div class="icon"><a href=""><i class="fa fa-h-square"></i></a></div>
-                            <h4 class="title"><a href="">Spitale si policlinici</a></h4>
+                            <div class="icon"><a href="Servicii/Spitale.php"><i class="fa fa-h-square"></i></a></div>
+                            <h4 class="title"><a href="Servicii/Spitale.php">Spitale si policlinici</a></h4>
                             <p class="description">Suntem mereu aproape de pacientii nostri, prin intermediul celor 36 de policlinici, 4 spitale, 8 Campusuri si 180 de clinici partenere in toată tara.</p>
                         </div>
                     </div>

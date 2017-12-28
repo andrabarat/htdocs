@@ -34,6 +34,14 @@ h1, h2, h3, h4 {
   font-weight: 500;
 }
 
+.question {
+    padding-top: 20;
+}
+
+.checkButtons{
+    padding-bottom: 20;
+}
+
 .project-name {
   text-align: center;
   padding: 10px 0;

@@ -344,13 +344,14 @@ function reserveIntervalHours(elem){
     var type=document.getElementById(elem).className;
     if(type.indexOf("hoursSelected")>0){
         document.getElementById(elem).className="col-sm-10 infoHours";
+        document.getElementById(elem).innerHTML="";
     } else {
         var allClasses=document.querySelectorAll(".hoursSelected");
         if(allClasses.length>0){
             alert('Nu va este permis mai mult de o singura rezervare intr-o zi la acest doctor.');
         } else {
             document.getElementById(elem).className+=" hoursSelected text-center";
-            document.getElementById(elem).innerHTML+="Text";
+            document.getElementById(elem).innerHTML="Text";
             document.getElementById(elem).style.color="white";
         }
     }

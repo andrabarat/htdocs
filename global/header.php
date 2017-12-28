@@ -20,7 +20,13 @@
                 <ul class="nav-menu">
                     <li><a href="/Medici/Doctori.php">Medici</a></li>
                     <?php if($login_session!='') {?>
-                    <li class="!menu-active"><a href="/Account/MyProfile.php"><?php echo $_SESSION["usernameLogin"];?></a></li>
+                    <li class="!menu-active menu-has-children"><a href="#"><?php echo $_SESSION["usernameLogin"];?></a>
+                        <ul>
+                            <li><a href="#">Editeaza profil</a></li>
+                            <li><a href="#">Programarile mele</a></li>
+                            <li><a href="/Account/MyProfile.php">Iesire din cont</a></li>
+                        </ul>
+                    </li>
                     <?php } else {?>
                     <li class="!menu-active"><a href="/Account/Login.php">Login</a></li>
                     <?php } ?>
