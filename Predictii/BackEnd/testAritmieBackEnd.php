@@ -9,7 +9,7 @@
     $puls=$_POST["optionsPuls"];
     $ekg=$_POST["optionsEKG"];
 
-    echo $puls." ".$ekg." ".$age." ".$diabetes." ".$gender;
+    //echo $puls." ".$ekg." ".$age." ".$diabetes." ".$gender;
 
     $list = array (
         array('Sex', 'Peste50', 'Diabetic', 'Puls', 'EKG'),
@@ -24,7 +24,9 @@
 
     fclose($fp);
     $dec_tree = new DecisionTree('data.csv', 0);
-    $dec_tree->predict_outcome('input_data.csv');
+    $result="";
+    $result=$dec_tree->predict_outcome('input_data.csv');
+    echo $result;
     exit();
 
 ?>

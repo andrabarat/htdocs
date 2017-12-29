@@ -56,7 +56,8 @@ class DecisionTree extends Tree {
 			$row['result'] = $this->predict($this->root, $row);	
 			$data[$k] = $row;
 		}
-		echo "\n";
+		//echo "\n";
+        return $row['result'];
 		//print_r($data);
 	}
 	
@@ -64,7 +65,7 @@ class DecisionTree extends Tree {
 		//we have reached a leaf node
 		if ( !count($node->namedBranches) ) {
 			//print_r("\nReturning " . $node->value);
-			print_r($node->value);
+			//print_r($node->value);
 			return $node->value;
 		}
 		if ( array_key_exists($node->value, $data_row) ) {

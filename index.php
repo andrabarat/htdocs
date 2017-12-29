@@ -101,10 +101,17 @@
                     </div>
                     <div class="col-lg-3 cta-btn-container text-center">
                         <div class="row">
+                            <?php if($login_session!='') { ?>
                             <a class="cta-btn align-middle col-sm-5" href="/Predictii/TestAritmie.php">Test Aritmie</a>
                             <a class="cta-btn align-middle col-sm-5" href="/Predictii/Test2.php">Test 2</a>
                             <a class="cta-btn align-middle col-sm-5" href="/Predictii/Test3.php">Test 3</a>
                             <a class="cta-btn align-middle col-sm-5" href="/Predictii/Test4.php">Test 4</a>
+                            <?php } else { ?>
+                            <a class="cta-btn align-middle col-sm-5" href="/Account/Login.php">Test Aritmie</a>
+                            <a class="cta-btn align-middle col-sm-5" href="/Account/Login.php">Test 2</a>
+                            <a class="cta-btn align-middle col-sm-5" href="/Account/Login.php">Test 3</a>
+                            <a class="cta-btn align-middle col-sm-5" href="/Account/Login.php">Test 4</a>
+                            <?php } ?>
                         </div>
                     </div>
                 </div>
@@ -120,7 +127,7 @@
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
                         <div class="box">
                             <div class="icon"><a href="Medici/Doctori.php"><i class="fa fa-user-md"></i></a></div>
-                            <h4 class="title"><a href="">Medici</a></h4>
+                            <h4 class="title"><a href="Medici/Doctori.php">Medici</a></h4>
                             <p class="description">Echipa noastră de medici este sufletul Reţelei private de sănătate REGNA.</p>
                         </div>
                     </div>
@@ -133,29 +140,29 @@
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
                         <div class="box">
-                            <div class="icon"><a href=""><i class="fa fa-hospital-o"></i></a></div>
-                            <h4 class="title"><a href="">Laboratoare</a></h4>
+                            <div class="icon"><a href="Servicii/Laboratoare.php"><i class="fa fa-hospital-o"></i></a></div>
+                            <h4 class="title"><a href="Servicii/Laboratoare.php">Laboratoare</a></h4>
                             <p class="description">Laboratorul Central REGNA are eticheta Roche Diagnostic pentru linia de biochimie si imunologie si e un reper tehnologic pentru sistemul medical romanesc.</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
                         <div class="box">
-                            <div class="icon"><a href=""><i class="fa fa-heartbeat"></i></a></div>
-                            <h4 class="title"><a href="">Imagistica</a></h4>
+                            <div class="icon"><a href="Servicii/Imagistica.php"><i class="fa fa-heartbeat"></i></a></div>
+                            <h4 class="title"><a href="Servicii/Imagistica.php">Imagistica</a></h4>
                             <p class="description">Acuratetea unui diagnostic este de o importanta cruciala in tratarea cu succes a cazurilor medicale cu care medicii se confrunta zilnic.</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
                         <div class="box">
-                            <div class="icon"><a href=""><i class="fa fa-medkit"></i></a></div>
-                            <h4 class="title"><a href="">Abonamente si pachete</a></h4>
+                            <div class="icon"><a href="Servicii/Abonamente.php"><i class="fa fa-medkit"></i></a></div>
+                            <h4 class="title"><a href="Servicii/Abonamente.php">Abonamente si pachete</a></h4>
                             <p class="description">Asigură-te că ai mereu acces la cele mai bune servicii medicale, contra unei sume avantajoase. </p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
                         <div class="box">
-                            <div class="icon"><a href=""><i class="fa fa-ambulance"></i></a></div>
-                            <h4 class="title"><a href="">Maternitati</a></h4>
+                            <div class="icon"><a href="Servicii/Maternitati.php"><i class="fa fa-ambulance"></i></a></div>
+                            <h4 class="title"><a href="Servicii/Maternitati.php">Maternitati</a></h4>
                             <p class="description">Nasterea unui copil este cel mai emotionant si memorabil moment din viata unei mamici.</p>
                         </div>
                     </div>
