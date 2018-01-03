@@ -94,8 +94,8 @@ function create(father, id, grade, firstname, lastname, description, jobTitle){
 
 function openModal(id, grade, firstname, lastname){
     
-    var currentYearGlobal=getCurrentYear();
-    var currentMonthGlobal=getCurrentMonth();
+    currentYearGlobal=getCurrentYear();
+    currentMonthGlobal=getCurrentMonth();
     
     document.getElementById("id_doctor").value=id;
     document.getElementById("modalHeader").innerHTML=grade+" "+firstname+" "+lastname;
@@ -304,7 +304,7 @@ function getCurrentDay(){
 
 function setDateAppoiment(day, month, year){
     document.getElementById("dateAppoiment").value=year+"-"+month+"-"+day;
-    document.getElementById("modalHeader").innerHTML=day+"-"+month+"-"+year;
+    document.getElementById("modalHeader").innerHTML=decimalFormat(day)+"-"+decimalFormat(month)+"-"+year;
     
     var father=document.getElementById("modalBody");
     father.innerHTML='';
@@ -316,9 +316,9 @@ function setDateAppoiment(day, month, year){
         row.className="row";
         var hours=document.createElement("td");
         hours.className="col-sm-2 text-center hours";
-        hours.innerHTML=hourFormat(i)+" - "+hourFormat((i+1));
+        hours.innerHTML=decimalFormat(i)+" - "+decimalFormat((i+1));
         var line=document.createElement("td");
-        line.id=hourFormat(i)+"-"+hourFormat((i+1));
+        line.id=decimalFormat(i)+"-"+decimalFormat((i+1));
         line.className="col-sm-10 infoHours";
         line.setAttribute("onclick","reserveIntervalHours(this.id)");
         row.appendChild(hours);
@@ -340,7 +340,7 @@ function setDateAppoiment(day, month, year){
     getReservedIntervalHours();
 }
 
-function hourFormat(text){
+function decimalFormat(text){
     text=text+"";
     if(text.length==1){
         return "0"+text;
@@ -377,10 +377,18 @@ function getReservedIntervalHours(){
             
         }
     };
+    var date=dateAppoiment.split("-");
+    var year=date[0];
+    var month=decimalFormat(date[1]);
+    var day=decimalFormat(date[2]);
+    var dateAppoiment=year+"-"+month+"-"+day;
+    console.info(dateAppoiment);
     xhttp.open("GET", "BackEnd/getReservations.php?id_doctor="+id_doctor+"&dateAppoiment="+dateAppoiment, true);
     xhttp.send();   
     
 }
+
+
 
 function reservedIntervalHours(intervalHours){
     intervalHours = intervalHours.split(", ");
