@@ -11,6 +11,9 @@
             $id_session=$row["id_user"];
         }
     }
+    if($id_session==0){
+        $id_session="";
+    }
 ?>
 <html lang="en">
 
@@ -61,7 +64,7 @@
         </div>
     </div>
     <form action="/Medici/BackEnd/appointments.php" method="post" style="display: none" id="reservation">
-        <input type="text" name="user_name" id="id_user" value="<?php echo $id_session?>">
+        <input type="text" name="user_name" id="id_user" value="<?php echo $id_session?>" required>
         <input type="text" name="id_doctor" id="id_doctor" value="">
         <input type="text" name="dateAppoiment" id="dateAppoiment" value="">
         <input type="text" name="timeInterval" id="timeInterval" value="">

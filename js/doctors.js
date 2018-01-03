@@ -382,7 +382,6 @@ function getReservedIntervalHours(){
     var month=decimalFormat(date[1]);
     var day=decimalFormat(date[2]);
     var dateAppoiment=year+"-"+month+"-"+day;
-    console.info(dateAppoiment);
     xhttp.open("GET", "BackEnd/getReservations.php?id_doctor="+id_doctor+"&dateAppoiment="+dateAppoiment, true);
     xhttp.send();   
     
@@ -391,12 +390,14 @@ function getReservedIntervalHours(){
 
 
 function reservedIntervalHours(intervalHours){
-    intervalHours = intervalHours.split(", ");
-    for(var i=0; i<intervalHours.length; i++){
-        document.getElementById(intervalHours[i]).className+=" reserved text-center";
-        document.getElementById(intervalHours[i]).innerHTML+="Ocupat";
-        document.getElementById(intervalHours[i]).style.color+="white";
-        document.getElementById(intervalHours[i]).setAttribute("onclick","");
+    if(intervalHours!=""){
+        intervalHours = intervalHours.split(", ");
+        for(var i=0; i<intervalHours.length; i++){
+            document.getElementById(intervalHours[i]).className+=" reserved text-center";
+            document.getElementById(intervalHours[i]).innerHTML+="Ocupat";
+            document.getElementById(intervalHours[i]).style.color+="white";
+            document.getElementById(intervalHours[i]).setAttribute("onclick","");
+        }
     }
 }
 
@@ -405,7 +406,12 @@ function submitForm(){
     
     if(allClasses.length==1){
         document.getElementById("timeInterval").value=allClasses[0].id;
-        document.getElementById("reservation").submit();
+        
+        if(document.getElementById("id_user").value==""){
+            alert("Logheaza-te intai te rog.")
+        } else {        
+            document.getElementById("reservation").submit();
+        }
     }else{
         alert("Pentru a face o rezervare, te rugam selecteaza un interval orar.");
     }

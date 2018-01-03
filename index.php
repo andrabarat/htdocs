@@ -18,20 +18,29 @@
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
-
 <body>
     <header id="header">
         <div class="container">
             <div id="logo" class="pull-left">
                 <a href="#hero"><img src="img/logo.png" alt="" title="" >
                 </a>
-                <!-- Uncomment below if you prefer to use a text logo -->
                 <!--<h1><a href="#hero">Regna</a></h1>-->
             </div>
             <nav id="nav-menu-container">
                 <ul class="nav-menu">
                     <!--li class="!menu-active"><a href="#hero">Acasa</a></li-->
-                    <li><a href="/Medici/Doctori.php">Medici</a></li>
+                    <li><a href="#" style="font-size: 17px"><i class="fa fa-phone-square"></i> 0232 . 905</a></li>
+                    <li data-toggle="modal" data-target="#appoimentsModal" onclick="createAppoimentModal()"><a href="#" style="font-size: 15px"><i class="fa fa-calendar"></i> Programare online</a></li>
+                    <li class="menu-has-children"><a href="">Servicii</a>
+                         <ul>
+                             <li><a href="/Medici/Doctori.php">Medici</a></li>
+                             <li><a href="/Servicii/Spitale.php">Spitale si policlinici</a></li>
+                             <li><a href="/Servicii/Laboratoare.php">Laboratoare</a></li>
+                             <li><a href="/Servicii/Imagistica.php">Imagistica</a></li>
+                             <li><a href="/Servicii/Maternitati.php">Maternitati</a></li>
+                             <li><a href="/Servicii/Abonamente.php">Abonamente si pachete</a></li>
+                         </ul>
+                    </li>
                     <li class="menu-has-children"><a href="">Informatii</a>
                          <ul>
                              <li><a href="#about">Despre noi</a></li>
@@ -64,9 +73,6 @@
         </div>
     </section>
     <main id="main">
-        <!--==========================
-            About Us Section
-            ============================-->
         <section id="about">
             <div class="container">
                 <div class="row about-container">
@@ -116,7 +122,7 @@
                     </div>
                 </div>
             </div>
-        </section>s
+        </section>
         <section id="services">
             <div class="container wow fadeIn">
                 <div class="section-header">
@@ -439,6 +445,8 @@
     <script src="lib/superfish/superfish.min.js"></script>
     <script src="contactform/contactform.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.12/jquery.mask.min.js"></script>
 </body>
 
 </html>

@@ -18,7 +18,18 @@
 
             <nav id="nav-menu-container">
                 <ul class="nav-menu">
-                    <li><a href="/Medici/Doctori.php">Medici</a></li>
+                    <li><a href="#" style="font-size: 17px"><i class="fa fa-phone-square"></i> 0232 . 905</a></li>
+                    <li data-toggle="modal" data-target="#appoimentsModal" onclick="createAppoimentModal()"><a href="#" style="font-size: 15px"><i class="fa fa-calendar"></i> Programare online</a></li>
+                    <li class="menu-has-children"><a href="">Servicii</a>
+                         <ul>
+                             <li><a href="/Medici/Doctori.php">Medici</a></li>
+                             <li><a href="/Servicii/Spitale.php">Spitale si policlinici</a></li>
+                             <li><a href="/Servicii/Laboratoare.php">Laboratoare</a></li>
+                             <li><a href="/Servicii/Imagistica.php">Imagistica</a></li>
+                             <li><a href="/Servicii/Maternitati.php">Maternitati</a></li>
+                             <li><a href="/Servicii/Abonamente.php">Abonamente si pachete</a></li>
+                         </ul>
+                    </li>
                     <?php if($login_session!='') {?>
                     <li class="!menu-active menu-has-children"><a href="#"><?php echo $_SESSION["usernameLogin"];?></a>
                         <ul>
@@ -104,6 +115,8 @@ Header
 <script src="/lib/counterup/counterup.min.js"></script>
 <script src="/lib/superfish/hoverIntent.js"></script>
 <script src="/lib/superfish/superfish.min.js"></script>
+<script src="/js/index.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.12/jquery.mask.min.js"></script>
 <!-- Contact Form JavaScript File -->
 <!-- Template Main Javascript File -->
 <script src="/js/main.js"></script>
