@@ -93,6 +93,10 @@ function create(father, id, grade, firstname, lastname, description, jobTitle){
 }
 
 function openModal(id, grade, firstname, lastname){
+    
+    var currentYearGlobal=getCurrentYear();
+    var currentMonthGlobal=getCurrentMonth();
+    
     document.getElementById("id_doctor").value=id;
     document.getElementById("modalHeader").innerHTML=grade+" "+firstname+" "+lastname;
     createCalendar(0);
@@ -125,7 +129,7 @@ function getCurrentMonthText(position) {
     month[11] = "Decembrie";
 
     var date = new Date();
-    var monthText = month[(date.getMonth()+position)%12];
+    var monthText = month[(date.getMonth()+position-1)%12];
     return monthText;
 }
     
@@ -272,6 +276,10 @@ function createCalendar(position){
             day.className="currentDay";
         }
         if(monthPosition<getCurrentMonth() && yearPosition<=getCurrentYear()){
+            day.className="inactiveDays";
+            day.setAttribute("onclick", "alert('Ne pare rau, dar nu puteti face o planificare in trecut.')");
+        }
+        if(monthPosition>getCurrentMonth() && yearPosition<getCurrentYear()){
             day.className="inactiveDays";
             day.setAttribute("onclick", "alert('Ne pare rau, dar nu puteti face o planificare in trecut.')");
         }
