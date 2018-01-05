@@ -53,9 +53,8 @@
                     <?php if($login_session!='') { ?>
                     <li class="menu-has-children"><a href="#"><?php echo $login_session; ?></a>
                         <ul>
-                            <li><a href="#">Editeaza profil</a></li>
-                            <li><a href="#">Programarile mele</a></li>
-                            <li><a href="/Account/MyProfile.php">Iesire din cont</a></li>
+                            <li><a href="/Account/Profil.php">Profilul meu</a></li>
+                            <li><form action="/Account/BackEnd/logout.php" action="post"><a href="/Account/BackEnd/logout.php">Iesire din cont</a></form></li>
                         </ul>
                     </li>
                     <?php } else { ?>
@@ -301,68 +300,6 @@
                                 <span>Protectia solara la copii</span>
                             </div>
                         </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="team">
-            <div class="container wow fadeInUp">
-                <div class="section-header">
-                    <h3 class="section-title">Echipa noastra</h3>
-                    <p class="section-description">Echipa noastră de medici este sufletul Reţelei private de sănătate REGNA</p>
-                </div>
-                <div class="row">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="member">
-                            <div class="pic"><img src="image/doc1.png" alt=""></div>
-                            <h4>Ioan Popescu</h4>
-                            <span>Doctor general</span>
-                            <div class="social">
-                                <a href=""><i class="fa fa-twitter"></i></a>
-                                <a href=""><i class="fa fa-facebook"></i></a>
-                                <a href=""><i class="fa fa-google-plus"></i></a>
-                                <a href=""><i class="fa fa-linkedin"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="member">
-                            <div class="pic"><img src="image/doc2.png" alt=""></div>
-                            <h4>Marian Dumitrescu</h4>
-                            <span>Medic de famielie</span>
-                            <div class="social">
-                                <a href=""><i class="fa fa-twitter"></i></a>
-                                <a href=""><i class="fa fa-facebook"></i></a>
-                                <a href=""><i class="fa fa-google-plus"></i></a>
-                                <a href=""><i class="fa fa-linkedin"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="member">
-                            <div class="pic"><img src="image/doc3.jpg" alt=""></div>
-                            <h4>Sebastian Ciobanu</h4>
-                            <span>Medic cardiolog</span>
-                            <div class="social">
-                                <a href=""><i class="fa fa-twitter"></i></a>
-                                <a href=""><i class="fa fa-facebook"></i></a>
-                                <a href=""><i class="fa fa-google-plus"></i></a>
-                                <a href=""><i class="fa fa-linkedin"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="member">
-                            <div class="pic"><img src="image/doc4.jpg" alt=""></div>
-                            <h4>Alina Manolache</h4>
-                            <span>Medic general</span>
-                            <div class="social">
-                                <a href=""><i class="fa fa-twitter"></i></a>
-                                <a href=""><i class="fa fa-facebook"></i></a>
-                                <a href=""><i class="fa fa-google-plus"></i></a>
-                                <a href=""><i class="fa fa-linkedin"></i></a>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>

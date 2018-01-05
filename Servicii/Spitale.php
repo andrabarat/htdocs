@@ -37,7 +37,7 @@
             <div class="box">
                 <div class="icon"><div><i class="fa fa-h-square"></i></div></div>
                 <h4 class="title"><div>3 CENTRE</div></h4>
-                <p class="description">Aceste centre ofera spitalizare dezi.</p>
+                <p class="description">Aceste centre ofera spitalizare de zi.</p>
             </div>
         </div>
         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">

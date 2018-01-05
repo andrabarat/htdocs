@@ -33,9 +33,8 @@
                     <?php if($login_session!='') {?>
                     <li class="!menu-active menu-has-children"><a href="#"><?php echo $_SESSION["usernameLogin"];?></a>
                         <ul>
-                            <li><a href="#">Editeaza profil</a></li>
-                            <li><a href="#">Programarile mele</a></li>
-                            <li><a href="/Account/MyProfile.php">Iesire din cont</a></li>
+                            <li><a href="/Account/Profil.php">Profilul meu</a></li>
+                            <li><form action="/Account/BackEnd/logout.php" action="post"><a href="/Account/BackEnd/logout.php">Iesire din cont</a></form></li>
                         </ul>
                     </li>
                     <?php } else {?>
