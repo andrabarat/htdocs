@@ -83,7 +83,7 @@ function createAppoimentModal(){
     modalBodyPhoneLabel.innerHTML="Telefon: <strong style='color:red'>*</strong>";
     var modalBodyPhoneInput=document.createElement("input"); 
     modalBodyPhoneInput.className="form-control phone";
-    modalBodyPhoneInput.id="inputSurname";
+    modalBodyPhoneInput.id="inputPhone";
     modalBodyPhoneInput.type="text";
     
     modalBodyPhone.appendChild(modalBodyPhoneLabel);
@@ -98,10 +98,10 @@ function createAppoimentModal(){
     var modalFooter=document.createElement("div");
     modalFooter.className="modal-footer";
     var modalFooterButton=document.createElement("button");
-    modalFooterButton.type="button";
-    modalFooterButton.className="btn btn-default";
-    modalFooterButton.setAttribute("data-dismiss", "modal");
-    modalFooterButton.innerHTML="Close";
+    modalFooterButton.setAttribute("type","button");
+    modalFooterButton.className="btn btn-success btn-lg";
+    modalFooterButton.setAttribute("onclick","submitFormReservation()");
+    modalFooterButton.innerHTML="Trimite programare";
         
     modalFooter.appendChild(modalFooterButton);
     
@@ -113,4 +113,26 @@ function createAppoimentModal(){
     modal.appendChild(modalDialog);
     
     document.getElementsByTagName("body")[0].appendChild(modal);
+}
+
+function submitFormReservation(){
+    
+    var job_title=document.getElementById("inputSpecialitate").value;
+    var last_name=document.getElementById("inputName").value;
+    var first_name=document.getElementById("inputSurname").value;
+    var phone=document.getElementById("inputPhone").value;
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange=function() {
+        if (this.readyState == 4 && this.status == 200) {
+            $("#appoimentsModal").modal('hide');
+            var response=this.responseText;
+            alert(response);
+            document.getElementById("inputSpecialitate").value="ALL";
+            document.getElementById("inputName").value="";
+            document.getElementById("inputSurname").value="";
+            document.getElementById("inputPhone").value="";
+        }
+    };
+    xhttp.open("GET", "/Medici/BackEnd/quickReservations.php?job_title="+job_title+"&last_name="+last_name+"&first_name="+first_name+"&phone="+phone, true);
+    xhttp.send(); 
 }

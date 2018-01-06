@@ -408,7 +408,7 @@ function submitForm(){
         document.getElementById("timeInterval").value=allClasses[0].id;
         
         if(document.getElementById("id_user").value==""){
-            alert("Logheaza-te intai te rog.")
+            alert("Pentru a face o programare trebuie sa te autentifici.")
         } else {        
             document.getElementById("reservation").submit();
         }

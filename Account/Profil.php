@@ -19,26 +19,25 @@
     
     
 <div class="row call-to-action">
-    <div class="container size text-center">    
+    <div class="container size">    
       <div class="row">
         <div class="col-sm-5 well">
           <div class="well">
-            <p><a href="#">My Profile</a></p>
+              <h3><a href="#"><strong>Profilul meu</strong></a></h3>
+              <h4><strong>Nume: </strong></h4>
+              <h4><strong>Prenume: </strong></h4>
+              <h4><strong>Nr. telefon: </strong></h4>
+              <h4><strong>Email: </strong></h4>
           </div>
           <div class="well">
-            <p><a href="#">Interests</a></p>
               <button type="button" class="btn btn-primary btn-lg btn-block">Schimba parola</button>
-          </div>
-          <div class="alert alert-success fade in">
-            <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
-            <p><strong>Ey!</strong></p>
-            People are looking at your profile. Find out who.
           </div>
         </div>
         <div class="col-sm-7">
           <div class="row">
             <div class="col-sm-12">
               <div class="well">
+                  <h3><a href="#"><strong>Programarile mele</strong></a></h3>
                 <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
               </div>
             </div>
@@ -46,24 +45,11 @@
           <div class="row">
             <div class="col-sm-12">
               <div class="well">
+                  <h3><a href="#"><strong>Abonamentele mele</strong></a></h3>
                 <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
               </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-12">
-              <div class="well">
-                <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-12">
-              <div class="well">
-                <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
-              </div>
-            </div>
-          </div>     
+          </div>    
         </div>
       </div>
     </div>

@@ -4,7 +4,7 @@ CREATE TABLE `users` (
     `last_name` varchar(50) NOT NULL,
     `cnp` varchar(13) NOT NULL,
     `user_name` varchar(50) NOT NULL,
-    `phone_number` varchar(10) NOT NULL,
+    `phone_number` varchar(13) NOT NULL,
     `email` varchar(50) NOT NULL,
     `password` varchar(250) NOT NULL,
     PRIMARY KEY (`id_user`)
