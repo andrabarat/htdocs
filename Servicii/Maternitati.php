@@ -27,21 +27,21 @@ De aceea, ne-am pregatit cu dotari la standarde internationale si o echipa de me
     
     
     <div class="row margin">
-        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+        <div class="col-lg-4 col-md-6" data-wow-delay="0.2s">
             <div class="box">
                 <div class="icon"><div><i class="fa fa-hospital-o"></i></div></div>
                 <h4 class="title"><div>UNIC</div></h4>
                 <p class="description">Singurul centru fetal din Romania</p>
             </div>
         </div>
-        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+        <div class="col-lg-4 col-md-6" data-wow-delay="0.4s">
             <div class="box">
                 <div class="icon"><div><i class="fa fa-h-square"></i></div></div>
                 <h4 class="title"><div>PRIMUL</div></h4>
                 <p class="description">Spital din Romania acreditat JCI</p>
             </div>
         </div>
-        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+        <div class="col-lg-4 col-md-6" data-wow-delay="0.6s">
             <div class="box">
                 <div class="icon"><div><i class="fa fa-user-md"></i></div></div>
                 <h4 class="title"><div>SPECIALIZAT</div></h4>
@@ -51,7 +51,7 @@ De aceea, ne-am pregatit cu dotari la standarde internationale si o echipa de me
     </div>
 </div>
     
-    <div class="row call-to-action">
+    <div class="call-to-action">
         <div class="container wow fadeIn">
             <div class="row">
                 <div class="col-lg-12 text-lg-left">

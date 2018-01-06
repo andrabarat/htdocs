@@ -26,21 +26,21 @@
     
     
     <div class="row margin">
-        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+        <div class="col-lg-4 col-md-6" data-wow-delay="0.2s">
             <div class="box">
                 <div class="icon"><div><i class="fa fa-hospital-o"></i></div></div>
                 <h4 class="title"><div>4 SPITALE</div></h4>
                 <p class="description">Spitalele sunt atat pentru adulti cat si pentru copii.</p>
             </div>
         </div>
-        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+        <div class="col-lg-4 col-md-6" data-wow-delay="0.4s">
             <div class="box">
                 <div class="icon"><div><i class="fa fa-h-square"></i></div></div>
                 <h4 class="title"><div>3 CENTRE</div></h4>
                 <p class="description">Aceste centre ofera spitalizare de zi.</p>
             </div>
         </div>
-        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+        <div class="col-lg-4 col-md-6" data-wow-delay="0.6s">
             <div class="box">
                 <div class="icon"><div><i class="fa fa-user-md"></i></div></div>
                 <h4 class="title"><div>100 MEDICI</div></h4>

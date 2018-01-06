@@ -26,42 +26,42 @@
     
     
     <div class="row margin">
-        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+        <div class="col-lg-4 col-md-6" data-wow-delay="0.2s">
             <div class="box">
                 <div class="icon"><div><i class="fa fa-hospital-o"></i></div></div>
                 <h4 class="title"><div>17</div></h4>
                 <p class="description">Ne facem treaba cu grija si atentie in cele 17 laboratoare de analize dotate cu aparaturi performante.</p>
             </div>
         </div>
-        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+        <div class="col-lg-4 col-md-6" data-wow-delay="0.4s">
             <div class="box">
                 <div class="icon"><div><i class="fa fa-h-square"></i></div></div>
                 <h4 class="title"><div>19</div></h4>
                 <p class="description">Avem 19 puncte de recoltare proprii pentru pacientii nostri.</p>
             </div>
         </div>
-        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+        <div class="col-lg-4 col-md-6" data-wow-delay="0.6s">
             <div class="box">
                 <div class="icon"><div><i class="fa fa-stethoscope"></i></div></div>
                 <h4 class="title"><div>900</div></h4>
                 <p class="description">In cadrul policlinicilor si spitalelor putem efectua pana la 900 tipuri de analize.</p>
             </div>
         </div>
-         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+         <div class="col-lg-4 col-md-6" data-wow-delay="0.6s">
             <div class="box">
                 <div class="icon"><div><i class="fa fa-search"></i></div></div>
                 <h4 class="title"><div>5</div></h4>
                 <p class="description">De asemenea avem 5 departamente cu o experienta bogata in medicina de laborator si nu numai.</p>
             </div>
         </div>
-         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+         <div class="col-lg-4 col-md-6" data-wow-delay="0.6s">
             <div class="box">
                 <div class="icon"><div><i class="fa fa-user-md"></i></div></div>
                 <h4 class="title"><div>100</div></h4>
                 <p class="description">Suntem echipa medicala mare, formata din aproximativ 100 medici.</p>
             </div>
         </div>
-         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+         <div class="col-lg-4 col-md-6" data-wow-delay="0.6s">
             <div class="box">
                 <div class="icon"><div><i class="fa fa-medkit"></i></div></div>
                 <h4 class="title"><div>18.000</div></h4>
@@ -71,7 +71,7 @@
     </div>
  </div> 
     
-    <div class="row call-to-action">
+    <div class="call-to-action">
         <div class="container wow fadeIn">
             <div class="row">
                 <div class="col-lg-9 text-lg-left">

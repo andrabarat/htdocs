@@ -26,63 +26,63 @@
     
     
     <div class="row margin">
-        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+        <div class="col-lg-4 col-md-6" data-wow-delay="0.2s">
             <div class="box">
                 <div class="icon"><div><i class="fa fa-birthday-cake"></i></div></div>
                 <h4 class="title"><div>EXPERIENTA</div></h4>
                 <p class="description">cea mai mare expertiza de pe piata, de peste 20 de ani</p>
             </div>
         </div>
-        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+        <div class="col-lg-4 col-md-6" data-wow-delay="0.4s">
             <div class="box">
                 <div class="icon"><div><i class="fa fa-h-square"></i></div></div>
                 <h4 class="title"><div>PERSONALIZARE</div></h4>
                 <p class="description">n functie de profilul companiilor: corporate, IMM, start-up, individuale</p>
             </div>
         </div>
-        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+        <div class="col-lg-4 col-md-6" data-wow-delay="0.6s">
             <div class="box">
                 <div class="icon"><div><i class="fa fa-user-md"></i></div></div>
                 <h4 class="title"><div>CONSULTANTA CUSTOMIZATA</div></h4>
                 <p class="description">Medical Advisor, Patient Care, Account Manager</p>
             </div>
         </div>
-        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+        <div class="col-lg-4 col-md-6" data-wow-delay="0.6s">
             <div class="box">
                 <div class="icon"><div><i class="fa fa-user"></i></div></div>
                 <h4 class="title"><div>PORTAL HR</div></h4>
                 <p class="description">platforma digitala creata pentru specialistii de HR si acces complet digitalizat la fisele de Medicina Muncii</p>
             </div>
         </div>
-        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+        <div class="col-lg-4 col-md-6" data-wow-delay="0.6s">
             <div class="box">
                 <div class="icon"><div><i class="fa fa-group"></i></div></div>
                 <h4 class="title"><div>SISTEM DE FEEDBACK</div></h4>
                 <p class="description">integrat, care monitorizeaza satisfactia pacientilor dupa vizita in clinica</p>
             </div>
         </div>
-        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+        <div class="col-lg-4 col-md-6" data-wow-delay="0.6s">
             <div class="box">
                 <div class="icon"><div><i class="fa fa-tablet"></i></div></div>
                 <h4 class="title"><div>FACILITATI DIGITALE</div></h4>
                 <p class="description">contul Meu, aplicatie de mobil, aplicatie de sarcina</p>
             </div>
         </div>
-        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+        <div class="col-lg-4 col-md-6" data-wow-delay="0.6s">
             <div class="box">
                 <div class="icon"><div><i class="fa fa-heart-o"></i></div></div>
                 <h4 class="title"><div>SISTEM INTEGRAT DE PREVENTIE</div></h4>
                 <p class="description">inclusiv campanii de informare si educatie medicala</p>
             </div>
         </div>
-        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+        <div class="col-lg-4 col-md-6" data-wow-delay="0.6s">
             <div class="box">
                 <div class="icon"><div><i class="fa fa-diamond"></i></div></div>
                 <h4 class="title"><div>RECUNOASTERE INTERNATIONALA</div></h4>
                 <p class="description">prin singurele doua spitale din Romania acreditate international</p>
             </div>
         </div>
-        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+        <div class="col-lg-4 col-md-6" data-wow-delay="0.6s">
             <div class="box">
                 <div class="icon"><div><i class="fa fa-file-text-o"></i></div></div>
                 <h4 class="title"><div>TESTE PREDICTIE</div></h4>
@@ -92,7 +92,7 @@
     </div>
 </div>
     
-    <div class="row call-to-action">
+    <div class="call-to-action">
         <div class="container wow fadeIn">
             <div class="row">
                 <div class="col-lg-12 text-lg-left">
