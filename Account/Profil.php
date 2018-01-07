@@ -41,6 +41,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.12/jquery.mask.min.js"></script>
     <script src="/js/profile.js"></script>
+    <script src="/js/global.js"></script>
 </head>
 <body>
     <div class="call-to-action">

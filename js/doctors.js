@@ -359,7 +359,7 @@ function reserveIntervalHours(elem){
             alert('Nu va este permis mai mult de o singura rezervare intr-o zi la acest doctor.');
         } else {
             document.getElementById(elem).className+=" hoursSelected text-center";
-            document.getElementById(elem).innerHTML="Text";
+            document.getElementById(elem).innerHTML="Pentru a finaliza programarea, apasati pe butonul de trimitere programare.";
             document.getElementById(elem).style.color="white";
         }
     }

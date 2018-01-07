@@ -1,8 +1,8 @@
-var jobTitle=["ALL", "CHIRURGIE GENERALA", "PNEUMOLOGIE", "OBSTETRICA-GINECOLOGIE",  "ORTOPEDIE-SI-TRAUMATOLOGIE"];
+var jobTitle=["ALL", "CHIRURGIE GENERALA", "PNEUMOLOGIE", "OBSTETRICA-GINECOLOGIE",  "ORTOPEDIE-SI-TRAUMATOLOGIE", "UROLOGIE", "GASTROENTEROLOGIE", "DERMATOLOGIE", "NEONATOLOGIE", "PEDIATRIE", "CHIRURGIE TORACICA" ];
 function createAppoimentModal(){
     document.getElementsByTagName("body")[0].style.padding="0";
     var test=document.querySelectorAll(".modal");
-    if(test.length<2){    
+    if(test.length<3){    
         $(document).ready(function(){
             $('.phone').mask('0000-000-000');
         });
@@ -135,6 +135,7 @@ function createAppoimentModal(){
     }
 }
 
+var responseMess="";
 function submitFormReservation(){
     
     var job_title=document.getElementById("inputSpecialitate").value;
@@ -148,8 +149,9 @@ function submitFormReservation(){
         xhttp.onreadystatechange=function() {
             if (this.readyState == 4 && this.status == 200) {
                 //$("#appoimentsModal").modal('hide');
-                var response=this.responseText;
-                alert(response);
+                responseMess=this.responseText;
+                statusResponse(responseMess);
+                $("#ModalResponse").modal('show');
                 document.getElementById("inputSpecialitate").value="ALL";
                 document.getElementById("inputName").value="";
                 document.getElementById("inputSurname").value="";

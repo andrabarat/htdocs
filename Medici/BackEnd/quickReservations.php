@@ -25,8 +25,8 @@
     }
     $sql = "INSERT INTO quickreservations (id_quick_reservation, job_title_reservation, last_name_reservation, first_name_reservation, phone_reservation, creation_reservation_quick) VALUES (".$id_quick_reservation.", '".$job_title."', '".$last_name."', '".$first_name."',  '".$phone."', '".$creation_reservation_quick."')";
     if ($conn->query($sql) === TRUE) {
-        echo "Your reservation has successful.";
+        echo "Rezervarea ta a fost trimisa cu succes.";
     } else {
-        echo "Your reservation has failed.";
+        echo "Rezervarea ta nu a putut fi trimisa.";
     }
 ?>

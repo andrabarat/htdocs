@@ -52,7 +52,7 @@ function createMyAppoiment(father, date, grade, last_name, first_name, job_title
 function deleteAppoiment(id_reservation){
     document.getElementsByTagName("body")[0].style.padding="0";
     var test=document.querySelectorAll(".modal");
-    if(test.length<2){ 
+    if(test.length<3){ 
         var modal=document.createElement("div");
         modal.className="modal fade";
         modal.id="checkModal";
@@ -112,8 +112,20 @@ function deleteAppoiment(id_reservation){
         document.getElementsByTagName("body")[0].style.padding="0";
     }
 }
+
+var responseMess="";
 function submitCancelAppoiment(id_reservation){
-    //ză eigeax coll
     
-    
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange=function() {
+        if (this.readyState == 4 && this.status == 200) {
+            responseMess=this.responseText;
+            statusResponse(responseMess);
+            $("#ModalResponse").modal('show');
+            setTimeout(function(){location.reload()}, 3000);
+        }
+    }; 
+    xhttp.open("GET", "/Account/BackEnd/deleteReservation.php?id_reservation="+id_reservation, true);
+    xhttp.send();
 }
+
