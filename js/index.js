@@ -1,6 +1,6 @@
 var jobTitle=["ALL", "CHIRURGIE GENERALA", "PNEUMOLOGIE", "OBSTETRICA-GINECOLOGIE",  "ORTOPEDIE-SI-TRAUMATOLOGIE"];
 function createAppoimentModal(){
-    
+    document.getElementsByTagName("body")[0].style.padding="0";
     var test=document.querySelectorAll(".modal");
     if(test.length<2){    
         $(document).ready(function(){
@@ -100,14 +100,26 @@ function createAppoimentModal(){
 
         var modalFooter=document.createElement("div");
         modalFooter.className="modal-footer";
+        
+        var alignButtons=document.createElement("h3");
+        alignButtons.className="text-center";
+        
         var modalFooterButton=document.createElement("button");
         modalFooterButton.setAttribute("type","button");
         modalFooterButton.className="btn btn-success btn-lg";
-        modalFooterButton.setAttribute("data-dismiss", "modal");
         modalFooterButton.setAttribute("onclick","submitFormReservation()");
         modalFooterButton.innerHTML="Trimite programare";
+        modalFooterButton.id="sendReservation";
 
-        modalFooter.appendChild(modalFooterButton);
+        var modalFooterButtonCancel=document.createElement("button");
+        modalFooterButtonCancel.setAttribute("type","button");
+        modalFooterButtonCancel.className="btn btn-default btn-lg";
+        modalFooterButtonCancel.setAttribute("data-dismiss", "modal");
+        modalFooterButtonCancel.innerHTML="Inchide";
+        
+        alignButtons.appendChild(modalFooterButton);
+        alignButtons.appendChild(modalFooterButtonCancel);
+        modalFooter.appendChild(alignButtons);
 
 
         modalContent.appendChild(modalHeader);
@@ -119,6 +131,7 @@ function createAppoimentModal(){
         document.getElementsByTagName("body")[0].appendChild(modal);
     } else {
         $("#appoimentsModal").modal('show');
+        document.getElementsByTagName("body")[0].style.padding="0";
     }
 }
 
@@ -128,18 +141,27 @@ function submitFormReservation(){
     var last_name=document.getElementById("inputName").value;
     var first_name=document.getElementById("inputSurname").value;
     var phone=document.getElementById("inputPhone").value;
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange=function() {
-        if (this.readyState == 4 && this.status == 200) {
-            //$("#appoimentsModal").modal('hide');
-            var response=this.responseText;
-            alert(response);
-            document.getElementById("inputSpecialitate").value="ALL";
-            document.getElementById("inputName").value="";
-            document.getElementById("inputSurname").value="";
-            document.getElementById("inputPhone").value="";
-        }
-    };
+    
+    if(job_title!="ALL" && last_name!="" && first_name!="" && phone!="")
+    {   
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange=function() {
+            if (this.readyState == 4 && this.status == 200) {
+                //$("#appoimentsModal").modal('hide');
+                var response=this.responseText;
+                alert(response);
+                document.getElementById("inputSpecialitate").value="ALL";
+                document.getElementById("inputName").value="";
+                document.getElementById("inputSurname").value="";
+                document.getElementById("inputPhone").value="";
+            }
+        }; 
     xhttp.open("GET", "/Medici/BackEnd/quickReservations.php?job_title="+job_title+"&last_name="+last_name+"&first_name="+first_name+"&phone="+phone, true);
-    xhttp.send(); 
+    xhttp.send();
+    document.getElementById("sendReservation").setAttribute("data-dismiss", "modal");
+    
+    }else{
+        alert("Toate campurile sunt obligatorii!");
+        document.getElementById("sendReservation").removeAttribute("data-dismiss", "");
+    }
 }
