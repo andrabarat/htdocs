@@ -18,7 +18,7 @@
 <html lang="en">
 
 <head>
-    <title>Bootstrap Example</title>
+    <title>Medici</title>
     <meta charset="utf-8">
     <link href="/css/doctors.css" rel="stylesheet">
     <script src="/js/doctors.js"></script>
@@ -34,6 +34,7 @@
                     <select id="profile-country" class="form-control" name="country" onchange="filterFunction(this.value)">
                         <option value="ALL">Specialitate</option>
                         <option value="CHIRURGIE-GENERALA">CHIRURGIE GENERALA</option>
+                        <option value="CARDIOLOGIE">CARDIOLOGIE</option>
                         <option value="PNEUMOLOGIE">PNEUMOLOGIE</option>
                         <option value="OBSTETRICA-GINECOLOGIE">OBSTETRICA-GINECOLOGIE</option>
                         <option value="ORTOPEDIE-SI-TRAUMATOLOGIE">ORTOPEDIE SI TRAUMATOLOGIE</option>
@@ -93,8 +94,3 @@
     }
 ?>
 </script>
-<style>
-.btn-success{
-    background-color: #2dc996 !important;
-}
-</style>

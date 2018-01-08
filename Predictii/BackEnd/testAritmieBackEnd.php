@@ -1,19 +1,29 @@
+
 <?php
     include "../../global/dbConnect.php";
     include "../../global/session.php";
     include "./dec_tree3.php";
 
-    $gender=$_POST["optionsGender"];
-    $age=$_POST["optionsAge"];
-    $diabetes=$_POST["optionsDiabetes"];
-    $puls=$_POST["optionsPuls"];
-    $ekg=$_POST["optionsEKG"];
+    $question1=$_POST["question1"];
+    $question2=$_POST["question2"];
+    $question3=$_POST["question3"];
+    $question4=$_POST["question4"];
+    $question5=$_POST["question5"];
 
-    //echo $puls." ".$ekg." ".$age." ".$diabetes." ".$gender;
+    $answear1=$_POST["answear1"];
+    $answear2=$_POST["answear2"];
+    $answear3=$_POST["answear3"];
+    $answear4=$_POST["answear4"];
+    $answear5=$_POST["answear5"];
+
+    echo $question1." ".$question2." ".$question3." ".$question4." ".$question5;
+    echo '<br>';
+    echo $answear1." ".$answear2." ".$answear3." ".$answear4." ".$answear5;
+    echo '<br>';
 
     $list = array (
         array('Sex', 'Peste50', 'Diabetic', 'Puls', 'EKG'),
-        array($gender, $age, $diabetes, $puls, $ekg)
+        array($answear1, $answear2, $answear3, $answear4, $answear5)
     );
 
     $fp = fopen('input_data.csv', 'w');

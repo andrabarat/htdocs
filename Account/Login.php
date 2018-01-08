@@ -8,7 +8,7 @@
 
 <html>
 <head>
-    <title>Login</title>
+    <title>Autentificare</title>
     <link href="/css/login.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.12/jquery.mask.min.js"></script>
     <script src="/js/login.js"></script>

@@ -23,7 +23,12 @@
 </head>
 
 <body>
-    <form action="/Predictii/BackEnd/testAritmieBackEnd.php" method="post" id="prediction">
+    <form action="/Predictii/Rezultat.php" method="post" id="prediction">
+        <input type="text" name="question1" value="Sexul" style="display: none">
+        <input type="text" name="question2" value="Aveti peste 50 de ani?" style="display: none">
+        <input type="text" name="question3" value="Suferiti de diabet?" style="display: none">
+        <input type="text" name="question4" value="Aveti pulsul marit?" style="display: none">
+        <input type="text" name="question5" value="Ati avut probleme la ultimul test EKG?" style="display: none">
         <div class="timeline-container">
             <h1 class="project-name">Test de Aritmie</h1>
             <div class="row">
@@ -42,10 +47,10 @@
                             <div class="col-sm-12 text-center">
                                 <div class="btn-group" data-toggle="buttons">
                                     <label class="btn btn-warning btn-lg">
-                                        <input type="radio" name="optionsGender" value="m" autocomplete="off" required> Masculin
+                                        <input type="radio" name="answear1" value="m" autocomplete="off" required> Masculin
                                     </label>
                                     <label class="btn btn-warning btn-lg">
-                                        <input type="radio" name="optionsGender" value="f" autocomplete="off"> Feminin
+                                        <input type="radio" name="answear1" value="f" autocomplete="off"> Feminin
                                     </label>
                                 </div>
                             </div>
@@ -63,10 +68,10 @@
                             <div class="col-sm-12 text-center">
                                 <div class="btn-group" data-toggle="buttons">
                                     <label class="btn btn-warning btn-lg">
-                                        <input type="radio" name="optionsAge" value="1" autocomplete="off" required> Da
+                                        <input type="radio" name="answear2" value="1" autocomplete="off" required> Da
                                     </label>
                                     <label class="btn btn-warning btn-lg">
-                                        <input type="radio" name="optionsAge" value="0" autocomplete="off"> Nu
+                                        <input type="radio" name="answear2" value="0" autocomplete="off"> Nu
                                     </label>
                                 </div>
                             </div>
@@ -84,10 +89,10 @@
                             <div class="col-sm-12 text-center">
                                 <div class="btn-group" data-toggle="buttons">
                                     <label class="btn btn-warning btn-lg">
-                                        <input type="radio" name="optionsDiabetes" value="1" autocomplete="off" required> Da
+                                        <input type="radio" name="answear3" value="1" autocomplete="off" required> Da
                                     </label>
                                     <label class="btn btn-warning btn-lg">
-                                        <input type="radio" name="optionsDiabetes" value="0" autocomplete="off"> Nu
+                                        <input type="radio" name="answear3" value="0" autocomplete="off"> Nu
                                     </label>
                                 </div>
                             </div>
@@ -105,10 +110,10 @@
                             <div class="col-sm-12 text-center">
                                 <div class="btn-group" data-toggle="buttons">
                                     <label class="btn btn-warning btn-lg">
-                                        <input type="radio" name="optionsPuls" value="1" autocomplete="off" required> Da
+                                        <input type="radio" name="answear4" value="1" autocomplete="off" required> Da
                                     </label>
                                     <label class="btn btn-warning btn-lg">
-                                        <input type="radio" name="optionsPuls" value="0" autocomplete="off"> Nu
+                                        <input type="radio" name="answear4" value="0" autocomplete="off"> Nu
                                     </label>
                                 </div>
                             </div>
@@ -126,10 +131,10 @@
                             <div class="col-sm-12 text-center">
                                 <div class="btn-group" data-toggle="buttons">
                                     <label class="btn btn-warning btn-lg">
-                                        <input type="radio" name="optionsEKG" value="1" autocomplete="off" required> Da
+                                        <input type="radio" name="answear5" value="1" autocomplete="off" required> Da
                                     </label>
                                     <label class="btn btn-warning btn-lg">
-                                        <input type="radio" name="optionsEKG" value="0" autocomplete="off"> Nu
+                                        <input type="radio" name="answear5" value="0" autocomplete="off"> Nu
                                     </label>
                                 </div>
                             </div>

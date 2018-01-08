@@ -14,6 +14,10 @@
 ?>
 
 <html>
+<head>
+    <title>Spitale si Policlinici</title>
+    <link href="/css/spitale.css" rel="stylesheet">
+</head>
 <body>
     
 <div class="container">
@@ -194,102 +198,3 @@
 </div>   
 </body>
 </html>
-
-<style>
-    .boxx
-    { 
-        padding-top: 20;
-    }
-    .project-name {
-        text-align: center;
-        padding-top: 120;
-    }
-    .icons{
-        font-size:36px;
-        width: 50;
-        color: #2dc997
-    }
-    .address{
-        color: #2dc996;
-        float: left;
-        font-weight: bold; 
-    }
-.box {
-  padding: 50px 20px;
-  margin-bottom: 50px;
-  text-align: center;
-  border: 1px solid #e6e6e6;
-  height: 200px;
-  position: relative;
-  background: #fafafa;
-}
-
- .icon {
-  position: absolute;
-  top: -36px;
-  left: calc(50% - 36px);
-  transition: 0.2s;
-  border-radius: 50%;
-  display: inline-block;
-  border: 6px solid #fff;
-}
-
-.icon a {
-  display: inline-block;
-  background: #2dc997;
-  border: 2px solid #2dc997;
-  padding: 16px;
-  border-radius: 50%;
-  transition: 0.3s;
-}
-
-.icon i {
-  color: #fff;
-  font-size: 24px;
-}
-
-.box:hover .icon i {
-  color: #2dc997;
-}
-
-.box:hover .icon a {
-  color: #2dc997;
-  background: #fff;
-}
-
-.title {
-  font-weight: 700;
-  font-size: 18px;
-  margin-bottom: 15px;
-  text-transform: uppercase;
-}
-
-.title a {
-  color: #111;
-}
-
-.description {
-  font-size: 14px;
-  line-height: 24px;
-}
-
-    .margin{
-        padding-top: 50;
-    }
-    
-    
-
-.box:hover .icon div {
-    color: #2dc997;
-    background: #fff;
-}
-
-.icon div {
-    display: inline-block;
-    background: #2dc997;
-    border: 2px solid #2dc997;
-    padding: 16px;
-    border-radius: 50%;
-    transition: 0.3s;
-}
-</style>
