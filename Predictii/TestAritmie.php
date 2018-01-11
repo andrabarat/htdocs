@@ -4,13 +4,14 @@
     include "../global/dbConnect.php";
 
     $id_session=0;
-    $sql = "SELECT id_user FROM users WHERE user_name='".$login_session."'";
+    $sql = "SELECT id_".substr($usertype, 0, -1)." FROM ".$usertype." WHERE user_name='".$login_session."'";
     $result = $conn->query($sql);        
     if ($result->num_rows > 0){
         while($row = $result->fetch_assoc()) {
-            $id_session=$row["id_user"];
+            $id_session=$row["id_".substr($usertype, 0, -1)];
         }
     }
+    $_SESSION["test".$id_session] = "aritmie";
 ?>
 <html lang="en">
 

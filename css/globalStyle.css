@@ -19,3 +19,8 @@
     background-color: #208b68 !important;
     border-color: #208b68 !important; 
 }
+
+/* hide host page redirect link*/
+img[alt="www.000webhost.com"]{
+    display :none!important;
+}

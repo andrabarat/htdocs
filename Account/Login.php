@@ -23,7 +23,7 @@
                     <div class="panel-heading">
                         <div class="row text-center headerForm">
                             <div class="col-md-6">
-                                <a class="active" id="login-link">Login</a>
+                                <a class="activeRegister" id="login-link">Login</a>
                             </div>
                             <div class="col-md-6">
                                 <a id="register-link">Register</a>
@@ -46,6 +46,17 @@
                                     <input type="password" class="form-control input-lg" placeholder="Password" name="passwordLogin" required>
                                 </div>
                             </div>
+                            <h1 class="text-center">
+                                <div class="btn-group" data-toggle="buttons">
+                                    <label class="btn btn-warning active btn-lg">
+                                        <input type="radio" name="userType" value="users" autocomplete="off" checked> Pacient
+                                    </label>
+                                    <label class="btn btn-warning  btn-lg">
+                                        <input type="radio" name="userType" value="doctors" autocomplete="off"> Doctor
+                                    </label>
+                                </div>
+                            </h1>
+                            
                             <?php if(isset($_GET["loginError"])) { ?>
                             <h5 id="errorLogin" class="form-text text-muted" style="color: red">* Wrong credentials.</h5>
                             <?php } ?>

@@ -1,10 +1,9 @@
-function createMyAppoiment(father, date, grade, last_name, first_name, job_title, id_reservation){
+function createMyAppoiment(father, date, grade, last_name, first_name, job_title, id_reservation, status){
 
     var root=document.getElementById(father);
 
     var colsm1= document.createElement("div");
     colsm1.className="col-sm-6";
-
 
     var colsm2= document.createElement("div");
     colsm2.className="col-sm-12";
@@ -15,6 +14,10 @@ function createMyAppoiment(father, date, grade, last_name, first_name, job_title
     var colsm3 = document.createElement("div"); 
     colsm3.className="col-sm-12 well text-center";
 
+    var h0 = document.createElement("h4");
+    h0.innerHTML="<strong>Status: </strong>"+" "+getStatus(status, date); 
+    colsm3.appendChild(h0);
+    
     var h1 = document.createElement("h4");
     h1.innerHTML="<strong>Data si ora programare: </strong>"+" "+date; 
     colsm3.appendChild(h1);
@@ -33,7 +36,7 @@ function createMyAppoiment(father, date, grade, last_name, first_name, job_title
     var button = document.createElement("button");
     button.setAttribute("type", "button");
     button.className="btn btn-warning btn-lg";
-    button.innerHTML="Elimina programare";
+    button.innerHTML="Anuleaza programare";
     button.setAttribute("onclick", "deleteAppoiment("+id_reservation+")");
     button.setAttribute("data-toggle", "modal");
     button.setAttribute("data-target", "#checkModal");
@@ -47,6 +50,20 @@ function createMyAppoiment(father, date, grade, last_name, first_name, job_title
 
     colsm1.appendChild(colsm2);
     root.appendChild(colsm1);
+}
+
+function getStatus(status, date){
+    if(status=="Neconfirmat"){
+        var now=new Date();
+        var date=new Date(date);
+        if( now < date){
+            return "Activa";
+        } else {
+            return status;
+        }
+    } else {
+        return status;
+    }
 }
 
 function deleteAppoiment(id_reservation){
@@ -73,7 +90,7 @@ function deleteAppoiment(id_reservation){
         modalHeaderButton.innerHTML="&times;";
         var modalHeaderTitle=document.createElement("h4");
         modalHeaderTitle.className="text-center";
-        modalHeaderTitle.innerHTML="Esti sigur ca vrei sa elimini aceasta programare?";
+        modalHeaderTitle.innerHTML="Esti sigur ca vrei sa anulezi aceasta programare?";
 
         modalHeader.appendChild(modalHeaderTitle);
 
@@ -87,7 +104,7 @@ function deleteAppoiment(id_reservation){
         modalFooterButton.className="btn btn-success btn-lg";
         modalFooterButton.setAttribute("data-dismiss", "modal");
         modalFooterButton.setAttribute("onclick","submitCancelAppoiment("+id_reservation+")");
-        modalFooterButton.innerHTML="Trimite programare";
+        modalFooterButton.innerHTML="Anuleaza programare";
         
         var modalFooterButtonCancel=document.createElement("button");
         modalFooterButtonCancel.setAttribute("type","button");

@@ -301,6 +301,11 @@ function getCurrentDay(){
     return date.getDate();
 }
 
+function getCurrentHour(){
+    var date = new Date();
+    var hour = date.getHours();
+    return hour;
+}
 
 function setDateAppoiment(day, month, year){
     document.getElementById("dateAppoiment").value=year+"-"+month+"-"+day;
@@ -319,8 +324,20 @@ function setDateAppoiment(day, month, year){
         hours.innerHTML=decimalFormat(i)+" - "+decimalFormat((i+1));
         var line=document.createElement("td");
         line.id=decimalFormat(i)+"-"+decimalFormat((i+1));
-        line.className="col-sm-10 infoHours";
+        var hour=getCurrentHour();
+        var currentDate=decimalFormat(getCurrentDay())+"-"+decimalFormat(getCurrentMonth())+"-"+getCurrentYear();
+        var date=document.getElementById("modalHeader").innerHTML;
         line.setAttribute("onclick","reserveIntervalHours(this.id)");
+        if(currentDate==date){
+            if(i>hour){
+                line.className="col-sm-10 infoHours";
+            } else {
+                line.className="col-sm-10 infoHours inactiveInterval";
+                line.removeAttribute("onclick");
+            }
+        } else {
+            line.className="col-sm-10 infoHours";
+        }
         row.appendChild(hours);
         row.appendChild(line);
         tbody.appendChild(row);
@@ -356,7 +373,7 @@ function reserveIntervalHours(elem){
     } else {
         var allClasses=document.querySelectorAll(".hoursSelected");
         if(allClasses.length>0){
-            alert('Nu va este permis mai mult de o singura rezervare intr-o zi la acest doctor.');
+            alert('Va este permisa doar o singura rezervare.');
         } else {
             document.getElementById(elem).className+=" hoursSelected text-center";
             document.getElementById(elem).innerHTML="Pentru a finaliza programarea, apasati pe butonul de trimitere programare.";
@@ -382,7 +399,7 @@ function getReservedIntervalHours(){
     var month=decimalFormat(date[1]);
     var day=decimalFormat(date[2]);
     var dateAppoiment=year+"-"+month+"-"+day;
-    xhttp.open("GET", "BackEnd/getReservations.php?id_doctor="+id_doctor+"&dateAppoiment="+dateAppoiment, true);
+    xhttp.open("GET", "/Medici/BackEnd/getReservations.php?id_doctor="+id_doctor+"&dateAppoiment="+dateAppoiment, true);
     xhttp.send();   
     
 }

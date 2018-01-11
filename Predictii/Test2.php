@@ -11,6 +11,7 @@
             $id_session=$row["id_user"];
         }
     }
+    $_SESSION["test".$id_session] = "diabet";
 ?>
 <html lang="en">
 

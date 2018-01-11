@@ -1,15 +1,15 @@
 $(function() {
     $('#login-link').click(function(e) {
-		$('#register-link').removeClass('active');
-		$(this).addClass('active');
+		$('#register-link').removeClass('activeRegister');
+		$(this).addClass('activeRegister');
         $("#login-form").delay(500).fadeIn(500);
         $("#register-form").fadeOut(500);
 		e.preventDefault();
 	});
     
 	$('#register-link').click(function(e) {
-        $('#login-link').removeClass('active');
-		$(this).addClass('active');
+        $('#login-link').removeClass('activeRegister');
+		$(this).addClass('activeRegister');
         $("#register-form").delay(500).fadeIn(500);
  		$("#login-form").fadeOut(500);
 		e.preventDefault();
@@ -100,7 +100,7 @@ function checkError(elem){
     if(elem!=''){
         document.getElementById('login-form').style.display="none";
         document.getElementById('register-form').style.display="block";
-        $('#login-link').removeClass('active');
-        $('#register-link').addClass('active');
+        $('#login-link').removeClass('activeRegister');
+        $('#register-link').addClass('activeRegister');
     }
 }

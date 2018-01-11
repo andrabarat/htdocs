@@ -24,7 +24,9 @@
                     <li data-toggle="modal" data-target="#appoimentsModal" onclick="createAppoimentModal()"><a href="#" style="font-size: 15px"><i class="fa fa-calendar"></i> Programare online</a></li>
                     <li class="menu-has-children"><a href="">Servicii</a>
                          <ul>
+                             <?php if($usertype!='doctors') {?>
                              <li><a href="/Medici/Doctori.php">Medici</a></li>
+                             <?php } ?>
                              <li><a href="/Servicii/Spitale.php">Spitale si policlinici</a></li>
                              <li><a href="/Servicii/Laboratoare.php">Laboratoare</a></li>
                              <li><a href="/Servicii/Imagistica.php">Imagistica</a></li>
@@ -35,7 +37,11 @@
                     <?php if($login_session!='') {?>
                     <li class="!menu-active menu-has-children"><a href="#"><?php echo $_SESSION["usernameLogin"];?></a>
                         <ul>
+                            <?php if($usertype=='users') {?>
                             <li><a href="/Account/Profil.php">Profilul meu</a></li>
+                            <?php } else {?>
+                            <li><a href="/Account/ProfilDoctor.php">Profilul meu</a></li>
+                            <?php } ?>
                             <li><form action="/Account/BackEnd/logout.php" action="post"><a href="/Account/BackEnd/logout.php">Iesire din cont</a></form></li>
                         </ul>
                     </li>

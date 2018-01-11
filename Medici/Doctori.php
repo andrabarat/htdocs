@@ -2,6 +2,10 @@
     include "../global/session.php";
     include "../global/header.php";
     include "../global/dbConnect.php";
+    
+    if($usertype == 'doctors'){
+         header("Location: /");
+    }
 
     $id_session=0;
     $sql = "SELECT id_user FROM users WHERE user_name='".$login_session."'";
@@ -29,8 +33,8 @@
     <div class="container doctors" id="doctorsList">
         <div class="form-group">
             <div class="row">
-                <div class="col-sm-1"><h3>Cauta</h3></div>
-                <div class="col-sm-6">
+                <div class="col-sm-2"><h3 class="text-center">Cauta</h3></div>
+                <div class="col-sm-5">
                     <select id="profile-country" class="form-control" name="country" onchange="filterFunction(this.value)">
                         <option value="ALL">Specialitate</option>
                         <option value="CHIRURGIE-GENERALA">CHIRURGIE GENERALA</option>
@@ -89,8 +93,6 @@
             create("doctorsList", "<?php echo $row["id_doctor"]?>", "<?php echo $row["grade"]?>", "<?php echo $row["first_name"]?>", "<?php echo $row["last_name"]?>", "<?php echo $row["description"]?>", "<?php echo $row["job_title"]?>");
             <?php
         }
-    } else {
-        echo "0 results";
     }
-?>
+?>     
 </script>

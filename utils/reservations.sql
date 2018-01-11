@@ -1,4 +1,4 @@
-CREATE TABLE `test`.`reservations` ( 
+CREATE TABLE `reservations` ( 
     `id_reservation` INT(5) NOT NULL ,
     `id_user` INT(5) NOT NULL , 
     `id_doctor` INT(5) NOT NULL , 

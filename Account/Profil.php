@@ -2,7 +2,10 @@
     include "../global/session.php";
     if($login_session == ''){
          header("Location: /Account/Login.php");
-    } else {    
+    } else {
+        if($usertype != 'users'){
+             header("Location: /");
+        }
         include "../global/header.php";
         include "../global/dbConnect.php";
         
@@ -29,7 +32,8 @@
         $first_name_doctor="";   
         $job_title="";
         $id_reservation="";
-        $sql = "SELECT r.`start_reservation`,d.grade, d.`last_name`, d.`first_name`, d.`job_title`, r.`id_reservation` FROM users u join reservations r on u.`id_user`=r.`id_user` join `doctors` d on r.`id_doctor`=d.`id_doctor`";
+        $status="";
+        $sql = "SELECT r.`start_reservation`,d.grade, d.`last_name`, d.`first_name`, d.`job_title`, r.`id_reservation`, a.`status` FROM users u join reservations r on u.`id_user`=r.`id_user` join `doctors` d on r.`id_doctor`=d.`id_doctor` join analyzes a on r.`id_reservation`=a.`id_reservation`";
         $result = $conn->query($sql); 
 ?>
 
@@ -105,7 +109,8 @@
                 $first_name_doctor=$row["first_name"];
                 $job_title=$row["job_title"];
                 $id_reservation=$row["id_reservation"];
-                ?>createMyAppoiment("myApp", "<?php echo $start_reservation?>", "<?php echo $grade?>", "<?php echo $last_name_doctor?>", "<?php echo $first_name_doctor?>", "<?php echo $job_title?>", "<?php echo $id_reservation?>");<?php
+                $status=$row["status"];
+                ?>createMyAppoiment("myApp", "<?php echo $start_reservation?>", "<?php echo $grade?>", "<?php echo $last_name_doctor?>", "<?php echo $first_name_doctor?>", "<?php echo $job_title?>", "<?php echo $id_reservation?>", "<?php echo $status?>");<?php
             }
         }
     ?>
