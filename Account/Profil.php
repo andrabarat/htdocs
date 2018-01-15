@@ -10,14 +10,16 @@
         include "../global/dbConnect.php";
         
         //Profilul userului
+        $id_user="";
         $first_name="";
         $last_name="";
         $phone_number="";
         $email="";
-        $sql = "SELECT `first_name`, `last_name`, `phone_number`, `email` FROM users where `user_name`='".$login_session."'";
+        $sql = "SELECT `id_user`, `first_name`, `last_name`, `phone_number`, `email` FROM users where `user_name`='".$login_session."'";
         $result = $conn->query($sql);        
         if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
+                $id_user=$row["id_user"];
                 $first_name=$row["first_name"];
                 $last_name=$row["last_name"];
                 $phone_number=$row["phone_number"];
@@ -33,7 +35,12 @@
         $job_title="";
         $id_reservation="";
         $status="";
-        $sql = "SELECT r.`start_reservation`,d.grade, d.`last_name`, d.`first_name`, d.`job_title`, r.`id_reservation`, a.`status` FROM users u join reservations r on u.`id_user`=r.`id_user` join `doctors` d on r.`id_doctor`=d.`id_doctor` join analyzes a on r.`id_reservation`=a.`id_reservation`";
+        $reservation_status="";
+        $sql = "SELECT r.`start_reservation`, d.`grade`, d.`last_name`, d.`first_name`, d.`job_title`, r.`id_reservation`, a.`status`, 
+                CASE WHEN r.`start_reservation` >= NOW() THEN 'Activ'
+                ELSE 'Expirat'
+                END as reservation_status
+                FROM users u join reservations r on u.`id_user`=r.`id_user` join `doctors` d on r.`id_doctor`=d.`id_doctor` join analyzes a on r.`id_reservation`=a.`id_reservation` where r.`id_user`=".$id_user;
         $result = $conn->query($sql); 
 ?>
 
@@ -60,7 +67,7 @@
                         <h4><strong>Email: </strong><?php echo $email?></h4>
                     </div>
                     <div class="well">
-                        <button type="button" class="btn btn-primary btn-lg btn-block">Schimba parola</button>
+                        <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#checkModal" onclick="changePassword()">Schimba parola</button>
                     </div>
                 </div>
                 <div class="col-sm-7">
@@ -110,8 +117,133 @@
                 $job_title=$row["job_title"];
                 $id_reservation=$row["id_reservation"];
                 $status=$row["status"];
-                ?>createMyAppoiment("myApp", "<?php echo $start_reservation?>", "<?php echo $grade?>", "<?php echo $last_name_doctor?>", "<?php echo $first_name_doctor?>", "<?php echo $job_title?>", "<?php echo $id_reservation?>", "<?php echo $status?>");<?php
+                $reservation_status=$row["reservation_status"];
+                ?>createMyAppoiment("myApp", "<?php echo $start_reservation?>", "<?php echo $grade?>", "<?php echo $last_name_doctor?>", "<?php echo $first_name_doctor?>", "<?php echo $job_title?>", "<?php echo $id_reservation?>", "<?php echo $status?>", "<?php echo $reservation_status?>");<?php
             }
         }
     ?>
+    
+function changePassword(){
+    document.getElementsByTagName("body")[0].style.padding="0";
+    var test=document.querySelectorAll(".modal");
+    if(test.length<3){ 
+        if(document.getElementById("checkModal")!=null){
+            document.getElementById("checkModal").remove();
+        }        
+        var modal=document.createElement("div");
+        modal.className="modal fade";
+        modal.id="checkModal";
+        modal.setAttribute("role", "dialog");
+
+        var modalDialog=document.createElement("div");
+        modalDialog.className="modal-dialog";
+
+        var modalContent=document.createElement("div");
+        modalContent.className="modal-content";
+
+        var modalHeader=document.createElement("div");
+        modalHeader.className="modal-header";
+        var modalHeaderButton=document.createElement("button");
+        modalHeaderButton.type="button";
+        modalHeaderButton.className="close";
+        modalHeaderButton.setAttribute("data-dismiss", "modal");
+        modalHeaderButton.innerHTML="&times;";
+        var modalHeaderTitle=document.createElement("h4");
+        modalHeaderTitle.className="text-center";
+        modalHeaderTitle.innerHTML="Dorești o parolă nouă?";
+
+        modalHeader.appendChild(modalHeaderTitle);
+
+        var modalBody=document.createElement("div");
+        modalBody.className="modal-body";
+        
+        var modalBodyOldPass=document.createElement("div");
+        modalBodyOldPass.className="input-group";
+        modalBodyOldPass.innerHTML='<span class="input-group-addon input-lg glyphicon glyphicon-search" aria-hidden="true"></span>';
+        var modalBodyOldPassInput=document.createElement("input");
+        modalBodyOldPassInput.type="password";
+        modalBodyOldPassInput.className="form-control input-lg";
+        modalBodyOldPassInput.placeholder="Parola veche";
+        modalBodyOldPassInput.name="passwordOld";
+        modalBodyOldPassInput.id="passwordOld";
+        modalBodyOldPassInput.required="true";
+        
+        var br=document.createElement("br");
+        
+        var modalBodyNewPass=document.createElement("div");
+        modalBodyNewPass.className="input-group";
+        modalBodyNewPass.innerHTML='<span class="input-group-addon input-lg glyphicon glyphicon-search" aria-hidden="true"></span>';
+        var modalBodyNewPassInput=document.createElement("input");
+        modalBodyNewPassInput.type="password";
+        modalBodyNewPassInput.className="form-control input-lg";
+        modalBodyNewPassInput.placeholder="Parola nouă";
+        modalBodyNewPassInput.name="passwordNew";
+        modalBodyNewPassInput.id="passwordNew";
+        modalBodyNewPassInput.required="true";
+        
+        modalBodyOldPass.appendChild(modalBodyOldPassInput);
+        modalBody.appendChild(modalBodyOldPass);        
+        modalBody.appendChild(br);        
+        modalBodyNewPass.appendChild(modalBodyNewPassInput);
+        modalBody.appendChild(modalBodyNewPass);
+        
+        var alignButtons=document.createElement("h3");
+        alignButtons.className="text-center";
+
+        var modalFooter=document.createElement("div");
+        modalFooter.className="modal-footer";
+        var modalFooterButton=document.createElement("button");
+        modalFooterButton.setAttribute("type","button");
+        modalFooterButton.className="btn btn-primary btn-lg";
+        modalFooterButton.setAttribute("data-dismiss", "modal");
+        modalFooterButton.setAttribute("onclick","submitChangePassword()");
+        modalFooterButton.innerHTML="Schimba parola";
+        
+        var modalFooterButtonCancel=document.createElement("button");
+        modalFooterButtonCancel.setAttribute("type","button");
+        modalFooterButtonCancel.className="btn btn-default btn-lg";
+        modalFooterButtonCancel.setAttribute("data-dismiss", "modal");
+        modalFooterButtonCancel.innerHTML="Inchide";
+
+        alignButtons.appendChild(modalFooterButton);
+        alignButtons.appendChild(modalFooterButtonCancel);
+        
+        modalFooter.appendChild(alignButtons);
+
+
+        modalContent.appendChild(modalHeader);
+        modalContent.appendChild(modalBody);
+        modalContent.appendChild(modalFooter);
+        modalDialog.appendChild(modalContent);
+        modal.appendChild(modalDialog);
+
+        document.getElementsByTagName("body")[0].appendChild(modal);
+    } else {
+        $("#checkModal").modal('show');
+        document.getElementsByTagName("body")[0].style.padding="0";
+    }
+}
+
+function submitChangePassword(){
+    var oldPass=document.getElementById("passwordOld").value;
+    var newPass=document.getElementById("passwordNew").value;
+    document.getElementsByTagName("body")[0].style.padding="0";
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange=function() {
+        if (this.readyState == 4 && this.status == 200) {
+            responseMess=this.responseText;
+            statusResponse(responseMess);
+            $("#ModalResponse").modal('show');
+        }
+    }; 
+    xhttp.open("GET", "/Account/BackEnd/changePassword.php?oldPassword="+oldPass+"&newPassword="+newPass, true);
+    xhttp.send();
+    console.info("/Account/BackEnd/changePassword.php?oldPassword="+oldPass+"&newPassword="+newPass);
+}
+    
 </script>
+<style>
+.glyphicon{
+    position: initial;
+}
+</style>

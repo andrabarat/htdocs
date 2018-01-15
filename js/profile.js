@@ -1,4 +1,4 @@
-function createMyAppoiment(father, date, grade, last_name, first_name, job_title, id_reservation, status){
+function createMyAppoiment(father, date, grade, last_name, first_name, job_title, id_reservation, status, reservation_status){
 
     var root=document.getElementById(father);
 
@@ -37,7 +37,12 @@ function createMyAppoiment(father, date, grade, last_name, first_name, job_title
     button.setAttribute("type", "button");
     button.className="btn btn-warning btn-lg";
     button.innerHTML="Anuleaza programare";
-    button.setAttribute("onclick", "deleteAppoiment("+id_reservation+")");
+    
+    if(reservation_status=="Expirat"){
+        button.setAttribute("disabled", "true");
+    } else {
+        button.setAttribute("onclick", "deleteAppoiment("+id_reservation+")");
+    }
     button.setAttribute("data-toggle", "modal");
     button.setAttribute("data-target", "#checkModal");
     
@@ -70,6 +75,9 @@ function deleteAppoiment(id_reservation){
     document.getElementsByTagName("body")[0].style.padding="0";
     var test=document.querySelectorAll(".modal");
     if(test.length<3){ 
+        if(document.getElementById("checkModal")!=null){
+            document.getElementById("checkModal").remove();
+        }
         var modal=document.createElement("div");
         modal.className="modal fade";
         modal.id="checkModal";
@@ -124,6 +132,7 @@ function deleteAppoiment(id_reservation){
         modal.appendChild(modalDialog);
 
         document.getElementsByTagName("body")[0].appendChild(modal);
+        document.getElementsByTagName("body")[0].style.padding="0";
     } else {
         $("#checkModal").modal('show');
         document.getElementsByTagName("body")[0].style.padding="0";
