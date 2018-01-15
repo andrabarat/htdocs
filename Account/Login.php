@@ -23,27 +23,27 @@
                     <div class="panel-heading">
                         <div class="row text-center headerForm">
                             <div class="col-md-6">
-                                <a class="activeRegister" id="login-link">Login</a>
+                                <a class="activeRegister" id="login-link">Autentificare</a>
                             </div>
                             <div class="col-md-6">
-                                <a id="register-link">Register</a>
+                                <a id="register-link">Înregistrare</a>
                             </div>
                         </div>
                     </div>
                     <div class="panel-body">
                         <form id="login-form" action="BackEnd/login_validation.php" method="post">
                             <div class="form-group">
-                                <label for="username">Username</label>
+                                <label for="username">Nume utilizator</label>
                                 <div class="input-group">
                                     <span class="input-group-addon input-lg glyphicon glyphicon-user" aria-hidden="true"></span>
-                                    <input type="text" class="form-control input-lg" placeholder="Username" name="usernameLogin" required>
+                                    <input type="text" class="form-control input-lg" placeholder="Nume utilizator" name="usernameLogin" required>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="password">Password</label>
+                                <label for="password">Parolă</label>
                                 <div class="input-group">
                                     <span class="input-group-addon input-lg glyphicon glyphicon-search" aria-hidden="true"></span>
-                                    <input type="password" class="form-control input-lg" placeholder="Password" name="passwordLogin" required>
+                                    <input type="password" class="form-control input-lg" placeholder="Parolă" name="passwordLogin" required>
                                 </div>
                             </div>
                             <h1 class="text-center">
@@ -58,10 +58,10 @@
                             </h1>
                             
                             <?php if(isset($_GET["loginError"])) { ?>
-                            <h5 id="errorLogin" class="form-text text-muted" style="color: red">* Wrong credentials.</h5>
+                            <h5 id="errorLogin" class="form-text text-muted" style="color: red">* Numele utilizatorului sau parola sunt greșite.</h5>
                             <?php } ?>
                             <br>
-                            <button type="submit" class="btn btn-primary btn-lg center-block">Submit <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span></button>
+                            <button type="submit" class="btn btn-primary btn-lg center-block">Conectează-te</button>
                         </form>
 
                         <form id="register-form" style="display:none" action="BackEnd/register_validation.php" method="post">
@@ -70,14 +70,14 @@
                                     <label for="firstname">Prenume *</label>
                                     <div class="input-group">
                                         <span class="input-group-addon input-lg glyphicon glyphicon-user" aria-hidden="true"></span>
-                                        <input type="text" class="form-control input-lg" id="firstnameReg" placeholder="First name" name="firstnameReg" required onfocusout="validate(this.id)">
+                                        <input type="text" class="form-control input-lg" id="firstnameReg" placeholder="Prenume" name="firstnameReg" required onfocusout="validate(this.id)">
                                     </div>
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="lastname">Nume *</label>
                                     <div class="input-group">
                                         <span class="input-group-addon input-lg glyphicon glyphicon-user" aria-hidden="true"></span>
-                                        <input type="text" class="form-control input-lg" id="lastnameReg" placeholder="Last name" name="lastnameReg" required onfocusout="validate(this.id)">
+                                        <input type="text" class="form-control input-lg" id="lastnameReg" placeholder="Nume" name="lastnameReg" required onfocusout="validate(this.id)">
                                     </div>
                                 </div>
                             </div>
@@ -90,17 +90,17 @@
                             </div>
                             <div class="row">
                                 <div class="form-group col-md-6">
-                                    <label for="username">Nume user *</label>
+                                    <label for="username">Nume utilizator *</label>
                                     <div class="input-group">
                                         <span class="input-group-addon input-lg glyphicon glyphicon-user" aria-hidden="true"></span>
-                                        <input type="text" class="form-control input-lg" id="usernameReg" placeholder="Username" name="usernameReg" required onfocusout="validate(this.id)">
+                                        <input type="text" class="form-control input-lg" id="usernameReg" placeholder="Nume utilizator" name="usernameReg" required onfocusout="validate(this.id)">
                                     </div>
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label for="phone">Numar telefon *</label>
+                                    <label for="phone">Număr de telefon *</label>
                                     <div class="input-group">
                                         <span class="input-group-addon input-lg glyphicon glyphicon-earphone" aria-hidden="true"></span>
-                                        <input type="tel" class="form-control input-lg phone" id="phoneReg" placeholder="Phone" name="phoneReg" required onfocusout="validatePhone(this.id)">
+                                        <input type="tel" class="form-control input-lg phone" id="phoneReg" placeholder="Număr de telefon" name="phoneReg" required onfocusout="validatePhone(this.id)">
                                     </div>
                                 </div>
                             </div>
@@ -113,28 +113,28 @@
                             </div>
                             <div class="row">
                                 <div class="form-group col-md-6">
-                                    <label for="password">Parola *</label>
+                                    <label for="password">Parolă *</label>
                                     <div class="input-group">
                                         <span class="input-group-addon input-lg glyphicon glyphicon-search" aria-hidden="true"></span>
-                                        <input type="password" class="form-control input-lg" id="passwordReg" placeholder="Password" name="passwordReg" required onfocusout="validatePassword(this.id)">
+                                        <input type="password" class="form-control input-lg" id="passwordReg" placeholder="Parolă" name="passwordReg" required onfocusout="validatePassword(this.id)">
                                     </div>
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label for="passwordConfirm">Confirmare parola *</label>
+                                    <label for="passwordConfirm">Confirmare parolă *</label>
                                     <div class="input-group">
                                         <span class="input-group-addon input-lg glyphicon glyphicon-search" aria-hidden="true"></span>
-                                        <input type="password" class="form-control input-lg" id="confirmPasswordReg" placeholder="Confirm Password" name="confirmPasswordReg" required onfocusout="checkPassword('passwordReg', this.id)">
+                                        <input type="password" class="form-control input-lg" id="confirmPasswordReg" placeholder="Confirmare parolă" name="confirmPasswordReg" required onfocusout="checkPassword('passwordReg', this.id)">
                                     </div>
                                 </div>
                             </div>
-                            <small id="registerHelp" class="form-text text-muted">* Toate campurile sunt obligatorii.</small>
+                            <small id="registerHelp" class="form-text text-muted">* Toate câmpurile sunt obligatorii.</small>
                             <hr>
                             <?php if(isset($_GET["registerError"])) { ?>
                             <div class="alert alert-danger">
-                                <strong>Wrong <?php echo $_GET["registerError"] ?></strong>
+                                <strong>Câmpul <?php echo $_GET["registerError"] ?> este greșit.</strong>
                             </div>
                             <?php } ?>
-                            <button type="submit" class="btn btn-primary btn-lg center-block">Intrare in cont <span class="glyphicon glyphicon-floppy-save" aria-hidden="true"></span></button>
+                            <button type="submit" class="btn btn-primary btn-lg center-block">Înregistrare</button>
                         </form>
                     </div>
                 </div>

@@ -37,19 +37,19 @@
                              <?php if($usertype!='doctors') {?>
                              <li><a href="/Medici/Doctori.php">Medici</a></li>
                              <?php } ?>
-                             <li><a href="/Servicii/Spitale.php">Spitale si policlinici</a></li>
+                             <li><a href="/Servicii/Spitale.php">Spitale și policlinici</a></li>
                              <li><a href="/Servicii/Laboratoare.php">Laboratoare</a></li>
-                             <li><a href="/Servicii/Imagistica.php">Imagistica</a></li>
-                             <li><a href="/Servicii/Maternitati.php">Maternitati</a></li>
-                             <li><a href="/Servicii/Abonamente.php">Abonamente si pachete</a></li>
+                             <li><a href="/Servicii/Imagistica.php">Imagistică</a></li>
+                             <li><a href="/Servicii/Maternitati.php">Maternitați</a></li>
+                             <li><a href="/Servicii/Abonamente.php">Abonamente și pachete</a></li>
                          </ul>
                     </li>
-                    <li class="menu-has-children"><a href="">Informatii</a>
+                    <li class="menu-has-children"><a href="">Informații</a>
                          <ul>
                              <li><a href="#about">Despre noi</a></li>
                              <li><a href="#services">Servicii</a></li>
-                             <li><a href="#portfolio">Educatie medicala</a></li>
-                             <li><a href="#team">Echipa</a></li>
+                             <li><a href="#portfolio">Educație medicală</a></li>
+                             <li><a href="#team">Echipă</a></li>
                              <li><a href="#contact">Contact</a></li>
                          </ul>
                     </li>
@@ -73,8 +73,8 @@
     </header>
     <section id="hero">
         <div class="hero-container">
-            <h1>REGNA iti ureaza bun venit!</h1>
-            <h2>Suntem aici zi de zi ca sa stim ca esti bine.</h2>
+            <h1>REGNA îți urează bun venit!</h1>
+            <h2>Suntem aici zi de zi ca să știm că ești bine.</h2>
             <!--<a href="#about" class="btn-get-started">Get Started</a>-->
         </div>
     </section>
@@ -345,29 +345,27 @@
                     </div>
                     <div class="col-lg-5 col-md-8">
                         <div class="form">
-                            <div id="sendmessage">Your message has been sent. Thank you!</div>
+                            <div id="sendmessage"></div>
                             <div id="errormessage"></div>
-                            <form action="" method="post" role="form" class="contactForm">
-                                <div class="form-group">
-                                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                                    <div class="validation"></div>
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                                    <div class="validation"></div>
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                                    <div class="validation"></div>
-                                </div>
-                                <div class="form-group">
-                                    <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-                                    <div class="validation"></div>
-                                </div>
-                                <div class="text-center">
-                                    <button type="submit">Send Message</button>
-                                </div>
-                            </form>
+                            <div class="form-group">
+                                <input type="text" name="name" class="form-control" id="name" placeholder="Nume" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                                <div class="validation"></div>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" name="email" id="email" placeholder="Email" data-rule="email" data-msg="Please enter a valid email" />
+                                <div class="validation"></div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subiect" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                                <div class="validation"></div>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Mesaj"></textarea>
+                                <div class="validation"></div>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" onclick="submitContactForm()">Trimite mesaj</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -387,10 +385,11 @@
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/superfish/hoverIntent.js"></script>
     <script src="lib/superfish/superfish.min.js"></script>
-    <script src="contactform/contactform.js"></script>
+    <!--<script src="contactform/contactform.js"></script>-->
     <script src="js/main.js"></script>
     <script src="js/index.js"></script>
     <script src="js/global.js"></script>
+    <script src="js/contact.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.12/jquery.mask.min.js"></script>
 </body>
 
