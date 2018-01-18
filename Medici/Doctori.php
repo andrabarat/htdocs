@@ -94,5 +94,11 @@
             <?php
         }
     }
+               
+    if(isset($_GET["specialitate"])){?>
+        filterFunction("<?php echo strtoupper($_GET["specialitate"]) ?>");
+        document.getElementById("profile-country").value="<?php echo strtoupper($_GET["specialitate"]) ?>";
+    <?php
+    }
 ?>     
 </script>

@@ -18,6 +18,7 @@
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/globalStyle.css" rel="stylesheet">
+    <link href="css/chat.css" rel="stylesheet">
 </head>
 <body>
     <header id="header">
@@ -372,6 +373,25 @@
             </div>
         </section>
     </main>
+    <div id="live-chat" onclick="sayHello()">
+        <header class="clearfix">
+            <a href="#" class="chat-close"><i class="fa fa-times" aria-hidden="true"></i></a>
+            <h5 class="chatHeader"><p id="status" class="statusInactive"></p>Regna Chat</h5>
+            <!--span class="chat-message-counter">!</span-->
+        </header>
+        <div id="chat-body" class="chat" style="display: none">
+            <div class="chat-history" id="chat">
+
+            </div>
+            <!-- end chat-history -->
+            <div class="waiting"><p id="typingeffect" class="typingeffect">Asteptam o intrebare ...</p></div>
+            <div class="typeBox">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="messageChat" placeholder="Type your message..." onkeypress="return postQuestion(event, this.value, 'admin')">
+                </div>
+            </div>
+        </div>
+    </div>
     <footer id="footer">
     </footer>
     <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
@@ -390,7 +410,7 @@
     <script src="js/index.js"></script>
     <script src="js/global.js"></script>
     <script src="js/contact.js"></script>
+    <script src="js/chat.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.12/jquery.mask.min.js"></script>
 </body>
-
 </html>

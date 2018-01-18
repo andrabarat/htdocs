@@ -78,7 +78,7 @@
 
         $mail->Subject = "Confirmare programare Regna";
         
-        $message="Buna ziua,\r\n\r\nVa anuntam ca programarea dumneavoastra cu numarul ".$id_reservation." pentru data de ".$dateAppoiment." ".substr($time_interval, 0, 2).":00:00 la doctorul ".$doctorName." a fost confirmata cu succes.\r\n\r\n\r\nCu stima, Regna.";
+        $message="Buna ziua,\r\n\r\nVa anuntam ca programarea dumneavoastra cu numarul ".$id_reservation." pentru data de ".$dateAppoiment." ".substr($time_interval, 0, 2).":00:00 la doctorul ".$doctorName." a fost confirmata cu succes.\r\n\r\n\r\nCu stima,\r\n Regna.";
 
         $mail->Body = $message;
 
