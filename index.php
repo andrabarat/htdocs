@@ -318,6 +318,7 @@
                     <h3 class="section-title">Contact</h3>
                 </div>
             </div>
+            <div id="google-map"></div>
             <div class="container wow fadeInUp">
                 <div class="row justify-content-center">
                     <div class="col-lg-3 col-md-4">
@@ -400,7 +401,7 @@
     <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8HeI8o-c1NppZA-92oYlXakhDPYR7XMY"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdcZRd4foy58YFvo09XdahItn7n3y_DJA&callback=myMap"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/superfish/hoverIntent.js"></script>

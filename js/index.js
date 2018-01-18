@@ -167,3 +167,12 @@ function submitFormReservation(){
         document.getElementById("sendReservation").removeAttribute("data-dismiss", "");
     }
 }
+
+function myMap() {
+    var mapCanvas = document.getElementById("google-map");
+    var mapOptions = {
+        center: new google.maps.LatLng("47.157517", "27.592462"), zoom: 12
+    };
+    var map = new google.maps.Map(mapCanvas, mapOptions);
+}
+myMap();
