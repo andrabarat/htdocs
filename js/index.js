@@ -1,4 +1,4 @@
-var jobTitle=["ALL", "CHIRURGIE GENERALA", "PNEUMOLOGIE", "OBSTETRICA-GINECOLOGIE",  "ORTOPEDIE-SI-TRAUMATOLOGIE", "UROLOGIE", "GASTROENTEROLOGIE", "DERMATOLOGIE", "NEONATOLOGIE", "PEDIATRIE", "CHIRURGIE TORACICA" ];
+var jobTitle=["ALL", "CHIRURGIE GENERALA", "DERMATOLOGIE",  "GASTROENTEROLOGIE", "MEDICINA INTERNA", "NEONATOLOGIE", "OBSTETRICA-GINECOLOGIE", "ORTOPEDIE-SI-TRAUMATOLOGIE", "PEDIATRIE","PNEUMOLOGIE","UROLOGIE"];
 function createAppoimentModal(){
     document.getElementsByTagName("body")[0].style.padding="0";
     var test=document.querySelectorAll(".modal");
@@ -171,8 +171,7 @@ function submitFormReservation(){
 function myMap() {
     var mapCanvas = document.getElementById("google-map");
     var mapOptions = {
-        center: new google.maps.LatLng("47.157517", "27.592462"), zoom: 12
+        center: new google.maps.LatLng("47.1256247", "27.5672558"), zoom: 15
     };
     var map = new google.maps.Map(mapCanvas, mapOptions);
 }
-myMap();
