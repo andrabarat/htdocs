@@ -12,7 +12,7 @@
 <body>
     
 <div class="container">
-    <h1 class="project-name">Spitale si Policlinici</h1>
+    <h1 class="project-name">Spitale și Policlinici</h1>
     <div class="row">
         <div class="col-sm-12 text-center">
             <h4>Suntem mereu aproape de pacientii nostri, prin intermediul celor 36 de policlinici, 4 spitale, 8 Campusuri si 180 de clinici partenere in toată tara.</h4>
@@ -63,7 +63,7 @@
                     <i class="icons fa fa-user-md"></i>
                 </div>
                 <ul class="list-group list-group-flush text-center">
-                    <li class="list-group-item"><div class="address">Adresă:</div>Str. Nicolae Caramfil 85A, București</li>
+                    <li class="list-group-item"><div class="address">Adresă:</div>Str. Nicolae Caramfil 85A, Iași</li>
                     <li class="list-group-item"><div class="address">Telefon:</div>021 9886</li>
                     <li class="list-group-item"><div class="address">E-mail:</div>birouinternari@regna.ro</li>
                 </ul>
@@ -86,7 +86,7 @@
                     <i class="icons fa fa-user-md"></i>
                 </div>
                 <ul class="list-group list-group-flush text-center">
-                    <li class="list-group-item"><div class="address">Adresă:</div>Calea Floreasca nr. 14a, sector 1</li>
+                    <li class="list-group-item"><div class="address">Adresă:</div>Calea Florilor, Iași</li>
                     <li class="list-group-item"><div class="address">Telefon:</div>021 9208</li>
                     <li class="list-group-item"><div class="address">E-mail:</div>office.ponderas@regna.ro</li>
                 </ul>
@@ -96,11 +96,11 @@
             <div class="panel panel-danger">
                 <div class="panel-heading">
                     <h4 class="text-center">
-                        SPITALUL BANEASA</h4>
+                        SPITALUL REGNA</h4>
                 </div>
                 <div class="panel-body">
                     <p>
-                        Spitalul Baneasa este primul si singurul spital din Romania acreditat international (JCI) pentru siguranta ingrijirii pacientului. Totul este controlat, fiecare moment inseamna grija si precizie.Oferim condiții de tratament, intervenții chirurgicale și de cazare la standarde internaționale</p>
+                        Spitalul REGNA este primul si singurul spital din Romania acreditat international (JCI) pentru siguranta ingrijirii pacientului. Totul este controlat, fiecare moment inseamna grija si precizie.Oferim condiții de tratament, intervenții chirurgicale și de cazare la standarde internaționale</p>
                     <i class="icons fa fa-h-square"></i>
                     <i class="icons fa fa-ambulance"></i>
                     <i class="icons fa fa-medkit"></i>
@@ -109,7 +109,7 @@
                     <i class="icons fa fa-user-md"></i>
                 </div>
                 <ul class="list-group list-group-flush text-center">
-                    <li class="list-group-item"><div class="address">Adresă:</div>Str. Dobrogeanu Gherea, nr 85, sector 1</li>
+                    <li class="list-group-item"><div class="address">Adresă:</div>Str. Dobrogeanu Gherea, Iași</li>
                     <li class="list-group-item"><div class="address">Telefon:</div>021 9268</li>
                     <li class="list-group-item"><div class="address">E-mail:</div>office@regna.ro</li>
                 </ul>
@@ -119,7 +119,7 @@
             <div class="panel panel-danger">
                 <div class="panel-heading">
                     <h4 class="text-center">
-                        POLICLINICA MED IASI</h4>
+                        POLICLINICA MED IAȘI</h4>
                 </div>
                 <div class="panel-body">
                     <p>
@@ -132,7 +132,7 @@
                     <i class="icons fa fa-user-md"></i>
                 </div>
                 <ul class="list-group list-group-flush text-center">
-                    <li class="list-group-item"><div class="address">Adresă:</div>Str. Nicolae Iorga 85A, Iasi</li>
+                    <li class="list-group-item"><div class="address">Adresă:</div>Str. Nicolae Iorga 85A, Iași</li>
                     <li class="list-group-item"><div class="address">Telefon:</div>021 3486</li>
                     <li class="list-group-item"><div class="address">E-mail:</div>policlinica@regna.ro</li>
                 </ul>
@@ -142,11 +142,11 @@
             <div class="panel panel-danger">
                 <div class="panel-heading">
                     <h4 class="text-center">
-                        CAMPUS MED BACAU</h4>
+                        CAMPUS MED IAȘI</h4>
                 </div>
                 <div class="panel-body">
                     <p>
-                        In Campusul Medical Bacau, pacientii au acces la peste 15 specialitati medicale si 30 de medici cu experienta in diagnosticarea, tratarea si urmarirea pacientilor cu afectiuni acute sau cronice. Totul este controlat, fiecare moment inseamna grija si precizie pentru pacinetii nostri.</p>
+                        In Campusul Medical Iași, pacientii au acces la peste 15 specialitati medicale si 30 de medici cu experienta in diagnosticarea, tratarea si urmarirea pacientilor cu afectiuni acute sau cronice. Totul este controlat, fiecare moment inseamna grija si precizie pentru pacinetii nostri.</p>
                     <i class="icons fa fa-h-square"></i>
                     <i class="icons fa fa-ambulance"></i>
                     <i class="icons fa fa-medkit"></i>
@@ -155,9 +155,9 @@
                     <i class="icons fa fa-user-md"></i>
                 </div>
                 <ul class="list-group list-group-flush text-center">
-                    <li class="list-group-item"><div class="address">Adresă:</div>Str. Calea Romanului 32A, Bacau</li>
+                    <li class="list-group-item"><div class="address">Adresă:</div>Str. Calea Romanului 32A, Iași</li>
                     <li class="list-group-item"><div class="address">Telefon:</div>021 9656</li>
-                    <li class="list-group-item"><div class="address">E-mail:</div>campusbacau@regna.ro</li>
+                    <li class="list-group-item"><div class="address">E-mail:</div>campusiași@regna.ro</li>
                 </ul>
             </div>  
         </div>
@@ -165,11 +165,11 @@
             <div class="panel panel-danger">
                 <div class="panel-heading">
                     <h4 class="text-center">
-                        CAMPUSUL DE PEDIATRIE BRAȘOV</h4>
+                        CAMPUSUL DE PEDIATRIE IAȘI</h4>
                 </div>
                 <div class="panel-body">
                     <p>
-                        Este parte integranta a singurului Campus Medical privat din Brasov si ofera toate solutiile medicale pentru mama si copil, atat in ambulatoriu, cat si in cadrul spitalului.Fiecare moment inseamna grija si precizie pentru pacinetii nostri.</p>
+                        Este parte integranta a singurului Campus Medical privat din Iași si ofera toate solutiile medicale pentru mama si copil, atat in ambulatoriu, cat si in cadrul spitalului.Fiecare moment inseamna grija si precizie pentru pacinetii nostri.</p>
                     <i class="icons fa fa-h-square"></i>
                     <i class="icons fa fa-ambulance"></i>
                     <i class="icons fa fa-medkit"></i>
@@ -178,9 +178,9 @@
                     <i class="icons fa fa-user-md"></i>
                 </div>
                 <ul class="list-group list-group-flush text-center">
-                    <li class="list-group-item"><div class="address">Adresă:</div>Str. Iuliu Maniu 22, Brașov</li>
+                    <li class="list-group-item"><div class="address">Adresă:</div>Str. Iuliu Maniu 22, Iași</li>
                     <li class="list-group-item"><div class="address">Telefon:</div>021 2286</li>
-                    <li class="list-group-item"><div class="address">E-mail:</div>campusbrasov@regna.ro</li>
+                    <li class="list-group-item"><div class="address">E-mail:</div>campusiași@regna.ro</li>
                 </ul>
             </div>  
         </div>

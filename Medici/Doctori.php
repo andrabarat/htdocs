@@ -37,16 +37,16 @@
                 <div class="col-sm-5">
                     <select id="profile-country" class="form-control" name="country" onchange="filterFunction(this.value)">
                         <option value="ALL">Specialitate</option>
-                        <option value="CHIRURGIE-GENERALA">CHIRURGIE GENERALA</option>
                         <option value="CARDIOLOGIE">CARDIOLOGIE</option>
-                        <option value="PNEUMOLOGIE">PNEUMOLOGIE</option>
-                        <option value="OBSTETRICA-GINECOLOGIE">OBSTETRICA-GINECOLOGIE</option>
-                        <option value="ORTOPEDIE-SI-TRAUMATOLOGIE">ORTOPEDIE SI TRAUMATOLOGIE</option>
-                        <option value="CHIRURGIE TORACICA">CHIRURGIE TORACICA</option>
-                        <option value="PEDIATRIE">PEDIATRIE</option>
-                        <option value="NEONATOLOGIE">NEONATOLOGIE</option>
+                        <option value="CHIRURGIE-GENERALA">CHIRURGIE GENERALA</option>
                         <option value="DERMATOLOGIE">DERMATOLOGIE</option>
                         <option value="GASTROENTEROLOGIE">GASTROENTEROLOGIE</option>
+                        <option value="MEDICINA-INTERNA">MEDICINA INTERNA</option>
+                        <option value="NEONATOLOGIE">NEONATOLOGIE</option>
+                        <option value="OBSTETRICA-GINECOLOGIE">OBSTETRICA-GINECOLOGIE</option>
+                        <option value="ORTOPEDIE-SI-TRAUMATOLOGIE">ORTOPEDIE SI TRAUMATOLOGIE</option>
+                        <option value="PEDIATRIE">PEDIATRIE</option>
+                        <option value="PNEUMOLOGIE">PNEUMOLOGIE</option>
                         <option value="UROLOGIE">UROLOGIE</option>
                     </select>
                 </div>

@@ -1,6 +1,6 @@
 jQuery(document).ready(function( $ ) {
 
-  // Header fixed and Back to top button
+
   $(window).scroll(function() {
     if ($(this).scrollTop() > 100) {
       $('.back-to-top').fadeIn('slow');
@@ -15,10 +15,10 @@ jQuery(document).ready(function( $ ) {
     return false;
   });
 
-  // Initiate the wowjs
+
   new WOW().init();
 
-  // Initiate superfish on nav menu
+
   $('.nav-menu').superfish({
     animation: {opacity:'show'},
     speed: 400
@@ -59,7 +59,6 @@ jQuery(document).ready(function( $ ) {
     $("#mobile-nav, #mobile-nav-toggle").hide();
   }
 
-  // Smoth scroll on page hash links
   $('a[href*="#"]:not([href="#"])').on('click', function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
 
@@ -94,7 +93,6 @@ jQuery(document).ready(function( $ ) {
     }
   });
 
-  // Porfolio filter
   $("#portfolio-flters li").click ( function() {
     $("#portfolio-flters li").removeClass('filter-active');
     $(this).addClass('filter-active');
@@ -110,33 +108,9 @@ jQuery(document).ready(function( $ ) {
     }, 300);
   });
 
-  // jQuery counterUp
   $('[data-toggle="counter-up"]').counterUp({
     delay: 10,
     time: 1000
   });
-
-
-  //Google Map
-    /*
-  var get_latitude = $('#google-map').data('latitude');
-  var get_longitude = $('#google-map').data('longitude');
-
-  function initialize_google_map() {
-    var myLatlng = new google.maps.LatLng(get_latitude, get_longitude);
-    var mapOptions = {
-      zoom: 14,
-      scrollwheel: false,
-      center: myLatlng
-    };
-    var map = new google.maps.Map(document.getElementById('google-map'), mapOptions);
-    var marker = new google.maps.Marker({
-      position: myLatlng,
-      map: map
-    });
-  }
-  google.maps.event.addDomListener(window, 'load', initialize_google_map);*/
-
-// custom code
 
 });

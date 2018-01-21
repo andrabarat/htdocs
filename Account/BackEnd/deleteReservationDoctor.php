@@ -8,7 +8,7 @@
     $doctorName="";
     $name="";
  
-    $sql = "SELECT `email`, `first_name`, `last_name` FROM `users` where user_name='".$login_session."'";
+    $sql = "SELECT u.`email`, u.`first_name`, u.`last_name` FROM `users` u join `reservations` r on u.`id_user`=r.`id_user` where r.`id_reservation`='".$id_reservation."'";
     $result = $conn->query($sql);        
     if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
@@ -50,7 +50,7 @@
 
         $mail->Subject = "Anulare programare Regna";
         
-        $message="Buna ziua,\r\n\r\nCu parere de rau va anuntam ca programarea dumneavoastra cu numarul ".$id_reservation." a fost anulata cu succes.\r\n\r\n\r\nCu stima, Regna.";
+        $message="Buna ziua,\r\n\r\nCu parere de rau va anuntam ca programarea dumneavoastra cu numarul ".$id_reservation." a fost anulata de catre un doctor.\r\nVa rugam sa completati o noua rezervare.\r\n\r\n\r\nCu stima, Regna.";
 
         $mail->Body = $message;
 

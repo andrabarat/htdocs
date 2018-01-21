@@ -350,6 +350,7 @@ function setDateAppoiment(day, month, year){
     button.setAttribute("type","button");
     button.className="btn btn-success btn-lg";
     button.setAttribute("onclick","submitForm()");
+    button.setAttribute("data-dismiss", "modal");
     button.innerHTML="Trimite programare";
     
     fatherFooter.appendChild(button); 
@@ -420,7 +421,6 @@ function reservedIntervalHours(intervalHours){
 
 function submitForm(){
     var allClasses=document.querySelectorAll(".hoursSelected");
-    
     if(allClasses.length==1){
         document.getElementById("timeInterval").value=allClasses[0].id;
         
@@ -428,6 +428,7 @@ function submitForm(){
             alert("Pentru a face o programare trebuie sa te autentifici.")
         } else {        
             document.getElementById("reservation").submit();
+            
         }
     }else{
         alert("Pentru a face o rezervare, te rugam selecteaza un interval orar.");

@@ -45,7 +45,7 @@
         }
     }
     
-    $sql = "INSERT INTO reservations (id_reservation, id_user, id_doctor, start_reservation, time_interval, creation_date) VALUES (".$id_reservation.",".$id_user.", ".$id_doctor.", '".$dateAppoiment." ".substr($time_interval, 0, 2).":00:00','".$time_interval."','".$creation_date."'); INSERT INTO `analyzes`(`id_analyze`, `id_reservation`, `status`, `prescription`) VALUES ('".$id_reservation."', '".$id_reservation."', 'Neconfirmat', 'Necompletat')";
+    $sql = "INSERT INTO reservations (id_reservation, id_user, id_doctor, start_reservation, time_interval, creation_date) VALUES (".$id_reservation.",".$id_user.", ".$id_doctor.", '".$dateAppoiment." ".substr($time_interval, 0, 2).":00:00','".$time_interval."','".$creation_date."'); INSERT INTO `analysis`(`id_analyse`, `id_reservation`, `status`, `prescription`) VALUES ('".$id_reservation."', '".$id_reservation."', 'Neconfirmat', 'Necompletat')";
     if ($conn->multi_query($sql) === TRUE) {
         
         $mail = new PHPMailer;

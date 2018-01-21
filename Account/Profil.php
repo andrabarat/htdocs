@@ -40,7 +40,7 @@
                 CASE WHEN r.`start_reservation` >= NOW() THEN 'Activ'
                 ELSE 'Expirat'
                 END as reservation_status
-                FROM users u join reservations r on u.`id_user`=r.`id_user` join `doctors` d on r.`id_doctor`=d.`id_doctor` join analyzes a on r.`id_reservation`=a.`id_reservation` where r.`id_user`=".$id_user;
+                FROM users u join reservations r on u.`id_user`=r.`id_user` join `doctors` d on r.`id_doctor`=d.`id_doctor` join analysis a on r.`id_reservation`=a.`id_reservation` where r.`id_user`=".$id_user;
         $result = $conn->query($sql); 
 ?>
 

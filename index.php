@@ -26,12 +26,10 @@
             <div id="logo" class="pull-left">
                 <a href="#hero"><img src="img/logo.png" alt="" title="" >
                 </a>
-                <!--<h1><a href="#hero">Regna</a></h1>-->
             </div>
             <nav id="nav-menu-container">
                 <ul class="nav-menu">
-                    <!--li class="!menu-active"><a href="#hero">Acasa</a></li-->
-                    <li><a href="#" style="font-size: 17px"><i class="fa fa-phone-square"></i> 0232 . 905</a></li>
+                    <li><a href="" style="font-size: 17px"><i class="fa fa-phone-square"></i> 0232 . 905</a></li>
                     <li data-toggle="modal" data-target="#appoimentsModal" onclick="createAppoimentModal()"><a href="#" style="font-size: 15px"><i class="fa fa-calendar"></i> Programare online</a></li>
                     <li class="menu-has-children"><a href="">Servicii</a>
                          <ul>
@@ -76,7 +74,6 @@
         <div class="hero-container">
             <h1>REGNA îți urează bun venit!</h1>
             <h2>Suntem aici zi de zi ca să știm că ești bine.</h2>
-            <!--<a href="#about" class="btn-get-started">Get Started</a>-->
         </div>
     </section>
     <main id="main">
@@ -325,16 +322,16 @@
                         <div class="info">
                             <div>
                                 <i class="fa fa-map-marker"></i>
-                                <p>A108 Adam Street
-                                    <br>New York, NY 535022</p>
+                                <p>Str. Nicolina
+                                    <br>Iasi, IS</p>
                             </div>
                             <div>
                                 <i class="fa fa-envelope"></i>
-                                <p>info@example.com</p>
+                                <p>regna@gmail.com</p>
                             </div>
                             <div>
                                 <i class="fa fa-phone"></i>
-                                <p>+1 5589 55488 55s</p>
+                                <p>0232.905</p>
                             </div>
                         </div>
                         <div class="social-links">
@@ -401,7 +398,7 @@
     <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdcZRd4foy58YFvo09XdahItn7n3y_DJA&callback=myMap"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVCUz4TI_tpltoP1V3oXf2Tlimtr7JYFg"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/superfish/hoverIntent.js"></script>
@@ -415,3 +412,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.12/jquery.mask.min.js"></script>
 </body>
 </html>
+<script>
+myMap();
+</script>
