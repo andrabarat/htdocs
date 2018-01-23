@@ -5,7 +5,6 @@
     
     $id_reservation=$_GET["id_reservation"];
     $email="";
-    $doctorName="";
     $name="";
  
     $sql = "SELECT u.`email`, u.`first_name`, u.`last_name` FROM `users` u join `reservations` r on u.`id_user`=r.`id_user` where r.`id_reservation`='".$id_reservation."'";

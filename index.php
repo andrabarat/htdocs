@@ -81,20 +81,20 @@
             <div class="container">
                 <div class="row about-container">
                     <div class="col-lg-6 content order-lg-1 order-2">
-                        <h2 class="title">Cateva cuvinte despre noi</h2>
+                        <h2 class="title">Câteva cuvinte despre noi</h2>
                         <div class="icon-box wow fadeInUp">
                             <div class="icon"><i class="fa fa-user-md"></i></div>
                             <h4 class="title"><a href="">Oamenii REGNA</a></h4>
-                            <p class="description">Echipa noastră de medici este sufletul Reţelei private de sănătate REGNA. Pregătirea şi implicarea lor neobosită, atenţia acordată fiecărui pacient şi performanţele medicale pe care le-au atins sunt garanţii ale excelenţei pe care o promovăm.</p>
+                            <p class="description">Echipa noastră de medici este sufletul reţelei private de sănătate REGNA. Pregătirea şi implicarea lor neobosită, atenţia acordată fiecărui pacient şi performanţele medicale pe care le-au atins sunt garanţii ale excelenţei pe care o promovăm.</p>
                         </div>
                         <div class="icon-box wow fadeInUp" data-wow-delay="0.2s">
                             <div class="icon"><i class="fa fa-medkit"></i></div>
-                            <h4 class="title"><a href="">Stiinta REGNA</a></h4>
-                            <p class="description"> Priceperea specialistilor nostri se imbina cu precizia celei mai performante aparaturi din Romania. Laboratorul Central REGNA are eticheta Roche Diagnostic pentru linia de biochimie si imunologie si e un reper tehnologic pentru sistemul medical romanesc. </p>
+                            <h4 class="title"><a href="">Stiința REGNA</a></h4>
+                            <p class="description"> Priceperea specialiștilor noștri se îmbina cu precizia celei mai performante aparaturi din România. Laboratorul Central REGNA are eticheta Roche Diagnostic pentru linia de biochimie și imunologie și e un reper tehnologic pentru sistemul medical românesc. </p>
                         </div>
                         <div class="icon-box wow fadeInUp" data-wow-delay="0.4s">
                             <div class="icon"><i class="fa fa-shopping-bag"></i></div>
-                            <h4 class="title"><a href="">Experienta REGNA</a></h4>
+                            <h4 class="title"><a href="">Experiența REGNA</a></h4>
                             <p class="description">Asigură-te că ai mereu acces la cele mai bune servicii medicale, contra unei sume avantajoase. </p>
                         </div>
                     </div>
@@ -106,8 +106,8 @@
             <div class="container wow fadeIn">
                 <div class="row">
                     <div class="col-lg-9 text-center text-lg-left">
-                        <h3 class="cta-title">Ai grija de sanatatea ta!</h3>
-                        <p class="cta-text"> Fii sigur ca duci o viata sanatoasa. Noi te ajutam sa afli la ce ai putea sa fii predispus. Completeaza formularul apasand butonul din dreapta.</p>
+                        <h3 class="cta-title">Ai grijă de sănătatea ta!</h3>
+                        <p class="cta-text"> Fii sigur că duci o viață sănătoasă. Noi te ajutăm să afli la ce ai putea să fii predispus. Completează formularele apăsând butonul din dreapta.</p>
                     </div>
                     <div class="col-lg-3 cta-btn-container text-center">
                         <div class="row">
@@ -131,7 +131,7 @@
             <div class="container wow fadeIn">
                 <div class="section-header">
                     <h3 class="section-title">Servicii</h3>
-                    <p class="section-description">Suntem siguri ca ai ales locul potrivit pentru a te face bine!</p>
+                    <p class="section-description">Suntem siguri că ai ales locul potrivit pentru a te face bine!</p>
                 </div>
                 <div class="row">
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
@@ -144,36 +144,36 @@
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
                         <div class="box">
                             <div class="icon"><a href="Servicii/Spitale.php"><i class="fa fa-h-square"></i></a></div>
-                            <h4 class="title"><a href="Servicii/Spitale.php">Spitale si policlinici</a></h4>
-                            <p class="description">Suntem mereu aproape de pacientii nostri, prin intermediul celor 36 de policlinici, 4 spitale, 8 Campusuri si 180 de clinici partenere in toată tara.</p>
+                            <h4 class="title"><a href="Servicii/Spitale.php">Spitale și policlinici</a></h4>
+                            <p class="description">Suntem mereu aproape de pacienții noștri, prin intermediul celor 6 de policlinici, 4 spitale, 2 Campusuri și 50 de clinici partenere în toată țara.</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
                         <div class="box">
                             <div class="icon"><a href="Servicii/Laboratoare.php"><i class="fa fa-hospital-o"></i></a></div>
                             <h4 class="title"><a href="Servicii/Laboratoare.php">Laboratoare</a></h4>
-                            <p class="description">Laboratorul Central REGNA are eticheta Roche Diagnostic pentru linia de biochimie si imunologie si e un reper tehnologic pentru sistemul medical romanesc.</p>
+                            <p class="description">Laboratorul Central REGNA are eticheta Roche Diagnostic pentru linia de biochimie și imunologie și e un reper tehnologic pentru sistemul medical românesc.</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
                         <div class="box">
                             <div class="icon"><a href="Servicii/Imagistica.php"><i class="fa fa-heartbeat"></i></a></div>
-                            <h4 class="title"><a href="Servicii/Imagistica.php">Imagistica</a></h4>
-                            <p class="description">Acuratetea unui diagnostic este de o importanta cruciala in tratarea cu succes a cazurilor medicale cu care medicii se confrunta zilnic.</p>
+                            <h4 class="title"><a href="Servicii/Imagistica.php">Imagistică</a></h4>
+                            <p class="description">Acuratețea unui diagnostic este de o importanță crucială în tratarea cu succes a cazurilor medicale cu care medicii se confrunta zilnic.</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
                         <div class="box">
                             <div class="icon"><a href="Servicii/Abonamente.php"><i class="fa fa-medkit"></i></a></div>
-                            <h4 class="title"><a href="Servicii/Abonamente.php">Abonamente si pachete</a></h4>
+                            <h4 class="title"><a href="Servicii/Abonamente.php">Abonamente și pachete</a></h4>
                             <p class="description">Asigură-te că ai mereu acces la cele mai bune servicii medicale, contra unei sume avantajoase. </p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
                         <div class="box">
                             <div class="icon"><a href="Servicii/Maternitati.php"><i class="fa fa-ambulance"></i></a></div>
-                            <h4 class="title"><a href="Servicii/Maternitati.php">Maternitati</a></h4>
-                            <p class="description">Nasterea unui copil este cel mai emotionant si memorabil moment din viata unei mamici.</p>
+                            <h4 class="title"><a href="Servicii/Maternitati.php">Maternități</a></h4>
+                            <p class="description">Nașterea unui copil este cel mai emoționant și memorabil moment din viața unei mamici.</p>
                         </div>
                     </div>
                 </div>

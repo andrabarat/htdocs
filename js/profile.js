@@ -35,16 +35,38 @@ function createMyAppoiment(father, date, grade, last_name, first_name, job_title
 
     var button = document.createElement("button");
     button.setAttribute("type", "button");
-    button.className="btn btn-warning btn-lg";
-    button.innerHTML="Anuleaza programare";
     
-    if(reservation_status=="Expirat"){
-        button.setAttribute("disabled", "true");
-    } else {
+    if(getStatus(status, date)=="Activa"){
+        button.className="btn btn-warning btn-lg";
+        button.innerHTML="Anuleaza programare";
         button.setAttribute("onclick", "deleteAppoiment("+id_reservation+")");
+        button.setAttribute("data-toggle", "modal");
+        button.setAttribute("data-target", "#checkModal");
+        h4.appendChild(button);
     }
-    button.setAttribute("data-toggle", "modal");
-    button.setAttribute("data-target", "#checkModal");
+    if(getStatus(status, date)=="Neconfirmat"){
+        button.className="btn btn-success btn-lg";
+        button.innerHTML="Așteaptă status";
+        //button.setAttribute("onclick", "changeStatus("+id_reservation+")");
+        //button.setAttribute("data-toggle", "modal");
+        //button.setAttribute("data-target", "#checkModal");
+        button.setAttribute("disabled", "true");
+        h4.appendChild(button);
+    }
+    if(getStatus(status, date)=="Confirmat"){
+        button.className="btn btn-primary btn-lg";
+        button.innerHTML="Vezi reteta";
+        button.setAttribute("onclick", "getPrescription("+id_reservation+")");
+        button.setAttribute("data-toggle", "modal");
+        button.setAttribute("data-target", "#checkModal");
+        h4.appendChild(button);
+    }
+    if(getStatus(status, date)=="Absent"){
+        button.className="btn btn-danger btn-lg";
+        button.innerHTML="Neprezentat";
+        button.setAttribute("disabled", "true");
+        h4.appendChild(button);
+    }
     
     h4.appendChild(button);
 
@@ -74,10 +96,10 @@ function getStatus(status, date){
 function deleteAppoiment(id_reservation){
     document.getElementsByTagName("body")[0].style.padding="0";
     var test=document.querySelectorAll(".modal");
+    if(document.getElementById("checkModal")!=null){
+        document.getElementById("checkModal").remove();
+    }
     if(test.length<3){ 
-        if(document.getElementById("checkModal")!=null){
-            document.getElementById("checkModal").remove();
-        }
         var modal=document.createElement("div");
         modal.className="modal fade";
         modal.id="checkModal";
@@ -109,7 +131,7 @@ function deleteAppoiment(id_reservation){
         modalFooter.className="modal-footer";
         var modalFooterButton=document.createElement("button");
         modalFooterButton.setAttribute("type","button");
-        modalFooterButton.className="btn btn-success btn-lg";
+        modalFooterButton.className="btn btn-warning btn-lg";
         modalFooterButton.setAttribute("data-dismiss", "modal");
         modalFooterButton.setAttribute("onclick","submitCancelAppoiment("+id_reservation+")");
         modalFooterButton.innerHTML="Anuleaza programare";
@@ -124,7 +146,6 @@ function deleteAppoiment(id_reservation){
         alignButtons.appendChild(modalFooterButtonCancel);
         
         modalFooter.appendChild(alignButtons);
-
 
         modalContent.appendChild(modalHeader);
         modalContent.appendChild(modalFooter);
@@ -141,12 +162,11 @@ function deleteAppoiment(id_reservation){
 
 var responseMess="";
 function submitCancelAppoiment(id_reservation){
-    
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange=function() {
         if (this.readyState == 4 && this.status == 200) {
-            responseMess=this.responseText;
             statusResponse(responseMess);
+            document.getElementById("responseHeaderTitle").innerHTML=this.responseText;
             $("#ModalResponse").modal('show');
             setTimeout(function(){location.reload()}, 3000);
         }
@@ -155,3 +175,19 @@ function submitCancelAppoiment(id_reservation){
     xhttp.send();
 }
 
+//get prescription
+function getPrescription(id_reservation){
+    if(document.getElementById("checkModal")!=null){
+        document.getElementById("checkModal").remove();
+    }   
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange=function() {
+        if (this.readyState == 4 && this.status == 200) {
+            statusResponse(this.responseText);
+            document.getElementById("responseHeaderTitle").innerHTML=this.responseText;
+            $("#ModalResponse").modal('show');
+        }
+    }; 
+    xhttp.open("GET", "/Account/BackEnd/getPrescription.php?id_reservation="+id_reservation, true);
+    xhttp.send();
+}

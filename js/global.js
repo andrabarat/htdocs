@@ -1,9 +1,10 @@
 function statusResponse(response){
     document.getElementsByTagName("body")[0].style.padding="0";
     var test=document.querySelectorAll(".modal");
-   
+    if(document.getElementById("checkModal")!=null){
+        document.getElementById("checkModal").remove();
+    }   
     if(test.length<2){ 
-        console.info(test.length);
         var modal=document.createElement("div");
         modal.className="modal fade";
         modal.id="ModalResponse";
@@ -24,7 +25,7 @@ function statusResponse(response){
         modalHeaderButton.innerHTML="&times;";
         var modalHeaderTitle=document.createElement("h4");
         modalHeaderTitle.className="text-center";
-        modalHeaderTitle.innerHTML=response;
+        modalHeaderTitle.id="responseHeaderTitle";
 
         modalHeader.appendChild(modalHeaderTitle);
 

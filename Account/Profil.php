@@ -126,10 +126,10 @@
 function changePassword(){
     document.getElementsByTagName("body")[0].style.padding="0";
     var test=document.querySelectorAll(".modal");
-    if(test.length<3){ 
-        if(document.getElementById("checkModal")!=null){
-            document.getElementById("checkModal").remove();
-        }        
+    if(document.getElementById("checkModal")!=null){
+        document.getElementById("checkModal").remove();
+    }  
+    if(test.length<3){       
         var modal=document.createElement("div");
         modal.className="modal fade";
         modal.id="checkModal";
@@ -231,16 +231,14 @@ function submitChangePassword(){
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange=function() {
         if (this.readyState == 4 && this.status == 200) {
-            responseMess=this.responseText;
-            statusResponse(responseMess);
+            statusResponse(this.responseText);
+            document.getElementById("responseHeaderTitle").innerHTML=this.responseText;
             $("#ModalResponse").modal('show');
         }
     }; 
     xhttp.open("GET", "/Account/BackEnd/changePassword.php?oldPassword="+oldPass+"&newPassword="+newPass, true);
     xhttp.send();
-    console.info("/Account/BackEnd/changePassword.php?oldPassword="+oldPass+"&newPassword="+newPass);
 }
-    
 </script>
 <style>
 .glyphicon{

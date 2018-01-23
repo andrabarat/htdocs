@@ -405,8 +405,6 @@ function getReservedIntervalHours(){
     
 }
 
-
-
 function reservedIntervalHours(intervalHours){
     if(intervalHours!=""){
         intervalHours = intervalHours.split(", ");

@@ -45,7 +45,7 @@ function checkAppoiment(father, date, last_name, first_name, job_title, id_reser
         h4.appendChild(button);
     }
     if(getStatus(status, date)=="Neconfirmat"){
-        button.className="btn btn-success btn-lg";
+        button.className="btn btn-info btn-lg";
         button.innerHTML="Schimba status";
         button.setAttribute("onclick", "changeStatus("+id_reservation+")");
         button.setAttribute("data-toggle", "modal");
@@ -55,6 +55,7 @@ function checkAppoiment(father, date, last_name, first_name, job_title, id_reser
     if(getStatus(status, date)=="Confirmat"){
         button.className="btn btn-primary btn-lg";
         button.innerHTML="Vezi reteta";
+        button.setAttribute("onclick", "getPrescription("+id_reservation+")");
         button.setAttribute("data-toggle", "modal");
         button.setAttribute("data-target", "#checkModal");
         h4.appendChild(button);
@@ -93,10 +94,10 @@ function getStatus(status, date){
 function deleteAppoiment(id_reservation){
     document.getElementsByTagName("body")[0].style.padding="0";
     var test=document.querySelectorAll(".modal");
+    if(document.getElementById("checkModal")!=null){
+        document.getElementById("checkModal").remove();
+    }
     if(test.length<3){ 
-        if(document.getElementById("checkModal")!=null){
-            document.getElementById("checkModal").remove();
-        }
         var modal=document.createElement("div");
         modal.className="modal fade";
         modal.id="checkModal";
@@ -158,14 +159,13 @@ function deleteAppoiment(id_reservation){
     }
 }
 
-var responseMess="";
 function submitCancelAppoiment(id_reservation){
     
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange=function() {
         if (this.readyState == 4 && this.status == 200) {
-            responseMess=this.responseText;
-            statusResponse(responseMess);
+            statusResponse(this.responseText);
+            document.getElementById("responseHeaderTitle").innerHTML=this.responseText;
             $("#ModalResponse").modal('show');
             setTimeout(function(){location.reload()}, 3000);
         }
@@ -178,10 +178,10 @@ function submitCancelAppoiment(id_reservation){
 function changeStatus(id_reservation){
     document.getElementsByTagName("body")[0].style.padding="0";
     var test=document.querySelectorAll(".modal");
+    if(document.getElementById("checkModal")!=null){
+        document.getElementById("checkModal").remove();
+    }
     if(test.length<3){ 
-        if(document.getElementById("checkModal")!=null){
-            document.getElementById("checkModal").remove();
-        }
         var modal=document.createElement("div");
         modal.className="modal fade";
         modal.id="checkModal";
@@ -276,12 +276,33 @@ function submitChangeStatus(id_reservation){
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange=function() {
             if (this.readyState == 4 && this.status == 200) {
-                console.info(this.response);
+                statusResponse(this.responseText);
+                document.getElementById("responseHeaderTitle").innerHTML=this.responseText;
+                $("#ModalResponse").modal('show');
+                setTimeout(function(){location.reload()}, 3000);
             }
         }; 
         xhttp.open("GET", "/Account/BackEnd/changeStatusReservation.php?id_reservation="+id_reservation+"&status="+status+"&prescription="+presciption, true);
-        console.info("/Account/BackEnd/changeStatusReservation.php?id_reservation="+id_reservation+"&status="+status+"&prescription="+presciption);
         xhttp.send();
     }
 }
 
+//get prescription
+function getPrescription(id_reservation){
+    if(document.getElementById("checkModal")!=null){
+        document.getElementById("checkModal").remove();
+    }   
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange=function() {
+        if (this.readyState == 4 && this.status == 200) {
+            if(document.getElementById("checkModal")!=null){
+                document.getElementById("checkModal").remove();
+            }   
+            statusResponse(this.responseText);
+            document.getElementById("responseHeaderTitle").innerHTML=this.responseText;
+            $("#ModalResponse").modal('show');
+        }
+    }; 
+    xhttp.open("GET", "/Account/BackEnd/getPrescription.php?id_reservation="+id_reservation, true);
+    xhttp.send();
+}

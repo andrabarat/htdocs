@@ -148,9 +148,8 @@ function submitFormReservation(){
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange=function() {
             if (this.readyState == 4 && this.status == 200) {
-                //$("#appoimentsModal").modal('hide');
-                responseMess=this.responseText;
-                statusResponse(responseMess);
+                statusResponse(this.responseText);
+                document.getElementById("responseHeaderTitle").innerHTML=this.responseText;
                 $("#ModalResponse").modal('show');
                 document.getElementById("inputSpecialitate").value="ALL";
                 document.getElementById("inputName").value="";
