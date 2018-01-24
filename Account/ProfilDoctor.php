@@ -31,6 +31,15 @@
             }
         }
         
+        $avg_rating=0;
+        $sql = "SELECT truncate(avg(`rating`),2) as 'rating_avg' FROM `ratings` where `id_doctor`='".$id_doctor."'";
+        $result = $conn->query($sql);        
+        if ($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+                $avg_rating=$row["rating_avg"];
+            }
+        }
+        
         $start_reservation="";
         $grade="";
         $last_name_user="";
@@ -78,8 +87,8 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="well">
-                                <h3><a href="#"><strong>Abonamentele mele</strong></a></h3>
-                                <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
+                                <h3><a href="#"><strong>Rating</strong></a></h3>
+                                <h4><?php echo $avg_rating?> din 10.</h4>
                             </div>
                             <div class="well">
                                 <h4><strong>Data si ora programare: </strong></h4>

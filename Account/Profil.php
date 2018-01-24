@@ -91,7 +91,30 @@
                     <div class="row">
                         <div class="col-sm-12" id="myApp">
                             <div class="row well">
-                                <h3><a href="#"><strong>Programarile mele:</strong></a></h3>
+                                <h3 class="col-sm-12">
+                                    <a href="#">
+                                        <strong>Programarile mele:</strong>
+                                    </a>
+                                </h3>
+                                <div class="col-sm-12">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons" onchange="filterReservation()">
+                                        <label class="btn btn-warning btn-lg active">
+                                            <input type="radio" name="options" id="Toate" autocomplete="off" checked> Toate
+                                        </label>
+                                        <label class="btn btn-warning btn-lg">
+                                            <input type="radio" name="options" id="Absent"> Absente
+                                        </label>
+                                        <label class="btn btn-warning btn-lg">
+                                            <input type="radio" name="options" id="Activa"> Active
+                                        </label>
+                                        <label class="btn btn-warning btn-lg">
+                                            <input type="radio" name="options" id="Confirmat"> Confirmate
+                                        </label>
+                                        <label class="btn btn-warning btn-lg">
+                                            <input type="radio" name="options" id="Neconfirmat"> Neconfirmate
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -122,126 +145,4 @@
             }
         }
     ?>
-    
-function changePassword(){
-    document.getElementsByTagName("body")[0].style.padding="0";
-    var test=document.querySelectorAll(".modal");
-    if(document.getElementById("checkModal")!=null){
-        document.getElementById("checkModal").remove();
-    }  
-    if(test.length<3){       
-        var modal=document.createElement("div");
-        modal.className="modal fade";
-        modal.id="checkModal";
-        modal.setAttribute("role", "dialog");
-
-        var modalDialog=document.createElement("div");
-        modalDialog.className="modal-dialog";
-
-        var modalContent=document.createElement("div");
-        modalContent.className="modal-content";
-
-        var modalHeader=document.createElement("div");
-        modalHeader.className="modal-header";
-        var modalHeaderButton=document.createElement("button");
-        modalHeaderButton.type="button";
-        modalHeaderButton.className="close";
-        modalHeaderButton.setAttribute("data-dismiss", "modal");
-        modalHeaderButton.innerHTML="&times;";
-        var modalHeaderTitle=document.createElement("h4");
-        modalHeaderTitle.className="text-center";
-        modalHeaderTitle.innerHTML="Dorești o parolă nouă?";
-
-        modalHeader.appendChild(modalHeaderTitle);
-
-        var modalBody=document.createElement("div");
-        modalBody.className="modal-body";
-        
-        var modalBodyOldPass=document.createElement("div");
-        modalBodyOldPass.className="input-group";
-        modalBodyOldPass.innerHTML='<span class="input-group-addon input-lg glyphicon glyphicon-search" aria-hidden="true"></span>';
-        var modalBodyOldPassInput=document.createElement("input");
-        modalBodyOldPassInput.type="password";
-        modalBodyOldPassInput.className="form-control input-lg";
-        modalBodyOldPassInput.placeholder="Parola veche";
-        modalBodyOldPassInput.name="passwordOld";
-        modalBodyOldPassInput.id="passwordOld";
-        modalBodyOldPassInput.required="true";
-        
-        var br=document.createElement("br");
-        
-        var modalBodyNewPass=document.createElement("div");
-        modalBodyNewPass.className="input-group";
-        modalBodyNewPass.innerHTML='<span class="input-group-addon input-lg glyphicon glyphicon-search" aria-hidden="true"></span>';
-        var modalBodyNewPassInput=document.createElement("input");
-        modalBodyNewPassInput.type="password";
-        modalBodyNewPassInput.className="form-control input-lg";
-        modalBodyNewPassInput.placeholder="Parola nouă";
-        modalBodyNewPassInput.name="passwordNew";
-        modalBodyNewPassInput.id="passwordNew";
-        modalBodyNewPassInput.required="true";
-        
-        modalBodyOldPass.appendChild(modalBodyOldPassInput);
-        modalBody.appendChild(modalBodyOldPass);        
-        modalBody.appendChild(br);        
-        modalBodyNewPass.appendChild(modalBodyNewPassInput);
-        modalBody.appendChild(modalBodyNewPass);
-        
-        var alignButtons=document.createElement("h3");
-        alignButtons.className="text-center";
-
-        var modalFooter=document.createElement("div");
-        modalFooter.className="modal-footer";
-        var modalFooterButton=document.createElement("button");
-        modalFooterButton.setAttribute("type","button");
-        modalFooterButton.className="btn btn-primary btn-lg";
-        modalFooterButton.setAttribute("data-dismiss", "modal");
-        modalFooterButton.setAttribute("onclick","submitChangePassword()");
-        modalFooterButton.innerHTML="Schimba parola";
-        
-        var modalFooterButtonCancel=document.createElement("button");
-        modalFooterButtonCancel.setAttribute("type","button");
-        modalFooterButtonCancel.className="btn btn-default btn-lg";
-        modalFooterButtonCancel.setAttribute("data-dismiss", "modal");
-        modalFooterButtonCancel.innerHTML="Inchide";
-
-        alignButtons.appendChild(modalFooterButton);
-        alignButtons.appendChild(modalFooterButtonCancel);
-        
-        modalFooter.appendChild(alignButtons);
-
-
-        modalContent.appendChild(modalHeader);
-        modalContent.appendChild(modalBody);
-        modalContent.appendChild(modalFooter);
-        modalDialog.appendChild(modalContent);
-        modal.appendChild(modalDialog);
-
-        document.getElementsByTagName("body")[0].appendChild(modal);
-    } else {
-        $("#checkModal").modal('show');
-        document.getElementsByTagName("body")[0].style.padding="0";
-    }
-}
-
-function submitChangePassword(){
-    var oldPass=document.getElementById("passwordOld").value;
-    var newPass=document.getElementById("passwordNew").value;
-    document.getElementsByTagName("body")[0].style.padding="0";
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange=function() {
-        if (this.readyState == 4 && this.status == 200) {
-            statusResponse(this.responseText);
-            document.getElementById("responseHeaderTitle").innerHTML=this.responseText;
-            $("#ModalResponse").modal('show');
-        }
-    }; 
-    xhttp.open("GET", "/Account/BackEnd/changePassword.php?oldPassword="+oldPass+"&newPassword="+newPass, true);
-    xhttp.send();
-}
 </script>
-<style>
-.glyphicon{
-    position: initial;
-}
-</style>

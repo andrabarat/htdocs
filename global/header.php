@@ -39,6 +39,7 @@
                         <ul>
                             <?php if($usertype=='users') {?>
                             <li><a href="/Account/Profil.php">Profilul meu</a></li>
+                            <li><a href="/Rating/RatingDoctor.php">Adaugă un rating</a></li>
                             <?php } else {?>
                             <li><a href="/Account/ProfilDoctor.php">Profilul meu</a></li>
                             <?php } ?>

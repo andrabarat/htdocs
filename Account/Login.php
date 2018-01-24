@@ -59,7 +59,7 @@
                             <?php if(isset($_GET["loginError"])) { ?>
                             <h5 id="errorLogin" class="form-text text-muted" style="color: red">* Numele utilizatorului sau parola sunt greșite.</h5>
                             <?php } ?>
-                            <br>
+                            <hr>
                             <button type="submit" class="btn btn-primary btn-lg center-block">Conectează-te</button>
                         </form>
 

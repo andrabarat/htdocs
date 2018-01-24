@@ -34,7 +34,7 @@
             <h1 class="project-name">Test de Aritmie</h1>
             <div class="row">
                 <div class="col-sm-12 text-center">
-                    <h4>Acest test va ajuta in a afla daca suferiti sau nu de aritmie. Raspunsul este in procentaj maxim corect. Consultati un medic in urma efectuarii testului.</h4>
+                    <h4>Acest test vă ajută în a afla dacă suferiți sau nu de aritmie. Raspunsul nu este într-un procentaj maxim corect. Consultați un medic în urma efectuarii testului.</h4>
                 </div>
             </div>
             <div id="timeline">
@@ -43,7 +43,7 @@
                         <i class="fa fa-user-circle-o" aria-hidden="true"></i>
                     </div>
                     <div class="timeline-content">
-                        <h2>Alegeti sexul:</h2>
+                        <h2>Alegeți sexul:</h2>
                         <div class="row question">
                             <div class="col-sm-12 text-center">
                                 <div class="btn-group" data-toggle="buttons">
@@ -64,7 +64,7 @@
                         <i class="fa fa-user-circle-o" aria-hidden="true"></i>
                     </div>
                     <div class="timeline-content right">
-                        <h2>Aveti peste 50 de ani?</h2>
+                        <h2>Aveți peste 50 de ani?</h2>
                         <div class="row question">
                             <div class="col-sm-12 text-center">
                                 <div class="btn-group" data-toggle="buttons">
@@ -85,7 +85,7 @@
                         <i class="fa fa-user-circle-o" aria-hidden="true"></i>
                     </div>
                     <div class="timeline-content">
-                        <h2>Suferiti de diabet?</h2>
+                        <h2>Suferiți de diabet?</h2>
                         <div class="row question">
                             <div class="col-sm-12 text-center">
                                 <div class="btn-group" data-toggle="buttons">
@@ -106,7 +106,7 @@
                         <i class="fa fa-user-circle-o" aria-hidden="true"></i>
                     </div>
                     <div class="timeline-content right">
-                        <h2>Aveti pulsul marit?</h2>
+                        <h2>Aveți pulsul mărit?</h2>
                         <div class="row question">
                             <div class="col-sm-12 text-center">
                                 <div class="btn-group" data-toggle="buttons">
@@ -127,7 +127,7 @@
                         <i class="fa fa-user-circle-o" aria-hidden="true"></i>
                     </div>
                     <div class="timeline-content">
-                        <h2>Ati avut probleme la ultimul test EKG?</h2>
+                        <h2>Ați avut probleme la ultimul test EKG?</h2>
                         <div class="row question">
                             <div class="col-sm-12 text-center">
                                 <div class="btn-group" data-toggle="buttons">
@@ -146,7 +146,7 @@
             </div> 
             <div class="row">
                 <div class="col-sm-12 text-center checkButtons">
-                    <button type="button" class="btn btn-secondary btn-lg">Elimina date</button>
+                    <button type="button" class="btn btn-secondary btn-lg">Elimină date</button>
                     <button type="submit" class="btn btn-success btn-lg">Trimite date</button>
                 </div>
             </div>
