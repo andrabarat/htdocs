@@ -114,6 +114,26 @@
                         <div class="col-sm-12" id="userApp">
                             <div class="row well">
                                 <h3><a href="#"><strong>Programarile mele:</strong></a></h3>
+                                <hr>
+                                <div class="col-sm-12">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons" onchange="filterReservations()">
+                                        <label class="btn btn-warning btn-lg active">
+                                            <input type="radio" name="options" id="Toate" checked> Toate
+                                        </label>
+                                        <label class="btn btn-warning btn-lg">
+                                            <input type="radio" name="options" id="Absent"> Absente
+                                        </label>
+                                        <label class="btn btn-warning btn-lg">
+                                            <input type="radio" name="options" id="Activa"> Active
+                                        </label>
+                                        <label class="btn btn-warning btn-lg">
+                                            <input type="radio" name="options" id="Confirmat"> Confirmate
+                                        </label>
+                                        <label class="btn btn-warning btn-lg">
+                                            <input type="radio" name="options" id="Neconfirmat"> Neconfirmate
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -259,4 +279,56 @@ function submitChangePassword(){
 }
     
 </script>
-
+<script>
+function filterReservations(){
+    var all=document.getElementById("Toate").checked;
+    var absent=document.getElementById("Absent").checked;
+    var activa=document.getElementById("Activa").checked;
+    var confrimat=document.getElementById("Confirmat").checked;
+    var neconfirmat=document.getElementById("Neconfirmat").checked;
+    
+    var allReservations=document.getElementsByClassName("reservation");
+    
+    if(all==true){
+        for(var i=0; i<allReservations.length; i++){
+            allReservations[i].style.display="block";
+        }
+    }
+    if(absent==true){
+        for(var i=0; i<allReservations.length; i++){
+            if(allReservations[i].className.indexOf("Absernt")>-1){
+                allReservations[i].style.display="block";
+            } else {
+                allReservations[i].style.display="none";
+            }
+        }
+    }
+    if(activa==true){
+        for(var i=0; i<allReservations.length; i++){
+            if(allReservations[i].className.indexOf("Activa")>-1){
+                allReservations[i].style.display="block";
+            } else {
+                allReservations[i].style.display="none";
+            }
+        }
+    }
+    if(confrimat==true){
+        for(var i=0; i<allReservations.length; i++){
+            if(allReservations[i].className.indexOf("Confirmat")>-1){
+                allReservations[i].style.display="block";
+            } else {
+                allReservations[i].style.display="none";
+            }
+        }
+    }
+    if(neconfirmat==true){
+        for(var i=0; i<allReservations.length; i++){
+            if(allReservations[i].className.indexOf("Neconfirmat")>-1){
+                allReservations[i].style.display="block";
+            } else {
+                allReservations[i].style.display="none";
+            }
+        }
+    }
+}
+</script>

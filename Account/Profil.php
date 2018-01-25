@@ -51,6 +51,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.12/jquery.mask.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="/js/profile.js"></script>
     <script src="/js/global.js"></script>
 </head>
@@ -89,17 +90,14 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="row">
-                        <div class="col-sm-12" id="myApp">
+                        <div class="col-sm-12" id="doctorApp">
                             <div class="row well">
-                                <h3 class="col-sm-12">
-                                    <a href="#">
-                                        <strong>Programarile mele:</strong>
-                                    </a>
-                                </h3>
+                                <h3><a href="#"><strong>Programarile mele:</strong></a></h3>
+                                <hr>
                                 <div class="col-sm-12">
-                                    <div class="btn-group btn-group-toggle" data-toggle="buttons" onchange="filterReservation()">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons" onchange="filterReservations()">
                                         <label class="btn btn-warning btn-lg active">
-                                            <input type="radio" name="options" id="Toate" autocomplete="off" checked> Toate
+                                            <input type="radio" name="options" id="Toate" checked> Toate
                                         </label>
                                         <label class="btn btn-warning btn-lg">
                                             <input type="radio" name="options" id="Absent"> Absente
@@ -141,8 +139,61 @@
                 $id_reservation=$row["id_reservation"];
                 $status=$row["status"];
                 $reservation_status=$row["reservation_status"];
-                ?>createMyAppoiment("myApp", "<?php echo $start_reservation?>", "<?php echo $grade?>", "<?php echo $last_name_doctor?>", "<?php echo $first_name_doctor?>", "<?php echo $job_title?>", "<?php echo $id_reservation?>", "<?php echo $status?>", "<?php echo $reservation_status?>");<?php
+                ?>createMyAppoiment("doctorApp", "<?php echo $start_reservation?>", "<?php echo $grade?>", "<?php echo $last_name_doctor?>", "<?php echo $first_name_doctor?>", "<?php echo $job_title?>", "<?php echo $id_reservation?>", "<?php echo $status?>", "<?php echo $reservation_status?>");<?php
             }
         }
     ?>
+</script>
+<script>
+function filterReservations(){
+    var all=document.getElementById("Toate").checked;
+    var absent=document.getElementById("Absent").checked;
+    var activa=document.getElementById("Activa").checked;
+    var confrimat=document.getElementById("Confirmat").checked;
+    var neconfirmat=document.getElementById("Neconfirmat").checked;
+    
+    var allReservations=document.getElementsByClassName("reservation");
+    
+    if(all==true){
+        for(var i=0; i<allReservations.length; i++){
+            allReservations[i].style.display="block";
+        }
+    }
+    if(absent==true){
+        for(var i=0; i<allReservations.length; i++){
+            if(allReservations[i].className.indexOf("Absernt")>-1){
+                allReservations[i].style.display="block";
+            } else {
+                allReservations[i].style.display="none";
+            }
+        }
+    }
+    if(activa==true){
+        for(var i=0; i<allReservations.length; i++){
+            if(allReservations[i].className.indexOf("Activa")>-1){
+                allReservations[i].style.display="block";
+            } else {
+                allReservations[i].style.display="none";
+            }
+        }
+    }
+    if(confrimat==true){
+        for(var i=0; i<allReservations.length; i++){
+            if(allReservations[i].className.indexOf("Confirmat")>-1){
+                allReservations[i].style.display="block";
+            } else {
+                allReservations[i].style.display="none";
+            }
+        }
+    }
+    if(neconfirmat==true){
+        for(var i=0; i<allReservations.length; i++){
+            if(allReservations[i].className.indexOf("Neconfirmat")>-1){
+                allReservations[i].style.display="block";
+            } else {
+                allReservations[i].style.display="none";
+            }
+        }
+    }
+}
 </script>
