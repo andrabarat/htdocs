@@ -16,7 +16,7 @@
 <html lang="en">
 
 <head>
-    <title>Bootstrap Example</title>
+    <title>Test Aritmie</title>
     <meta charset="utf-8">
     <link href="/css/test.css" rel="stylesheet">
     <script src="/js/doctors.js"></script>

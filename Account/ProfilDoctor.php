@@ -31,13 +31,19 @@
             }
         }
         
-        $avg_rating=0;
-        $sql = "SELECT truncate(avg(`rating`),2) as 'rating_avg' FROM `ratings` where `id_doctor`='".$id_doctor."'";
+        $avg_rating="";
+        $count_avg=0;
+        $sql = "SELECT truncate(avg(`rating`),2) as 'rating_avg', count(`rating`) as 'count_avg' FROM `ratings` where `id_doctor`='".$id_doctor."'";
         $result = $conn->query($sql);        
         if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
                 $avg_rating=$row["rating_avg"];
+                $count_avg=$row["count_avg"];
             }
+        }
+        
+        if($avg_rating==""){
+            $avg_rating="- ";
         }
         
         $start_reservation="";
@@ -87,8 +93,11 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="well">
-                                <h3><a href="#"><strong>Rating</strong></a></h3>
-                                <h4><?php echo $avg_rating?> din 10.</h4>
+                                <h3><a href="#"><strong>Notă doctor:</strong></a></h3>
+                                <div class="circle">
+                                    <h1 class="textCircle"><strong><?php echo $avg_rating?></strong><small class="colorRating">/ 10</small></h1>
+                                </div>
+                                <h4>De la <?php echo $count_avg?> utilizator.</h4>
                             </div>
                             <div class="well">
                                 <h4><strong>Data si ora programare: </strong></h4>
@@ -250,3 +259,4 @@ function submitChangePassword(){
 }
     
 </script>
+

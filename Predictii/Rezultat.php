@@ -41,27 +41,46 @@
     $answear4=$_POST["answear4"];
     $answear5=$_POST["answear5"];
 
-    $list = array (
-        array('Sex', 'Peste50', 'Diabetic', 'Puls', 'EKG'),
-        array($answear1, $answear2, $answear3, $answear4, $answear5)
-    );
-
-    $fp = fopen('../Predictii/BackEnd/input_data.csv', 'w');
-
-    foreach ($list as $fields) {
-        fputcsv($fp, $fields);
-    }
-
-    fclose($fp);
-    $dec_tree = new DecisionTree('../Predictii/BackEnd/data.csv', 0);
-    $result="";
-    $result=$dec_tree->predict_outcome('../Predictii/BackEnd/input_data.csv');
-    //echo $result;
-
     $category="";
     if($_SESSION["test".$id_session]=="aritmie"){
+        
         $category="cardiologie";
+        
+        $list = array (
+            array('Sex', 'Peste50', 'Diabetic', 'Puls', 'EKG'),
+            array($answear1, $answear2, $answear3, $answear4, $answear5)
+        );
+        $fp = fopen('../Predictii/BackEnd/input_data_artimie.csv', 'w');
+        foreach ($list as $fields) {
+            fputcsv($fp, $fields);
+        }
+
+        fclose($fp);
+        $dec_tree = new DecisionTree('../Predictii/BackEnd/data_aritmie.csv', 0);
+        $result="";
+        $result=$dec_tree->predict_outcome('../Predictii/BackEnd/input_data_artimie.csv');
+        //echo $result;
     }
+    if($_SESSION["test".$id_session]=="obezitate"){
+        
+        $category="nutritie";
+                
+        $list = array (
+            array('Sex', 'Peste45', 'Alimentatie', 'Sport', 'Cazuri'),
+            array($answear1, $answear2, $answear3, $answear4, $answear5)
+        );
+        $fp = fopen('../Predictii/BackEnd/input_data_obezitate.csv', 'w');
+        foreach ($list as $fields) {
+            fputcsv($fp, $fields);
+        }
+
+        fclose($fp);
+        $dec_tree = new DecisionTree('../Predictii/BackEnd/data_obezitate.csv', 0);
+        $result="";
+        $result=$dec_tree->predict_outcome('../Predictii/BackEnd/input_data_obezitate.csv');
+        //echo $result;
+    }
+
     $rezultat="";
     if($result=="YES"){
         $rezultat="Pozitiv";

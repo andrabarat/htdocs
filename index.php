@@ -113,15 +113,11 @@
                     <div class="col-lg-3 cta-btn-container text-center">
                         <div class="row">
                             <?php if($login_session!='') { ?>
-                            <a class="cta-btn align-middle col-sm-5" href="/Predictii/TestAritmie.php">Test Aritmie</a>
-                            <a class="cta-btn align-middle col-sm-5" href="/Predictii/Test2.php">Test 2</a>
-                            <a class="cta-btn align-middle col-sm-5" href="/Predictii/Test3.php">Test 3</a>
-                            <a class="cta-btn align-middle col-sm-5" href="/Predictii/Test4.php">Test 4</a>
+                            <a class="cta-btn align-middle col-sm-6" href="/Predictii/TestAritmie.php">Test Aritmie</a>
+                            <a class="cta-btn align-middle col-sm-6" href="/Predictii/TestObezitate.php">Test Obezitate</a>
                             <?php } else { ?>
-                            <a class="cta-btn align-middle col-sm-5" href="/Account/Login.php">Test Aritmie</a>
-                            <a class="cta-btn align-middle col-sm-5" href="/Account/Login.php">Test 2</a>
-                            <a class="cta-btn align-middle col-sm-5" href="/Account/Login.php">Test 3</a>
-                            <a class="cta-btn align-middle col-sm-5" href="/Account/Login.php">Test 4</a>
+                            <a class="cta-btn align-middle col-sm-6" href="/Account/Login.php">Test Aritmie</a>
+                            <a class="cta-btn align-middle col-sm-6" href="/Account/Login.php">Test Obezitate</a>
                             <?php } ?>
                         </div>
                     </div>
