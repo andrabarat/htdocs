@@ -47,8 +47,8 @@
         $category="cardiologie";
         
         $list = array (
-            array('Sex', 'Peste50', 'Diabetic', 'Puls', 'EKG'),
-            array($answear1, $answear2, $answear3, $answear4, $answear5)
+            array('Puls', 'EKG', 'Peste50', 'Diabet', 'Sex'),
+            array($answear4, $answear5, $answear2, $answear3, $answear1)
         );
         $fp = fopen('../Predictii/BackEnd/input_data_artimie.csv', 'w');
         foreach ($list as $fields) {
@@ -66,8 +66,9 @@
         $category="nutritie";
                 
         $list = array (
-            array('Sex', 'Peste45', 'Alimentatie', 'Sport', 'Cazuri'),
-            array($answear1, $answear2, $answear3, $answear4, $answear5)
+            array('Alimentatie', 'Cazuri', 'Sport', 'Varsta', 'Sex'),
+            array($answear3, $answear5, $answear4, $answear2, $answear1)
+            
         );
         $fp = fopen('../Predictii/BackEnd/input_data_obezitate.csv', 'w');
         foreach ($list as $fields) {

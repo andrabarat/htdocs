@@ -38,8 +38,8 @@
         <div class="col-lg-4 col-md-6" data-wow-delay="0.6s">
             <div class="box">
                 <div class="icon"><div><i class="fa fa-user-md"></i></div></div>
-                <h4 class="title"><div>30 MEDICI</div></h4>
-                <p class="description">Echipa noastra este formata din peste 30 cadre medicale.</p>
+                <h4 class="title"><div>35 MEDICI</div></h4>
+                <p class="description">Echipa noastra este formata din peste 35 cadre medicale.</p>
             </div>
         </div>
     </div>

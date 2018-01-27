@@ -59,7 +59,7 @@
     <div class="call-to-action">
         <div class="container size">
             <div class="row well">
-                <div class="col-sm-5">
+                <div class="col-sm-8">
                     <div class="well">
                         <h3><a href="#"><strong>Profilul meu:</strong></a></h3>
                         <h4><strong>Nume: </strong><?php echo $last_name?></h4>
@@ -68,10 +68,12 @@
                         <h4><strong>Email: </strong><?php echo $email?></h4>
                     </div>
                     <div class="well">
-                        <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#checkModal" onclick="changePassword()">Schimba parola</button>
+                        <h4><strong>Data si ora programare: </strong></h4>
+                        <h4><strong>Doctor: </strong></h4>
+                        <h4><strong>Specialitate: </strong></h4>
                     </div>
                 </div>
-                <div class="col-sm-7">
+                <div class="col-sm-4 text-center">
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="well">
@@ -79,9 +81,7 @@
                                 <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
                             </div>
                             <div class="well">
-                                <h4><strong>Data si ora programare: </strong></h4>
-                                <h4><strong>Doctor: </strong></h4>
-                                <h4><strong>Specialitate: </strong></h4>
+                                <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#checkModal" onclick="changePassword()">Schimba parola</button>
                             </div>
                         </div>
                     </div>

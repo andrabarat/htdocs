@@ -75,7 +75,7 @@
     <div class="call-to-action">
         <div class="container size">
             <div class="row well">
-                <div class="col-sm-5">
+                <div class="col-sm-8">
                     <div class="well">
                         <h3><a href="#"><strong>Profilul meu:</strong></a></h3>
                         <h4><strong>Grad: </strong><?php echo $grade_doctor?></h4>
@@ -89,7 +89,7 @@
                         <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#checkModal" onclick="changePassword()">Schimba parola</button>
                     </div>
                 </div>
-                <div class="col-sm-7">
+                <div class="col-sm-4 text-center">
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="well">

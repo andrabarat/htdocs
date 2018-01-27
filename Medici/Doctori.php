@@ -37,17 +37,17 @@
                 <div class="col-sm-5">
                     <select id="profile-country" class="form-control" name="country" onchange="filterFunction(this.value)">
                         <option value="ALL">Specialitate</option>
-                        <option value="CARDIOLOGIE">CARDIOLOGIE</option>
-                        <option value="CHIRURGIE-GENERALA">CHIRURGIE GENERALA</option>
-                        <option value="DERMATOLOGIE">DERMATOLOGIE</option>
-                        <option value="GASTROENTEROLOGIE">GASTROENTEROLOGIE</option>
-                        <option value="MEDICINA-INTERNA">MEDICINA INTERNA</option>
-                        <option value="NEONATOLOGIE">NEONATOLOGIE</option>
-                        <option value="OBSTETRICA-GINECOLOGIE">OBSTETRICA-GINECOLOGIE</option>
-                        <option value="ORTOPEDIE-SI-TRAUMATOLOGIE">ORTOPEDIE SI TRAUMATOLOGIE</option>
-                        <option value="PEDIATRIE">PEDIATRIE</option>
-                        <option value="PNEUMOLOGIE">PNEUMOLOGIE</option>
-                        <option value="UROLOGIE">UROLOGIE</option>
+                        <option value="Cardiologie">Cardiologie</option>
+                        <option value="Dermatologie">Dermatologie</option>
+                        <option value="Gastroenterologie">Gastroenterologie</option>
+                        <option value="Medicina-interna">Medicina interna</option>
+                        <option value="Nutritie">Nutritie</option>
+                        <option value="Neonatologie">Neonatologie</option>
+                        <option value="Obstetrica-Ginecologie">Obstetrica-Ginecologie</option>
+                        <option value="Ortopedie-si-traumatologie">Ortopedie si Traumatologie</option>
+                        <option value="Pediatrie">Pediatrie</option>
+                        <option value="Pneumologie">Pneumologie</option>
+                        <option value="Urologie">Urologie</option>
                     </select>
                 </div>
                 <div class="col-sm-5">

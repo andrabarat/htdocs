@@ -14,8 +14,6 @@
 
             <div id="logo" class="pull-left">
                 <a href="/"><img src="/img/logo.png"></img></a>
-                <!-- Uncomment below if you prefer to use a text logo -->
-                <!--<h1><a href="#hero">Regna</a></h1>-->
             </div>
 
             <nav id="nav-menu-container">
@@ -56,28 +54,19 @@
 </body>
 
 
-<!-- Contact Form JavaScript File -->
 <script src="/contactform/contactform.js"></script>
 
-<!--==========================
-Header
-============================-->
-<!-- Favicons -->
+
 <link href="/img/favicon.png" rel="icon">
 <link href="/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-<!-- Google Fonts -->
 
-
-<!-- Bootstrap CSS File -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
 
-<!-- Libraries CSS Files -->
 <link href="/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 <link href="/lib/animate/animate.min.css" rel="stylesheet">
 
-<!-- Main Stylesheet File -->
 <link href="/css/style.css" rel="stylesheet">
 <script src="/lib/jquery/jquery.min.js"></script>
 <script src="/lib/jquery/jquery-migrate.min.js"></script>
@@ -91,6 +80,5 @@ Header
 <script src="/lib/superfish/superfish.min.js"></script>
 <script src="/js/index.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.12/jquery.mask.min.js"></script>
-<!-- Contact Form JavaScript File -->
-<!-- Template Main Javascript File -->
+
 <script src="/js/main.js"></script>
