@@ -1,0 +1,37 @@
+body{
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/call-to-action-bg.jpg) fixed center center;
+    background-size: cover;
+}
+.call-to-action {
+  padding: 80px 0;
+}
+.cta-title {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+}
+ .cta-text {
+  color: #fff;
+} 
+.size {
+    margin-top: 50;
+}
+textarea{
+    resize: none;
+}
+.glyphicon{
+    position: initial;
+}
+.search{
+    color: white;
+}
+.text-white{
+    color: white;
+}
+hr{
+    border: 1px solid white;
+}
+.pacients{
+    background-color: white;
+    border-radius: 15px;
+}

@@ -277,15 +277,15 @@ function createCalendar(position){
         }
         if(monthPosition<getCurrentMonth() && yearPosition<=getCurrentYear()){
             day.className="inactiveDays";
-            day.setAttribute("onclick", "alert('Ne pare rau, dar nu puteti face o planificare in trecut.')");
+            day.setAttribute("onclick", "alert('Ne pare rău, dar nu puteți face o planificare în trecut.')");
         }
         if(monthPosition>getCurrentMonth() && yearPosition<getCurrentYear()){
             day.className="inactiveDays";
-            day.setAttribute("onclick", "alert('Ne pare rau, dar nu puteti face o planificare in trecut.')");
+            day.setAttribute("onclick", "alert('Ne pare rău, dar nu puteți face o planificare în trecut.')");
         }
         if(text<getCurrentDay() && monthPosition==getCurrentMonth() && yearPosition==getCurrentYear()){
             day.className="inactiveDays";
-            day.setAttribute("onclick", "alert('Ne pare rau, dar nu puteti face o planificare in trecut.')");
+            day.setAttribute("onclick", "alert('Ne pare rău, dar nu puteți face o planificare în trecut.')");
         }
         daysNumber.appendChild(day);
     }

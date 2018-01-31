@@ -11,14 +11,12 @@
     } else {
 ?>
 <html>
-
 <head>
     <title>Rating</title>
     <title>Profilul meu</title>
     <link href="/css/rating.css" rel="stylesheet">
 </head>
 <body>
-    
     <div class="call-to-action">
         <div class="container size">
             <div id="setRating"></div>
@@ -60,7 +58,7 @@
                             </div>
                         </div>
                          <div class="row bottom">
-                            <h3 class="col-sm-10">3. Cât de mulţumit sunteți de modul în care a decurs consultul?</h3>
+                            <h3 class="col-sm-10">3. Cât de mulţumit sunteți de modul în care a decurs consultația??</h3>
                             <h3 class="col-sm-1 text-center">Nota: </h3>
                             <h3 class="col-sm-1 text-center ratingMark" id="getValue3">5</h3>
                             <div class="form-group col-sm-12">

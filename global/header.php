@@ -40,6 +40,7 @@
                             <li><a href="/Rating/RatingDoctor.php">Adaugă un rating</a></li>
                             <?php } else {?>
                             <li><a href="/Account/ProfilDoctor.php">Profilul meu</a></li>
+                            <li><a href="/Pacient/Cauta.php">Adaugă un rating</a></li>
                             <?php } ?>
                             <li><form action="/Account/BackEnd/logout.php" action="post"><a href="/Account/BackEnd/logout.php">Iesire din cont</a></form></li>
                         </ul>

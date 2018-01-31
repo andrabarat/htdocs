@@ -296,7 +296,7 @@ function filterReservations(){
     }
     if(absent==true){
         for(var i=0; i<allReservations.length; i++){
-            if(allReservations[i].className.indexOf("Absernt")>-1){
+            if(allReservations[i].className.indexOf("Absent")>-1){
                 allReservations[i].style.display="block";
             } else {
                 allReservations[i].style.display="none";

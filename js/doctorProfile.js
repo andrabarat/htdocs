@@ -3,7 +3,7 @@ function checkAppoiment(father, date, last_name, first_name, job_title, id_reser
     var root=document.getElementById(father);
 
     var colsm1= document.createElement("div");
-    colsm1.className="col-sm-6 reservation "+status;
+    colsm1.className="col-sm-6 reservation "+getStatus(status, date);
 
     var colsm2= document.createElement("div");
     colsm2.className="col-sm-12";

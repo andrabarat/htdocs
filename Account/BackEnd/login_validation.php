@@ -16,5 +16,4 @@
         header("Location: /Account/Login.php?loginError=failed");
     }
     $conn->close();
-
 ?>

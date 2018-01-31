@@ -81,7 +81,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="cno">CNP *</label>
+                                <label for="cnp">CNP *</label>
                                 <div class="input-group">
                                     <span class="input-group-addon input-lg glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                                     <input type="text" class="form-control input-lg cnp" placeholder="1234567891234" id="cnpReg" name="cnpReg" required onfocusout="validateCNP(this.id)" >
