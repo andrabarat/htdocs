@@ -50,21 +50,39 @@ class DecisionTree extends Tree {
 		$this->input_data = $this->csv_to_array($data_file);
 		$data 	= $this->input_data['samples'];
 		$header = $this->input_data['header'];
+		//$row = $data[0];
+		//print_r($row);
 		foreach($data as $k => $row) {
 			$row['result'] = $this->predict($this->root, $row);	
 			$data[$k] = $row;
 		}
+		//echo "\n";
         return $row['result'];
+		//print_r($data);
 	}
 	
 	private function predict($node, $data_row) {
+		//we have reached a leaf node
 		if ( !count($node->namedBranches) ) {
+			//print_r("\nReturning " . $node->value);
+			//print_r($node->value);
 			return $node->value;
 		}
+		if ( array_key_exists($node->value, $data_row) ) {
+			//print_r("\nValue of " . $node->value . " is " . $data_row[$node->value]);
 			if ( array_key_exists($data_row[$node->value], $node->namedBranches) ) {
+				//print_r("\nBranch " . $data_row[$node->value] . " exists and leads to node " . $node->namedBranches[$data_row[$node->value]]->value);
 				$next_node = $node->namedBranches[$data_row[$node->value]];
 				return($this->predict($next_node, $data_row));
 			}
+				/*if ( $value != null ) {			
+					return $value;
+				}
+			}
+			else {
+				print_r ("\nReturning " . $node->value);
+				return $node->value;
+			}*/
 		}
 		print_r("\nInvalid path");
 		return null;
@@ -206,7 +224,7 @@ class DecisionTree extends Tree {
 				$p['no'] 	/= $total;
 			}
 			else {
-				die("You are dividing by ZERO");
+				die("You are dividing by ZERO, idiot!");
 			}
 		}
 		catch (Exception $e) {

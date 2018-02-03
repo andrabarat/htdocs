@@ -40,50 +40,50 @@
                         <div class="row bottom">
                             <h3 class="col-sm-10">1. Cât de mulţumit sunteți de modalităţile de programare la Regna?</h3>
                             <h3 class="col-sm-1 text-center">Nota: </h3>
-                            <h3 class="col-sm-1 text-center ratingMark" id="getValue1">5</h3>
+                            <h3 class="col-sm-1 text-center ratingMark" id="getValue1">3</h3>
                             <div class="form-group col-sm-12">
                                 <div class="input-group slidecontainer">
-                                    <input type="range" min="1" max="10" value="5" class="slider" id="setValue1" oninput="setMarkValue(this)">
+                                    <input type="range" min="1" max="5" value="3" class="slider" id="setValue1" oninput="setMarkValue(this)">
                                 </div>
                             </div>
                         </div>
                         <div class="row bottom">
                             <h3 class="col-sm-10">2. Cât de mulţumit sunteți de informaţiile şi detaliile primite de la medic?</h3>
                             <h3 class="col-sm-1 text-center markBox">Nota: </h3>
-                            <h3 class="col-sm-1 text-center ratingMark" id="getValue2">5</h3>
+                            <h3 class="col-sm-1 text-center ratingMark" id="getValue2">3</h3>
                             <div class="form-group col-sm-12">
                                 <div class="input-group slidecontainer">
-                                    <input type="range" min="1" max="10" value="5" class="slider" id="setValue2" oninput="setMarkValue(this)">
+                                    <input type="range" min="1" max="5" value="3" class="slider" id="setValue2" oninput="setMarkValue(this)">
                                 </div>
                             </div>
                         </div>
                          <div class="row bottom">
-                            <h3 class="col-sm-10">3. Cât de mulţumit sunteți de modul în care a decurs consultația??</h3>
+                            <h3 class="col-sm-10">3. Cât de mulţumit sunteți de modul în care a decurs consultația?</h3>
                             <h3 class="col-sm-1 text-center">Nota: </h3>
-                            <h3 class="col-sm-1 text-center ratingMark" id="getValue3">5</h3>
+                            <h3 class="col-sm-1 text-center ratingMark" id="getValue3">3</h3>
                             <div class="form-group col-sm-12">
                                 <div class="input-group slidecontainer">
-                                    <input type="range" min="1" max="10" value="5" class="slider" id="setValue3" oninput="setMarkValue(this)">
+                                    <input type="range" min="1" max="5" value="3" class="slider" id="setValue3" oninput="setMarkValue(this)">
                                 </div>
                             </div>
                         </div>   
                         <div class="row bottom">
-                            <h3 class="col-sm-10">4. Cât de mulţumit sunteți indicațiile primite?</h3>
+                            <h3 class="col-sm-10">4. Cât de mulţumit sunteți de indicațiile primite?</h3>
                             <h3 class="col-sm-1 text-center">Nota: </h3>
-                            <h3 class="col-sm-1 text-center ratingMark" id="getValue4">5</h3>
+                            <h3 class="col-sm-1 text-center ratingMark" id="getValue4">3</h3>
                             <div class="form-group col-sm-12">
                                 <div class="input-group slidecontainer">
-                                    <input type="range" min="1" max="10" value="5" class="slider" id="setValue4" oninput="setMarkValue(this)">
+                                    <input type="range" min="1" max="5" value="3" class="slider" id="setValue4" oninput="setMarkValue(this)">
                                 </div>
                             </div>
                         </div>
                         <div class="row bottom">
                             <h3 class="col-sm-10">5. Cât consideraţi că personalul auxiliar v-a ascultat şi v-a oferit informaţii?</h3>
                             <h3 class="col-sm-1 text-center markBox">Nota: </h3>
-                            <h3 class="col-sm-1 text-center ratingMark" id="getValue5">5</h3>
+                            <h3 class="col-sm-1 text-center ratingMark" id="getValue5">3</h3>
                             <div class="form-group col-sm-12">
                                 <div class="input-group slidecontainer">
-                                    <input type="range" min="1" max="10" value="5" class="slider" id="setValue5" oninput="setMarkValue(this)">
+                                    <input type="range" min="1" max="5" value="3" class="slider" id="setValue5" oninput="setMarkValue(this)">
                                 </div>
                             </div>
                         </div>

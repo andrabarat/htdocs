@@ -19,7 +19,9 @@
             <nav id="nav-menu-container">
                 <ul class="nav-menu">
                     <li><a href="#" style="font-size: 17px"><i class="fa fa-phone-square"></i> 0232 . 905</a></li>
+                    <?php if($usertype!='doctors') {?>
                     <li data-toggle="modal" data-target="#appoimentsModal" onclick="createAppoimentModal()"><a href="#" style="font-size: 15px"><i class="fa fa-calendar"></i> Programare online</a></li>
+                    <?php } ?>
                     <li class="menu-has-children"><a href="">Servicii</a>
                          <ul>
                              <?php if($usertype!='doctors') {?>
@@ -40,7 +42,7 @@
                             <li><a href="/Rating/RatingDoctor.php">Adaugă un rating</a></li>
                             <?php } else {?>
                             <li><a href="/Account/ProfilDoctor.php">Profilul meu</a></li>
-                            <li><a href="/Pacient/Cauta.php">Adaugă un rating</a></li>
+                            <li><a href="/Pacient/Cauta.php">Istoric pacient</a></li>
                             <?php } ?>
                             <li><form action="/Account/BackEnd/logout.php" action="post"><a href="/Account/BackEnd/logout.php">Iesire din cont</a></form></li>
                         </ul>

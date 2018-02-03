@@ -26,6 +26,22 @@
                 $email=$row["email"];
             }
         }
+            
+        
+        $sqlNext = "SELECT r.`start_reservation`, d.`grade`, d.`last_name`, d.`first_name`, d.`job_title`, r.`id_reservation`, a.`status`FROM users u join reservations r on u.`id_user`=r.`id_user` join `doctors` d on r.`id_doctor`=d.`id_doctor` join analysis a on r.`id_reservation`=a.`id_reservation` where r.`id_user`='".$id_user."' and r.`start_reservation` >= NOW() order by r.`start_reservation` LIMIT 1 ";
+        $resultNext = $conn->query($sqlNext);
+        
+        $nextStartReservation="";
+        $nextDoctor="";
+        $nextJobTitle="";
+        
+        if ($resultNext->num_rows > 0) {
+            while($row = $resultNext->fetch_assoc()) {
+                $nextStartReservation=$row["start_reservation"];
+                $nextDoctor=$row["first_name"]." ".$row["last_name"];
+                $nextJobTitle=$row["job_title"];
+            }
+        }
         
         //Programarile userului
         $start_reservation="";
@@ -41,7 +57,7 @@
                 ELSE 'Expirat'
                 END as reservation_status
                 FROM users u join reservations r on u.`id_user`=r.`id_user` join `doctors` d on r.`id_doctor`=d.`id_doctor` join analysis a on r.`id_reservation`=a.`id_reservation` where r.`id_user`=".$id_user;
-        $result = $conn->query($sql); 
+        $result = $conn->query($sql);
 ?>
 
 <html>
@@ -68,9 +84,10 @@
                         <h4><strong>Email: </strong><?php echo $email?></h4>
                     </div>
                     <div class="well">
-                        <h4><strong>Data si ora programare: </strong></h4>
-                        <h4><strong>Doctor: </strong></h4>
-                        <h4><strong>Specialitate: </strong></h4>
+                        <h3><a href="#"><strong>Urmatoarea programare:</strong></a></h3>
+                        <h4><strong>Data si ora programare: </strong><?php echo $nextStartReservation?></h4>
+                        <h4><strong>Doctor: </strong><?php echo $nextDoctor?></h4>
+                        <h4><strong>Specialitate: </strong><?php echo $nextJobTitle?></h4>
                     </div>
                 </div>
                 <div class="col-sm-4 text-center">
