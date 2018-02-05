@@ -231,7 +231,8 @@
                                 <textarea id="message" class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Mesaj"></textarea>
                                 <div class="validation"></div>
                             </div>
-                            <div class="text-center">
+                            <div class="g-recaptcha" data-sitekey="6LeIe0QUAAAAAHBw9vRdsxZWOrEDsN-y6uosz42h"></div>
+                            <div class="text-center buttonPosition">
                                 <button type="submit" onclick="submitContactForm()">Trimite mesaj</button>
                             </div>
                         </div>
@@ -278,6 +279,7 @@
     <script src="js/global.js"></script>
     <script src="js/contact.js"></script>
     <script src="js/chat.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.12/jquery.mask.min.js"></script>
 </body>
 </html>

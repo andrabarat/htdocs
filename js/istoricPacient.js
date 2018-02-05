@@ -23,9 +23,14 @@ function getPacient(){
                     document.getElementById("error").style.display="block";
                     document.getElementById("cnp").value="";
                     document.getElementById("phone").value="";
+                    document.getElementById("pacientsList").innerHTML="";
+                    document.getElementById("prescriptionsList").innerHTML="";
+                    
                 } else {
                     document.getElementById("cnp").value="";
                     document.getElementById("phone").value="";
+                    document.getElementById("pacientsList").innerHTML="";
+                    document.getElementById("prescriptionsList").innerHTML="";
                     responseJSON = JSON.parse(this.responseText);                
                     createPacient(responseJSON.name, responseJSON.phone, responseJSON.email);
                     prescritionList=responseJSON.reservations;

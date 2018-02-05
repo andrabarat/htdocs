@@ -7,6 +7,11 @@
     $email=$_GET["email"];
     $subject=$_GET["subject"];
     $message=$_GET["message"];
+    $secret="6LeIe0QUAAAAAOAke0EPaSV7ifKAvYHuhA7BSM-4";
+    $response=$_GET["captcha"];
+    $verify=file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret={$secret}&response={$response}");
+    $captcha_success=json_decode($verify);
+    
 
     $mail = new PHPMailer;
     $mail->isSMTP();
@@ -40,11 +45,9 @@
 
     $mail->Body    = $message;
 
-    if (!$mail->send()) {
-        echo "A intervenit ceva, va ruram incercati din nou.";
+    if (!$mail->send() || $captcha_success->success==false) {
+        echo "Vă rugăm completați câmpul captcha.";
     } else {
         echo "Mesajul a fost trimis cu succes.";
     }
-
-
 ?>
