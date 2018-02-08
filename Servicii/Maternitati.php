@@ -138,3 +138,8 @@ De aceea, ne-am pregatit cu dotari la standarde internationale si o echipa de me
 
 </body>
 </html>
+<style>
+.list-group{
+    padding-left: 1px !important;
+}
+</style>

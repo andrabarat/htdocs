@@ -35,7 +35,7 @@
             <div class="row">
                 <div class="col-sm-2"><h3 class="text-center">Cauta</h3></div>
                 <div class="col-sm-5">
-                    <select id="profile-country" class="form-control" name="country" onchange="filterFunction(this.value)">
+                    <select id="profile-country" class="form-control input-lg" name="country" onchange="filterFunction(this.value)">
                         <option value="ALL">Specialitate</option>
                         <option value="Cardiologie">Cardiologie</option>
                         <option value="Dermatologie">Dermatologie</option>
@@ -51,7 +51,7 @@
                     </select>
                 </div>
                 <div class="col-sm-5">
-                    <input type="text" class="form-control" id="profile-region" placeholder="Nume medic..." value="" onkeyup="filterFunction(this.value.toUpperCase())">
+                    <input type="text" class="form-control input-lg" id="profile-region" placeholder="Nume medic..." value="" onkeyup="filterFunction(this.value.toUpperCase())">
                 </div>
             </div>
         </div>
@@ -96,8 +96,8 @@
     }
                
     if(isset($_GET["specialitate"])){?>
-        filterFunction("<?php echo strtoupper($_GET["specialitate"]) ?>");
-        document.getElementById("profile-country").value="<?php echo strtoupper($_GET["specialitate"]) ?>";
+        filterFunction("<?php echo ($_GET["specialitate"]) ?>");
+        document.getElementById("profile-country").value="<?php echo $_GET["specialitate"] ?>";
     <?php
     }
 ?>     

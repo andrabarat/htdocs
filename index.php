@@ -104,6 +104,7 @@
                 </div>
             </div>
         </section>
+        <?php if($usertype!='doctors') {?>
         <section id="call-to-action">
             <div class="container wow fadeIn">
                 <div class="row">
@@ -125,6 +126,7 @@
                 </div>
             </div>
         </section>
+        <?php } ?>
         <section id="services">
             <div class="container wow fadeIn">
                 <div class="section-header">
