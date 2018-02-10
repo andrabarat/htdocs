@@ -12,6 +12,8 @@
         function ifNull($elem){
             if($elem==""){
                 return "-";
+            } else {
+                return $elem;
             }
         }
         
