@@ -26,9 +26,9 @@
 <body>
     <form action="/Predictii/Rezultat.php" method="post" id="prediction">
         <input type="text" name="question1" value="Sexul" style="display: none">
-        <input type="text" name="question2" value="Aveti peste 45 de ani?" style="display: none">
-        <input type="text" name="question3" value="Pe ce este bazata alimentatia?" style="display: none">
-        <input type="text" name="question4" value="Care este stilul de viata?" style="display: none">
+        <input type="text" name="question2" value="Aveți peste 45 de ani?" style="display: none">
+        <input type="text" name="question3" value="Alimentația dumneavoastră se bazază pe grăsimi?" style="display: none">
+        <input type="text" name="question4" value="Aveți un stilul de viață activ?" style="display: none">
         <input type="text" name="question5" value="Sunt in familie rude de grad I cu caz de obezitate?" style="display: none">
         <div class="timeline-container">
             <h1 class="project-name">Test de Obezitate</h1>
@@ -84,15 +84,15 @@
                         <i class="fa fa-user-circle-o" aria-hidden="true"></i>
                     </div>
                     <div class="timeline-content">
-                        <h2>Pe ce este bazată alimentația dumneavoastră?</h2>
+                        <h2>Alimentația dumneavoastră se bazază pe grăsimi?</h2>
                         <div class="row question">
                             <div class="col-sm-12 text-center">
                                 <div class="btn-group" data-toggle="buttons">
                                     <label class="btn btn-warning btn-lg">
-                                        <input type="radio" name="answear3" value="1" autocomplete="off" required> Vegetale
+                                        <input type="radio" name="answear3" value="1" autocomplete="off" required> Da
                                     </label>
                                     <label class="btn btn-warning btn-lg">
-                                        <input type="radio" name="answear3" value="0" autocomplete="off"> Grăsimi
+                                        <input type="radio" name="answear3" value="0" autocomplete="off"> Nu
                                     </label>
                                 </div>
                             </div>
@@ -105,15 +105,15 @@
                         <i class="fa fa-user-circle-o" aria-hidden="true"></i>
                     </div>
                     <div class="timeline-content right">
-                        <h2>Care este stilul de viață pe care îl aveți?</h2>
+                        <h2>Aveți un stilul de viață activ?</h2>
                         <div class="row question">
                             <div class="col-sm-12 text-center">
                                 <div class="btn-group" data-toggle="buttons">
                                     <label class="btn btn-warning btn-lg">
-                                        <input type="radio" name="answear4" value="1" autocomplete="off" required> Activ
+                                        <input type="radio" name="answear4" value="1" autocomplete="off" required> Da
                                     </label>
                                     <label class="btn btn-warning btn-lg">
-                                        <input type="radio" name="answear4" value="0" autocomplete="off"> Sedentar
+                                        <input type="radio" name="answear4" value="0" autocomplete="off"> Nu
                                     </label>
                                 </div>
                             </div>

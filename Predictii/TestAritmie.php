@@ -26,10 +26,10 @@
 <body>
     <form action="/Predictii/Rezultat.php" method="post" id="prediction">
         <input type="text" name="question1" value="Sexul" style="display: none">
-        <input type="text" name="question2" value="Aveti peste 50 de ani?" style="display: none">
-        <input type="text" name="question3" value="Suferiti de diabet?" style="display: none">
-        <input type="text" name="question4" value="Aveti pulsul marit?" style="display: none">
-        <input type="text" name="question5" value="Ati avut probleme la ultimul test EKG?" style="display: none">
+        <input type="text" name="question2" value="Aveți peste 50 de ani?" style="display: none">
+        <input type="text" name="question3" value="Suferiți de diabet?" style="display: none">
+        <input type="text" name="question4" value="Aveți pulsul mărit?" style="display: none">
+        <input type="text" name="question5" value="Ați avut probleme la ultimul test EKG?" style="display: none">
         <div class="timeline-container">
             <h1 class="project-name">Test de Aritmie</h1>
             <div class="row">
