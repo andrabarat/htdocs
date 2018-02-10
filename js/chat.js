@@ -102,12 +102,17 @@ function getSpecificResponse(message, id){
         for(var i=0;i<messageList.length;i++){
             for(var j=0;j<=jobTitle.length;j++){
                 if(messageList[i].toLowerCase().indexOf(jobtitle[j])>-1){
-                    return "Puteti merge la unul din doctorii nostri de la specialitate <a href='/Medici/Doctori.php?specialitate="+messageList[i]+"'>"+messageList[i]+"</a>.";
+                    return "Puteti merge la unul din doctorii nostri de la specialitate <a href='/Medici/Doctori.php?specialitate="+capitalizeString(messageList[i])+"'>"+messageList[i]+"</a>.";
                 }
             }
         }
         return "Ne pare rau dar nu exista un astfel de departament.";
     }
+}
+
+function capitalizeString(str){
+    init_cap=str[0].toUpperCase() + str.substring(1,str.length).toLowerCase();
+    return init_cap;
 }
 
 function getCurrentTime(){

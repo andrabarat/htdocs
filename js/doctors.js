@@ -23,7 +23,7 @@ function filterFunction(type) {
     }
 }
 
-function create(father, id, grade, firstname, lastname, description, jobTitle){
+function create(father, id, grade, firstname, lastname, description, jobTitle, rating){
     
     var root=document.getElementById(father);
     
@@ -54,23 +54,28 @@ function create(father, id, grade, firstname, lastname, description, jobTitle){
     row.className="row";
     
     var doctorDescr=document.createElement("div");
-    doctorDescr.className="col-sm-7";
+    doctorDescr.className="col-sm-6";
     
-    var textDescr=document.createElement("h5");
+    var textDescr=document.createElement("h4");
     textDescr.innerHTML=description;
     doctorDescr.appendChild(textDescr);
     
-    var titleJob=document.createElement("h5");
+    var titleJob=document.createElement("h4");
     titleJob.className="col-sm-3";
     titleJob.innerHTML="<strong>"+jobTitle+"</strong>";
     titleJob.style.color="#ff531a";
+    
+    var ratingBox=document.createElement("h4");
+    ratingBox.className="col-sm-1 text-center";
+    ratingBox.innerHTML="<strong>"+ratingChange(rating)+"</strong> / 5";
+    ratingBox.style.color="#FF8C00";
     
     var buttonContent=document.createElement("div");
     buttonContent.className="col-sm-2";
     
     var button=document.createElement("button");
     button.setAttribute("type", "button");
-    button.className="btn btn-success col-sm-12 fa fa-calendar";
+    button.className="btn btn-success btn-lg col-sm-12 fa fa-calendar";
     button.setAttribute("onclick","openModal('"+id+"', '"+grade+"','"+firstname+"','"+lastname+"')");
     button.setAttribute("data-target","#myModal");
     button.setAttribute("data-toggle","modal");
@@ -79,6 +84,7 @@ function create(father, id, grade, firstname, lastname, description, jobTitle){
     
     row.appendChild(doctorDescr);
     row.appendChild(titleJob);
+    row.appendChild(ratingBox);
     row.appendChild(buttonContent);
     
     mediaBody.appendChild(row);
@@ -90,6 +96,14 @@ function create(father, id, grade, firstname, lastname, description, jobTitle){
     media.appendChild(line);
     
     root.appendChild(media);
+}
+
+function ratingChange(rating){
+    if(rating=="0.0"){
+        return "-";
+    } else {
+        return rating;
+    }
 }
 
 function openModal(id, grade, firstname, lastname){
@@ -219,7 +233,7 @@ function createCalendar(position){
     next.innerHTML="&#10095";
     next.setAttribute("onclick", "createCalendar(1)");
     var currentMonth=document.createElement("li");
-    currentMonth.innerHTML=getCurrentMonthText(monthPosition)+'<br>';
+    currentMonth.innerHTML=getCurrentMonthText(monthPosition-1)+'<br>';
     //currentMonth.id="month";
     var currentYear=document.createElement("span");
     currentYear.style.fontSize="18px";

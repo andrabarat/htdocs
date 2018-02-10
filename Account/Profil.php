@@ -9,6 +9,12 @@
         include "../global/header.php";
         include "../global/dbConnect.php";
         
+        function ifNull($elem){
+            if($elem==""){
+                return "-";
+            }
+        }
+        
         //Profilul userului
         $id_user="";
         $first_name="";
@@ -67,7 +73,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.12/jquery.mask.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="/js/profile.js"></script>
     <script src="/js/global.js"></script>
 </head>
@@ -75,7 +80,7 @@
     <div class="call-to-action">
         <div class="container size">
             <div class="row well">
-                <div class="col-sm-8">
+                <div class="col-sm-12">
                     <div class="well">
                         <h3><a href="#"><strong>Profilul meu:</strong></a></h3>
                         <h4><strong>Nume: </strong><?php echo $last_name?></h4>
@@ -83,24 +88,18 @@
                         <h4><strong>Nr. telefon: </strong><?php echo $phone_number?></h4>
                         <h4><strong>Email: </strong><?php echo $email?></h4>
                     </div>
+                </div>
+                <div class="col-sm-12">
                     <div class="well">
                         <h3><a href="#"><strong>Urmatoarea programare:</strong></a></h3>
-                        <h4><strong>Data si ora programare: </strong><?php echo $nextStartReservation?></h4>
-                        <h4><strong>Doctor: </strong><?php echo $nextDoctor?></h4>
-                        <h4><strong>Specialitate: </strong><?php echo $nextJobTitle?></h4>
+                        <h4><strong>Data si ora programare: </strong><?php echo ifNull($nextStartReservation)?></h4>
+                        <h4><strong>Doctor: </strong><?php echo ifNull($nextDoctor)?></h4>
+                        <h4><strong>Specialitate: </strong><?php echo ifNull($nextJobTitle)?></h4>
                     </div>
                 </div>
-                <div class="col-sm-4 text-center">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="well">
-                                <h3><a href="#"><strong>Abonamentele mele</strong></a></h3>
-                                <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
-                            </div>
-                            <div class="well">
-                                <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#checkModal" onclick="changePassword()">Schimba parola</button>
-                            </div>
-                        </div>
+                <div class="col-sm-12">
+                    <div class="well">
+                        <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#checkModal" onclick="changePassword()">Schimbă parola</button>
                     </div>
                 </div>
             </div>
@@ -214,3 +213,7 @@ function filterReservations(){
     }
 }
 </script>
+<style>
+h1,h2,h3,h4,h5,h6,h7{
+    margin-top: 10px !important;
+}</style>

@@ -5,7 +5,7 @@
     
     $id_reservation=$_GET["id_reservation"];
     $status=$_GET["status"];
-    $prescription=$_GET["prescription"];
+    $prescription=nl2br($_GET["prescription"]);
     
     $email="";
     $name="";

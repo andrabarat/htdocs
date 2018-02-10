@@ -51,7 +51,7 @@
                     </select>
                 </div>
                 <div class="col-sm-5">
-                    <input type="text" class="form-control input-lg" id="profile-region" placeholder="Nume medic..." value="" onkeyup="filterFunction(this.value.toUpperCase())">
+                    <input type="text" class="form-control input-lg" id="profile-region" placeholder="Nume medic..." value="" onkeyup="filterFunction(this.value)">
                 </div>
             </div>
         </div>
@@ -85,12 +85,12 @@
 </html>
 <script>
 <?php
-    $sql="SELECT * FROM doctors";
+    $sql="SELECT d.`id_doctor`, d.`grade`, d.`first_name`, d.`last_name`, d.`description`, d.`job_title`, truncate(ifnull(r.`rating`,0),1) as 'rating' FROM doctors d left join ratings r on d.`id_doctor`=r.`id_doctor` group by d.`id_doctor`";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
             ?>
-            create("doctorsList", "<?php echo $row["id_doctor"]?>", "<?php echo $row["grade"]?>", "<?php echo $row["first_name"]?>", "<?php echo $row["last_name"]?>", "<?php echo $row["description"]?>", "<?php echo $row["job_title"]?>");
+            create("doctorsList", "<?php echo $row["id_doctor"]?>", "<?php echo $row["grade"]?>", "<?php echo $row["first_name"]?>", "<?php echo $row["last_name"]?>", "<?php echo $row["description"]?>", "<?php echo $row["job_title"]?>", "<?php echo $row["rating"]?>");
             <?php
         }
     }

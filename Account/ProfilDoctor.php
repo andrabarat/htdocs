@@ -95,14 +95,9 @@
                             <div class="well">
                                 <h3><a href="#"><strong>Notă doctor:</strong></a></h3>
                                 <div class="circle">
-                                    <h1 class="textCircle"><strong><?php echo $avg_rating?></strong><small class="colorRating">/ 10</small></h1>
+                                    <h1 class="textCircle"><strong><?php echo $avg_rating?></strong><small class="colorRating">/ 5</small></h1>
                                 </div>
-                                <h4>De la <?php echo $count_avg?> utilizator.</h4>
-                            </div>
-                            <div class="well">
-                                <h4><strong>Data si ora programare: </strong></h4>
-                                <h4><strong>Doctor: </strong></h4>
-                                <h4><strong>Specialitate: </strong></h4>
+                                <h4>De la <?php echo $count_avg; if($count_avg==1){ echo " utilizator."; } else {  echo " utilizatori."; }?> </h4>
                             </div>
                         </div>
                     </div>

@@ -1,4 +1,4 @@
-var jobTitle=["ALL", "CHIRURGIE GENERALA", "DERMATOLOGIE",  "GASTROENTEROLOGIE", "MEDICINA INTERNA", "NEONATOLOGIE", "NUTRITIE", "OBSTETRICA-GINECOLOGIE", "ORTOPEDIE-SI-TRAUMATOLOGIE", "PEDIATRIE","PNEUMOLOGIE","UROLOGIE"];
+var jobTitle=["ALL", "Cardiologie", "Dermatologie", "Gastroenterologie", "Medicina-interna", "Nutritie", "Neonatologie", "Obstetrica-Ginecologie", "Ortopedie-si-traumatologie", "Pediatrie", "Pneumologie", "Urologie"];
 function createAppoimentModal(){
     document.getElementsByTagName("body")[0].style.padding="0";
     var test=document.querySelectorAll(".modal");
