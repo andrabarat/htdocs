@@ -121,7 +121,7 @@
                                             <input type="radio" name="options" id="Absent"> Absente
                                         </label>
                                         <label class="btn btn-warning btn-lg">
-                                            <input type="radio" name="options" id="Activa"> Active
+                                            <input type="radio" name="options" id="Activă"> Active
                                         </label>
                                         <label class="btn btn-warning btn-lg">
                                             <input type="radio" name="options" id="Confirmat"> Confirmate
@@ -166,7 +166,7 @@
 function filterReservations(){
     var all=document.getElementById("Toate").checked;
     var absent=document.getElementById("Absent").checked;
-    var activa=document.getElementById("Activa").checked;
+    var activa=document.getElementById("Activă").checked;
     var confrimat=document.getElementById("Confirmat").checked;
     var neconfirmat=document.getElementById("Neconfirmat").checked;
     
@@ -188,7 +188,7 @@ function filterReservations(){
     }
     if(activa==true){
         for(var i=0; i<allReservations.length; i++){
-            if(allReservations[i].className.indexOf("Activa")>-1){
+            if(allReservations[i].className.indexOf("Activă")>-1){
                 allReservations[i].style.display="block";
             } else {
                 allReservations[i].style.display="none";
