@@ -9,6 +9,7 @@
     if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
            echo $row["first_name"]." ".$row["last_name"]." ".$row["phone_number"]." ".$row["email"];
+            $_SESSION["loginUsername"]=$username;
         }
     } else {
         echo "failed";
