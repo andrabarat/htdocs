@@ -94,7 +94,7 @@
 <html lang="en">
 
 <head>
-    <title>Bootstrap Example</title>
+    <title>Rezultat</title>
     <meta charset="utf-8">
     <script src="/js/doctors.js"></script>
     <link href="/css/doctors.css" rel="stylesheet">

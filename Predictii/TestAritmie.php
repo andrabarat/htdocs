@@ -5,6 +5,7 @@
 
     $id_session=0;
     $sql = "SELECT id_".substr($usertype, 0, -1)." FROM ".$usertype." WHERE user_name='".$login_session."'";
+echo $sql;
     $result = $conn->query($sql);        
     if ($result->num_rows > 0){
         while($row = $result->fetch_assoc()) {

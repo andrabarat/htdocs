@@ -36,9 +36,9 @@ function checkAppoiment(father, date, last_name, first_name, job_title, id_reser
     var button = document.createElement("button");
     button.setAttribute("type", "button");
     
-    if(getStatus(status, date)=="Activa"){
+    if(getStatus(status, date)=="Activă"){
         button.className="btn btn-warning btn-lg";
-        button.innerHTML="Anuleaza programare";
+        button.innerHTML="Anulează programare";
         button.setAttribute("onclick", "deleteAppoiment("+id_reservation+")");
         button.setAttribute("data-toggle", "modal");
         button.setAttribute("data-target", "#checkModal");
@@ -46,7 +46,7 @@ function checkAppoiment(father, date, last_name, first_name, job_title, id_reser
     }
     if(getStatus(status, date)=="Neconfirmat"){
         button.className="btn btn-info btn-lg";
-        button.innerHTML="Schimba status";
+        button.innerHTML="Schimbă status";
         button.setAttribute("onclick", "changeStatus("+id_reservation+")");
         button.setAttribute("data-toggle", "modal");
         button.setAttribute("data-target", "#checkModal");
@@ -54,7 +54,7 @@ function checkAppoiment(father, date, last_name, first_name, job_title, id_reser
     }
     if(getStatus(status, date)=="Confirmat"){
         button.className="btn btn-primary btn-lg";
-        button.innerHTML="Vezi reteta";
+        button.innerHTML="Vezi rețeta";
         button.setAttribute("onclick", "getPrescription("+id_reservation+")");
         button.setAttribute("data-toggle", "modal");
         button.setAttribute("data-target", "#checkModal");
@@ -81,7 +81,7 @@ function getStatus(status, date){
         var now=new Date();
         var date=new Date(date);
         if( now < date){
-            return "Activa";
+            return "Activă";
         } else {
             return status;
         }
@@ -132,7 +132,7 @@ function deleteAppoiment(id_reservation){
         modalFooterButton.className="btn btn-success btn-lg";
         modalFooterButton.setAttribute("data-dismiss", "modal");
         modalFooterButton.setAttribute("onclick","submitCancelAppoiment("+id_reservation+")");
-        modalFooterButton.innerHTML="Anuleaza programare";
+        modalFooterButton.innerHTML="Anulează programare";
         
         var modalFooterButtonCancel=document.createElement("button");
         modalFooterButtonCancel.setAttribute("type","button");

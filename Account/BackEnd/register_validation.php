@@ -50,6 +50,7 @@
                 VALUES (".$id_user.",'".$first_name."', '".$last_name."', '".$cnp."','".$user_name."','".$phone_number."','".$email."','".$password."')";
         if ($conn->query($sql) === TRUE) {
             $_SESSION['usernameLogin']=$user_name;
+            $_SESSION["userType"]="users";
         } else {
             header("Location: /Account/Login.php");
         }
